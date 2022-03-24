@@ -45,49 +45,49 @@ function buyFarm1() {
   farmsCost[1] = farmsCost[1] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm2() {
  if (moneu >= farmsCost[2]) {
   farms[2] = farms[2] + 1;
   moneu = moneu - farmsCost[2]
   farmsCost[2] = farmsCost[2] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm3() {
  if (moneu >= farmsCost[3]) {
   farms[3] = farms[3] + 1;
   moneu = moneu - farmsCost[3]
   farmsCost[3] = farmsCost[3] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm4() {
  if (moneu >= farmsCost[4]) {
   farms[4] = farms[4] + 1;
   moneu = moneu - farmsCost[4]
   farmsCost[4] = farmsCost[4] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm5() {
  if (moneu >= farmsCost[5]) {
   farms[5] = farms[5] + 1;
   moneu = moneu - farmsCost[5]
   farmsCost[5] = farmsCost[5] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm6() {
  if (moneu >= farmsCost[6]) {
   farms[6] = farms[6] + 1;
   moneu = moneu - farmsCost[6]
   farmsCost[6] = farmsCost[6] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm7() {
  if (moneu >= farmsCost[7]) {
   farms[7] = farms[7] + 1;
   moneu = moneu - farmsCost[1]
   farmsCost[7] = farmsCost[7] *1.05
  }
 }
-function buyFarm1() {
+function buyFarm8() {
  if (moneu >= farmsCost[8]) {
   farms[8] = farms[] + 1;
   moneu = moneu - farmsCost[8]
