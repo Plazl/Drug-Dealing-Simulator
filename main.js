@@ -89,7 +89,7 @@ function buyFarm7() {
 }
 function buyFarm8() {
  if (moneu >= farmsCost[8]) {
-  farms[8] = farms[] + 1;
+  farms[8] = farms[8] + 1;
   moneu = moneu - farmsCost[8]
   farmsCost[8] = farmsCost[8] *1.05
  }
