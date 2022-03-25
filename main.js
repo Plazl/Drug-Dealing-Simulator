@@ -133,7 +133,7 @@ function onlockNewDrug() {
 function sellDrugs() {
    moneu = drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall 
 }
-function gameLoop {
+function gameLoop() {
  document.getElementById('moneu').innerHTML = moneu
  if (farms[1] >= 1) {
   var farm1interval = setInterval(spawnDrugs, t);
