@@ -18,6 +18,12 @@ var farms = {
  '7':0,
  '8':0
 }
+var drugs = {
+ 'aderall':0,
+ 'marujuana':0,
+ 'crack':0,
+ 'meth':0
+}
 function openFarmsMenu() {
  if (openTab !== 1) {
    
