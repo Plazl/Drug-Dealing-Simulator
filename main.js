@@ -1,6 +1,13 @@
 var openTab = 1;
 var moneu = 100;
 var farm1interval;
+var farm2interval;
+var farm3interval;
+var farm4interval;
+var farm5interval;
+var farm6interval;
+var farm7interval;
+var farm8interval;
 var farmsCost = {
  '1':100,
  '2':1000,
@@ -144,9 +151,64 @@ function gameLoop() {
    farm1interval = setInterval(spawnDrugs, t);
   return
  }
+ 
+ if (farms[2] >= 1 && farm2interval == undefined) {
+  farm2interval = setInterval(newFarm1, 50)
+  return
+ }
+ 
+ if (farms[3] >= 1 && farm3interval == undefined) {
+  farm2interval = setInterval(newFarm2, 50)
+  return
+ }
+ if (farms[4] >= 1 && farm4interval == undefined) {
+  farm2interval = setInterval(newFarm3, 50)
+  return
+ }
+ 
+ if (farms[5] >= 1 && farm4interval == undefined) {
+  farm2interval = setInterval(newFarm4, 50)
+  return
+ }
+ 
+ if (farms[6] >= 1 && farm5interval == undefined) {
+  farm2interval = setInterval(newFarm5, 50)
+  return
+ }
+ 
+ if (farms[7] >= 1 && farm6interval == undefined) {
+  farm2interval = setInterval(newFarm6, 50)
+  return
+ }
+ 
+ if (farms[8] >= 1 && farm7interval == undefined) {
+  farm2interval = setInterval(newFarm7, 50)
+  return
+ }
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1
+}
+function newFarm1() {
+  farms[1] = farms[1] + 1 * farms[2];
+}
+function newFarm2() {
+  farms[2] = farms[2] + 1 * farms[3];
+}
+function newFarm3() {
+  farms[3] = farms[3] + 1 * farms[4];
+}
+function newFarm4() {
+  farms[4] = farms[4] + 1 * farms[5];
+}
+function newFarm5() {
+  farms[5] = farms[5] + 1 * farms[6];
+}
+function newFarm6() {
+  farms[6] = farms[6] + 1 * farms[7];
+}
+function newFarm7() {
+  farms[7] = farms[7] + 1 * farms[8];
 }
 setInterval(gameLoop, 50);
