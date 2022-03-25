@@ -1,5 +1,6 @@
 var openTab = 1;
 var moneu = 100;
+var farm1interval;
 var farmsCost = {
  '1':100,
  '2':1000,
@@ -140,7 +141,7 @@ function sellDrugs() {
 function gameLoop() {
  document.getElementById('moneu').innerHTML = moneu
  if (farms[1] >= 1 && farm1interval == 0) {
-  var farm1interval = setInterval(spawnDrugs, t);
+   farm1interval = setInterval(spawnDrugs, t);
   return
  }
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
