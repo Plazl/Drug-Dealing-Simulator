@@ -4,10 +4,14 @@
 </style>
  </head>
 <body>
+ <div class='main'>
+ <table>
  <tr>
   <p><span id="drugs">0</span></p>
   <p><span id="moneu">100</span></p>
  </tr>
+  </table>
+ </div>
   <table id="topMenu">
     <tr>
       <td onclick="openFarmsMenu()"><button>Farms</button></td>
@@ -16,6 +20,7 @@
       <td onclick="openDrugsMenu()"><button>Drugs</button</td>
      </tr>
     </table>
+       <div class='main'>
   <table id="farms">
    <tr>
     <td id="farm1">
@@ -60,6 +65,7 @@
     <td>
      <button onclick="sellDrugs()">Sell your drugs</button>
    </td>
+       </div>
       <div id='drugsMenu'>
         </tr>
             <tr>
@@ -67,6 +73,10 @@
      <button onclick="unlockNewDrug()">Unlock <span id='hiddenDrug'>marujuana</span></button>
    </td>
         </tr>
+       </div>
+       <div id='upgrades'>
+       </div>
+       <div id='achivements'>
        </div>
    <script src="main.js"></script>
  </body>
