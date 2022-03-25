@@ -74,11 +74,11 @@ function buyFarm1() {
   farms[1] = farms[1] + 1;
   moneu = moneu - farmsCost[1]
   farmsCost[1] = farmsCost[1] *1.05
- }
-}
-function addFarm1() {
- t = t - 50;
+  if (farms[1] > 1) {
+   t = t - 50;
+  }
  clearInterval(farm1interval);
+ }
 }
 function buyFarm2() {
  if (moneu >= farmsCost[2]) {
@@ -192,6 +192,8 @@ function spawnDrugs() {
 }
 function newFarm1() {
   farms[1] = farms[1] + 1 * farms[2];
+  t = t - 50;
+ clearInterval(farm1interval);
 }
 function newFarm2() {
   farms[2] = farms[2] + 1 * farms[3];
