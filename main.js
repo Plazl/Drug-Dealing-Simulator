@@ -78,6 +78,7 @@ function buyFarm1() {
    t = t - 50;
   }
  clearInterval(farm1interval);
+ farm1interval = undefined;
  }
 }
 function buyFarm2() {
@@ -85,6 +86,7 @@ function buyFarm2() {
   farms[2] = farms[2] + 1;
   moneu = moneu - farmsCost[2]
   farmsCost[2] = farmsCost[2] *1.05
+  farm2interval = undefined;
  }
 }
 function buyFarm3() {
@@ -92,6 +94,7 @@ function buyFarm3() {
   farms[3] = farms[3] + 1;
   moneu = moneu - farmsCost[3]
   farmsCost[3] = farmsCost[3] *1.05
+  farm3interval = undefined;
  }
 }
 function buyFarm4() {
@@ -99,6 +102,7 @@ function buyFarm4() {
   farms[4] = farms[4] + 1;
   moneu = moneu - farmsCost[4]
   farmsCost[4] = farmsCost[4] *1.05
+  farm4interval = undefined;
  }
 }
 function buyFarm5() {
@@ -106,6 +110,7 @@ function buyFarm5() {
   farms[5] = farms[5] + 1;
   moneu = moneu - farmsCost[5]
   farmsCost[5] = farmsCost[5] *1.05
+  farm5interval = undefined;
  }
 }
 function buyFarm6() {
@@ -113,6 +118,7 @@ function buyFarm6() {
   farms[6] = farms[6] + 1;
   moneu = moneu - farmsCost[6]
   farmsCost[6] = farmsCost[6] *1.05
+  farm6interval = undefined;
  }
 }
 function buyFarm7() {
@@ -120,6 +126,7 @@ function buyFarm7() {
   farms[7] = farms[7] + 1;
   moneu = moneu - farmsCost[1]
   farmsCost[7] = farmsCost[7] *1.05
+  farm7interval = undefined;
  }
 }
 function buyFarm8() {
@@ -127,6 +134,7 @@ function buyFarm8() {
   farms[8] = farms[8] + 1;
   moneu = moneu - farmsCost[8]
   farmsCost[8] = farmsCost[8] *1.05
+  farm8interval = undefined;
  }
 }
 function onlockNewDrug() {
@@ -197,20 +205,26 @@ function newFarm1() {
 }
 function newFarm2() {
   farms[2] = farms[2] + 1 * farms[3];
+ farm2interval = undefined;
 }
 function newFarm3() {
   farms[3] = farms[3] + 1 * farms[4];
+ farm3interval = undefined;
 }
 function newFarm4() {
   farms[4] = farms[4] + 1 * farms[5];
+ farm4interval = undefined;
 }
 function newFarm5() {
   farms[5] = farms[5] + 1 * farms[6];
+ farm5interval = undefined;
 }
 function newFarm6() {
   farms[6] = farms[6] + 1 * farms[7];
+ farm6interval = undefined;
 }
 function newFarm7() {
   farms[7] = farms[7] + 1 * farms[8];
+ farm7interval = undefined;
 }
 setInterval(gameLoop, 50);
