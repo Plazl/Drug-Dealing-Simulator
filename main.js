@@ -135,7 +135,7 @@ function sellDrugs() {
 }
 function gameLoop() {
  document.getElementById('moneu').innerHTML = moneu
- if (farms[1] >= 1) {
+ if (farms[1] >= 1 && farm1interval == 0) {
   var farm1interval = setInterval(spawnDrugs, t);
   break;
  }
