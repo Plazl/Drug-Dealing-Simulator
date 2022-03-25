@@ -138,7 +138,7 @@ function gameLoop() {
  if (farms[1] >= 1) {
   var farm1interval = setInterval(spawnDrugs, t);
  }
- document.getELementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
+ document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1
