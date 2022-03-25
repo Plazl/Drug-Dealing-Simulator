@@ -31,9 +31,9 @@ var unlockedDrugs = {
 'meth':0
 }
 var drugsWorth = {
-'aderall':1
-'marujuana':50
-'crack':500
+'aderall':1,
+'marujuana':50,
+'crack':500,
 'meth':10000
 }
 var t = 500;
