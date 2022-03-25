@@ -238,7 +238,8 @@ function newFarm7() {
 setInterval(gameLoop, 50);
 function boostFarms() {
  if (boostReq.farmType == 8 && farms[8] >= boostReq.farmCount) {
-  boost = boost * 2
-  boostReq.farmCount = boostReq.farmCount * 2 
+  boost = boost * 2;
+  boostReq.farmCount = boostReq.farmCount * 2; 
+  farms[8] = farms[8] - boostReq.farmCount;
  }
 }
