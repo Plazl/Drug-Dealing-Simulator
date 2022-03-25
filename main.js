@@ -131,7 +131,11 @@ function onlockNewDrug() {
 }
 }
 function sellDrugs() {
-   moneu = drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall 
+   moneu = drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall
+ drugs.aderall = 0
+ drugs.meth = 0
+ drugs.marujuana = 0
+ drugs.crack = 0
 }
 function gameLoop() {
  document.getElementById('moneu').innerHTML = moneu
