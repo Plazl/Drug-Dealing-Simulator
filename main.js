@@ -36,6 +36,8 @@ var drugsWorth = {
 'crack':500
 'meth':10000
 }
+var t = 500;
+var a = document.getElementById('drugsMenu')
 function openFarmsMenu() {
  if (openTab !== 1) {
    
@@ -53,7 +55,10 @@ function openAchMenu() {
 }
 function openDrugsMenu() {
   if (openTab !== 4) {
-   
+   openTab = 4
+   a.style.display = shown
+ } else {
+  a.style.display = hidden
  }
 }
 function buyFarm1() {
@@ -62,6 +67,10 @@ function buyFarm1() {
   moneu = moneu - farmsCost[1]
   farmsCost[1] = farmsCost[1] *1.05
  }
+}
+function addFarm1() {
+ t = t - 50;
+ clearInterval(farm1interval);
 }
 function buyFarm2() {
  if (moneu >= farmsCost[2]) {
@@ -124,3 +133,13 @@ function onlockNewDrug() {
 function sellDrugs() {
    moneu = drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall 
 }
+function gameLoop {
+ document.getElementById('moneu').innerHTML = moneu
+ if (farms[1] >= 1) {
+  var farm1interval = setInterval(spawnDrugs, t);
+ }
+}
+function spawnDrugs() {
+  drugs.aderall = drugs.aderall + 1
+}
+setInterval(gameLoop, 50);
