@@ -24,6 +24,18 @@ var drugs = {
  'crack':0,
  'meth':0
 }
+var unlockedDrugs = {
+'aderall':1,
+'marujuana':0,
+'crack':0,
+'meth':0
+}
+var drugsWorth = {
+'aderall':1
+'marujuana':50
+'crack':500
+'meth':10000
+}
 function openFarmsMenu() {
  if (openTab !== 1) {
    
@@ -99,4 +111,16 @@ function buyFarm8() {
   moneu = moneu - farmsCost[8]
   farmsCost[8] = farmsCost[8] *1.05
  }
+}
+function onlockNewDrug() {
+ if (unlockedDrugs.marujuana == 0 && unlockedDrugs.aderall >= 100000) {
+  unlockedDrugs.marujuana = 1;
+ } else if (unlockedDrugs.crack == 0 && unlockedDrugs.marujuana >= 10000000) {
+  unlockedDrugs.crack = 1;
+} else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack >= 1000000000) {
+  unlockedDrugs.meth = 1;
+}
+}
+function sellDrugs() {
+   moneu = drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall 
 }
