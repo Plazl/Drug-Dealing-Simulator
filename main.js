@@ -8,6 +8,13 @@ var farm5interval;
 var farm6interval;
 var farm7interval;
 var farm8interval;
+var boost = 1;
+var boostMult = 1;
+var boost = 1;
+var boostReq = {
+ 'farmType':4,
+ 'farmCount':20
+}
 var farmsCost = {
  '1':100,
  '2':1000,
@@ -15,7 +22,8 @@ var farmsCost = {
  '4':100000,
  '6':1000000,
  '7':10000000,
- '8':100000000};
+ '8':100000000
+}
 var farms = {
  '1':0,
  '2':0,
@@ -196,7 +204,7 @@ function gameLoop() {
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
 function spawnDrugs() {
-  drugs.aderall = drugs.aderall + 1
+  drugs.aderall = drugs.aderall + 1 * boost
 }
 function newFarm1() {
   farms[1] = farms[1] + 1 * farms[2];
@@ -228,3 +236,9 @@ function newFarm7() {
  farm7interval = undefined;
 }
 setInterval(gameLoop, 50);
+function boostFarms() {
+ if (boostReq.farmType == 8 && farms[8] >= boostReq.farmCount) {
+  boost = boost * 2
+  boostReq.farmCount = boostReq.farmCount * 2 
+ }
+}
