@@ -147,11 +147,11 @@ function buyFarm8() {
  }
 }
 function unlockNewDrug() {
- if (unlockedDrugs.marujuana == 0 && unlockedDrugs.aderall >= 100000) {
+ if (unlockedDrugs.marujuana == 0 && drugs.aderall >= 100000) {
   unlockedDrugs.marujuana = 1;
- } else if (unlockedDrugs.crack == 0 && unlockedDrugs.marujuana >= 10000000) {
+ } else if (unlockedDrugs.crack == 0 && drugs.marujuana >= 10000000) {
   unlockedDrugs.crack = 1;
-} else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack >= 1000000000) {
+} else if (unlockedDrugs.meth == 0 && drugs.crack >= 1000000000) {
   unlockedDrugs.meth = 1;
 }
 }
