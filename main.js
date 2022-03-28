@@ -81,7 +81,7 @@ function openDrugsMenu() {
 function buyFarm1() {
  if (moneu >= farmsCost[1]) {
   farms[1] = farms[1] + 1;
-  moneu = moneu - farmsCost[1]
+  moneu = moneu - Math.round(farmsCost[1])
   farmsCost[1] = farmsCost[1] *1.05
   if (farms[1] > 1) {
    t = t - 50;
@@ -93,7 +93,7 @@ function buyFarm1() {
 function buyFarm2() {
  if (moneu >= farmsCost[2]) {
   farms[2] = farms[2] + 1;
-  moneu = moneu - farmsCost[2]
+  moneu = moneu - Math.round(farmsCost[2])
   farmsCost[2] = farmsCost[2] *1.05
   farm2interval = undefined;
  }
@@ -101,7 +101,7 @@ function buyFarm2() {
 function buyFarm3() {
  if (moneu >= farmsCost[3]) {
   farms[3] = farms[3] + 1;
-  moneu = moneu - farmsCost[3]
+  moneu = moneu - Math.round(farmsCost[3])
   farmsCost[3] = farmsCost[3] *1.05
   farm3interval = undefined;
  }
@@ -109,7 +109,7 @@ function buyFarm3() {
 function buyFarm4() {
  if (moneu >= farmsCost[4]) {
   farms[4] = farms[4] + 1;
-  moneu = moneu - farmsCost[4]
+  moneu = moneu - Math.round(farmsCost[4])
   farmsCost[4] = farmsCost[4] *1.05
   farm4interval = undefined;
  }
@@ -117,7 +117,7 @@ function buyFarm4() {
 function buyFarm5() {
  if (moneu >= farmsCost[5]) {
   farms[5] = farms[5] + 1;
-  moneu = moneu - farmsCost[5]
+  moneu = moneu - Math.round(farmsCost[5])
   farmsCost[5] = farmsCost[5] *1.05
   farm5interval = undefined;
  }
@@ -125,7 +125,7 @@ function buyFarm5() {
 function buyFarm6() {
  if (moneu >= farmsCost[6]) {
   farms[6] = farms[6] + 1;
-  moneu = moneu - farmsCost[6]
+  moneu = moneu - Math.round(farmsCost[6])
   farmsCost[6] = farmsCost[6] *1.05
   farm6interval = undefined;
  }
@@ -133,7 +133,7 @@ function buyFarm6() {
 function buyFarm7() {
  if (moneu >= farmsCost[7]) {
   farms[7] = farms[7] + 1;
-  moneu = moneu - farmsCost[1]
+  moneu = moneu - Math.round(farmsCost[7])
   farmsCost[7] = farmsCost[7] *1.05
   farm7interval = undefined;
  }
@@ -141,7 +141,7 @@ function buyFarm7() {
 function buyFarm8() {
  if (moneu >= farmsCost[8]) {
   farms[8] = farms[8] + 1;
-  moneu = moneu - farmsCost[8]
+  moneu = moneu - Math.round(farmsCost[8])
   farmsCost[8] = farmsCost[8] *1.05
   farm8interval = undefined;
  }
