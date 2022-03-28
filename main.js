@@ -54,6 +54,7 @@ var drugsWorth = {
 }
 var t = 500;
 var a = document.getElementById('drugsMenu')
+var hiddenDrug = 2
 function openFarmsMenu() {
  if (openTab !== 1) {
    
@@ -145,7 +146,7 @@ function buyFarm8() {
   farm8interval = undefined;
  }
 }
-function onlockNewDrug() {
+function unlockNewDrug() {
  if (unlockedDrugs.marujuana == 0 && unlockedDrugs.aderall >= 100000) {
   unlockedDrugs.marujuana = 1;
  } else if (unlockedDrugs.crack == 0 && unlockedDrugs.marujuana >= 10000000) {
@@ -167,6 +168,7 @@ function gameLoop() {
    farm1interval = setInterval(spawnDrugs, t);
   return
  }
+ 
  
  if (farms[2] >= 1 && farm2interval == undefined) {
   farm2interval = setInterval(newFarm1, 50)
@@ -243,3 +245,13 @@ function boostFarms() {
   farms[8] = farms[8] - boostReq.farmCount;
  }
 }
+function updateDrug() {
+ if (unlockedDrugs.marujuana == 0 && unlockedDrugs.aderall == 1) {
+  document.getElementById('hiddenDrug').innerHTML = 'marujuana for 100000 aderall'
+ } else if (unlockedDrugs.crack == 0 && unlockedDrugs.marujuana == 1) {
+  document.getElementById('hiddenDrug').innerHTML = 'crack for 10000000 marujuana'
+ } else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack == 1) {
+  document.getElementById('hiddenDrug').innerHTML = 'meth for 1000000000 crack'
+ } 
+}
+setInterval(updateDrug, 50);
