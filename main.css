@@ -1,4 +1,4 @@
-#farm1 {
+#farms {
  left: 10%;
  top: 60%;
  width: 50px;
@@ -6,59 +6,9 @@
  background-color: #04AA6D;
  border: 5px;
 }
-#farm2 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm3 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm4 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm5 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm6 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm7 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
- background-color: #04AA6D;
- border: 5px;
-}
-#farm8 {
- left: 10%;
- top: 60%;
- width: 50px;
- height: 30px;
+#topMenu {
+ width: 30px;
+ height: 20px;
  background-color: #04AA6D;
  border: 5px;
 }
