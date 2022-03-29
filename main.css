@@ -1,9 +1,81 @@
 #farms {
  left: 10%;
  top: 60%;
- width: 50px;
+ width: 500px;
  height: 30px;
- color: #04AA6D;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farmBtns {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm1 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm2 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm3 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm4 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm5 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm6 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm7 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
+ border: 5px;
+}
+#farm8 {
+ left: 10%;
+ top: 60%;
+ width: 100px;
+ height: 30px;
+ background-color: #04AA6D;
  border: 5px;
 }
 #topMenu {
