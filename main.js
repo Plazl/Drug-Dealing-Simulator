@@ -207,41 +207,85 @@ function gameLoop() {
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * boost
+ if (unlockedDrugs.marujuana == 1) {
+  drugs.marujuana = drugs.marujuana + 1 * boost
+  
+ }; if (unlockedDrugs.crack == 1) {
+  drugs.crack = drugs.crack + 1 * boost
+ }; if (unlockedDrugs.meth == 1) {
+  drugs.meth = drugs.meth + 1 * boost
+ }
 }
 function newFarm1() {
 aaa()
 function aaa() {r = setInterval(function myFunc() {
  farms[1] = farms[1] + 1 * farms[2];
-  t = t - 5
+  t = t - 50
  clearInterval(r);
  setTimeout(function r() {
   aaa()
    },t)
   },t)
- ==\
+ }
 function newFarm2() {
-  farms[2] = farms[2] + 1 * farms[3];
- farm2interval = undefined;
+ aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[2] = farms[2] + 1 * farms[3];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 function newFarm3() {
-  farms[3] = farms[3] + 1 * farms[4];
- farm3interval = undefined;
+  aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[3] = farms[3] + 1 * farms[4];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 function newFarm4() {
-  farms[4] = farms[4] + 1 * farms[5];
- farm4interval = undefined;
+  aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[4] = farms[4] + 1 * farms[5];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 function newFarm5() {
-  farms[5] = farms[5] + 1 * farms[6];
- farm5interval = undefined;
+  aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[5] = farms[5] + 1 * farms[6];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 function newFarm6() {
-  farms[6] = farms[6] + 1 * farms[7];
- farm6interval = undefined;
+ aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[6] = farms[6] + 1 * farms[7];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 function newFarm7() {
-  farms[7] = farms[7] + 1 * farms[8];
- farm7interval = undefined;
+  aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[7] = farms[7] + 1 * farms[8];
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
 }
 setInterval(gameLoop, 50);
 function boostFarms() {
