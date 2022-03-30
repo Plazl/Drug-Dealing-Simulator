@@ -190,7 +190,6 @@ function gameLoop() {
   return
  }
  
- 
  if (farms[2] >= 1 && farm2interval == undefined) {
   farm2interval = setInterval(newFarm1, t2)
   return
@@ -241,12 +240,12 @@ function newFarm1() {
 aaa()
 function aaa() {r = setInterval(function myFunc() {
  farms[1] = farms[1] + 1 * farms[2];
-  t = t - 50
+  t1 = t1 - 50
  clearInterval(r);
  setTimeout(function r() {
   aaa()
-   },t)
-  },t)
+   },t1)
+  },t1)
  }
 }
 function newFarm2() {
