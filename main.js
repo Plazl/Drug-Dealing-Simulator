@@ -102,7 +102,9 @@ function buyFarm2() {
   farms[2] = farms[2] + 1;
   moneu = moneu - Math.round(farmsCost[2])
   farmsCost[2] = farmsCost[2] *1.05
+  clearInterval(farm2interval);
   farm2interval = undefined;
+  t2 = t2 - 50
  }
 }
 function buyFarm3() {
@@ -110,7 +112,9 @@ function buyFarm3() {
   farms[3] = farms[3] + 1;
   moneu = moneu - Math.round(farmsCost[3])
   farmsCost[3] = farmsCost[3] *1.05
+  clearInterval(farm3interval);
   farm3interval = undefined;
+  t3 = t3 - 50
  }
 }
 function buyFarm4() {
@@ -118,7 +122,9 @@ function buyFarm4() {
   farms[4] = farms[4] + 1;
   moneu = moneu - Math.round(farmsCost[4])
   farmsCost[4] = farmsCost[4] *1.05
+  clearInterval(farm4interval);
   farm4interval = undefined;
+  t4 = t4 - 50
  }
 }
 function buyFarm5() {
@@ -126,7 +132,9 @@ function buyFarm5() {
   farms[5] = farms[5] + 1;
   moneu = moneu - Math.round(farmsCost[5])
   farmsCost[5] = farmsCost[5] *1.05
+  clearInterval(farm5interval);
   farm5interval = undefined;
+  t5 = t5 - 50
  }
 }
 function buyFarm6() {
@@ -134,7 +142,9 @@ function buyFarm6() {
   farms[6] = farms[6] + 1;
   moneu = moneu - Math.round(farmsCost[6])
   farmsCost[6] = farmsCost[6] *1.05
+  clearInterval(farm6interval);
   farm6interval = undefined;
+  t6 = t6 - 50
  }
 }
 function buyFarm7() {
@@ -142,7 +152,9 @@ function buyFarm7() {
   farms[7] = farms[7] + 1;
   moneu = moneu - Math.round(farmsCost[7])
   farmsCost[7] = farmsCost[7] *1.05
+  clearInterval(farm7interval);
   farm7interval = undefined;
+  t7 = t7 - 50
  }
 }
 function buyFarm8() {
@@ -150,7 +162,9 @@ function buyFarm8() {
   farms[8] = farms[8] + 1;
   moneu = moneu - Math.round(farmsCost[8])
   farmsCost[8] = farmsCost[8] *1.05
+  clearInterval(farm8interval);
   farm8interval = undefined;
+  t8 = t8 - 50; 
  }
 }
 function unlockNewDrug() {
@@ -172,42 +186,42 @@ function sellDrugs() {
 function gameLoop() {
  document.getElementById('moneu').innerHTML = moneu
  if (farms[1] >= 1 && farm1interval == undefined) {
-   farm1interval = setInterval(spawnDrugs, t);
+   farm1interval = setInterval(spawnDrugs, t1);
   return
  }
  
  
  if (farms[2] >= 1 && farm2interval == undefined) {
-  farm2interval = setInterval(newFarm1, 50)
+  farm2interval = setInterval(newFarm1, t2)
   return
  }
  
  if (farms[3] >= 1 && farm3interval == undefined) {
-  farm2interval = setInterval(newFarm2, 50)
+  farm3interval = setInterval(newFarm2, t3)
   return
  }
  if (farms[4] >= 1 && farm4interval == undefined) {
-  farm2interval = setInterval(newFarm3, 50)
+  farm4interval = setInterval(newFarm3, t4)
   return
  }
  
  if (farms[5] >= 1 && farm4interval == undefined) {
-  farm2interval = setInterval(newFarm4, 50)
+  farm5interval = setInterval(newFarm4, t5)
   return
  }
  
  if (farms[6] >= 1 && farm5interval == undefined) {
-  farm2interval = setInterval(newFarm5, 50)
+  farm6interval = setInterval(newFarm5, t6)
   return
  }
  
  if (farms[7] >= 1 && farm6interval == undefined) {
-  farm2interval = setInterval(newFarm6, 50)
+  farm7interval = setInterval(newFarm6, t7)
   return
  }
  
  if (farms[8] >= 1 && farm7interval == undefined) {
-  farm2interval = setInterval(newFarm7, 50)
+  farm8interval = setInterval(newFarm7, t8)
   return
  }
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
