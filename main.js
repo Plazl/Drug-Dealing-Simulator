@@ -227,6 +227,7 @@ function aaa() {r = setInterval(function myFunc() {
    },t)
   },t)
  }
+}
 function newFarm2() {
  aaa()
 function aaa() {r = setInterval(function myFunc() {
@@ -236,6 +237,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 function newFarm3() {
   aaa()
@@ -246,6 +248,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 function newFarm4() {
   aaa()
@@ -256,6 +259,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 function newFarm5() {
   aaa()
@@ -266,6 +270,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 function newFarm6() {
  aaa()
@@ -276,6 +281,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 function newFarm7() {
   aaa()
@@ -286,6 +292,7 @@ function aaa() {r = setInterval(function myFunc() {
   aaa()
    },t)
   },t)
+ }
 }
 setInterval(gameLoop, 50);
 function boostFarms() {
