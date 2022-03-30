@@ -1,0 +1,13 @@
+var t = 1000
+
+aaa()
+function aaa() {r = setInterval(function myFunc() {
+  document.getElementById("demo1").innerHTML += "e";
+  t = t - 5
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
+ }
+}
