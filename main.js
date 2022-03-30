@@ -209,10 +209,16 @@ function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * boost
 }
 function newFarm1() {
-  farms[1] = farms[1] + 1 * farms[2];
-  t = t - 50;
- clearInterval(farm1interval);
-}
+aaa()
+function aaa() {r = setInterval(function myFunc() {
+ farms[1] = farms[1] + 1 * farms[2];
+  t = t - 5
+ clearInterval(r);
+ setTimeout(function r() {
+  aaa()
+   },t)
+  },t)
+ ==\
 function newFarm2() {
   farms[2] = farms[2] + 1 * farms[3];
  farm2interval = undefined;
