@@ -52,7 +52,14 @@ var drugsWorth = {
 'crack':500,
 'meth':10000
 }
-var t = 500;
+var t1 = 500;
+var t2 = 500;
+var t3 = 500;
+var t4 = 500;
+var t5 = 500;
+var t6 = 500;
+var t7 = 500;
+var t8 = 500;
 var a = document.getElementById('drugsMenu')
 var hiddenDrug = 2
 function openFarmsMenu() {
@@ -84,7 +91,7 @@ function buyFarm1() {
   moneu = moneu - Math.round(farmsCost[1])
   farmsCost[1] = farmsCost[1] *1.05
   if (farms[1] > 1) {
-   t = t - 50;
+   t1 = t1 - 50;
   }
  clearInterval(farm1interval);
  farm1interval = undefined;
@@ -229,70 +236,22 @@ function aaa() {r = setInterval(function myFunc() {
  }
 }
 function newFarm2() {
- aaa()
-function aaa() {r = setInterval(function myFunc() {
- farms[2] = farms[2] + 1 * farms[3];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
+farms[2] = farms[2] + 1 * farms[3];
 }
 function newFarm3() {
-  aaa()
-function aaa() {r = setInterval(function myFunc() {
- farms[3] = farms[3] + 1 * farms[4];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
+  farms[3] = farms[3] + 1 * farms[4];
 }
 function newFarm4() {
-  aaa()
-function aaa() {r = setInterval(function myFunc() {
- farms[4] = farms[4] + 1 * farms[5];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
+  farms[4] = farms[4] + 1 * farms[5];
 }
 function newFarm5() {
-  aaa()
-function aaa() {r = setInterval(function myFunc() {
  farms[5] = farms[5] + 1 * farms[6];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
 }
 function newFarm6() {
- aaa()
-function aaa() {r = setInterval(function myFunc() {
  farms[6] = farms[6] + 1 * farms[7];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
 }
 function newFarm7() {
-  aaa()
-function aaa() {r = setInterval(function myFunc() {
  farms[7] = farms[7] + 1 * farms[8];
- clearInterval(r);
- setTimeout(function r() {
-  aaa()
-   },t)
-  },t)
- }
 }
 setInterval(gameLoop, 50);
 function boostFarms() {
