@@ -1,5 +1,5 @@
 var openTab = 1;
-var moneu = 100;
+var moneu;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -10,7 +10,6 @@ var farm7interval;
 var farm8interval;
 var boost = 1;
 var boostMult = 1;
-var boost = 1;
 var boostReq = {
  'farmType':4,
  'farmCount':20
@@ -53,19 +52,19 @@ var drugsWorth = {
 'crack':500,
 'meth':10000
 }
-var t1 = 500;
-var t2 = 500;
-var t3 = 500;
-var t4 = 500;
-var t5 = 500;
-var t6 = 500;
-var t7 = 500;
-var t8 = 500;
+var t1;
+var t2;
+var t3;
+var t4;
+var t5;
+var t6;
+var t7;
+var t8;
+var hiddenDrug
 var a = document.getElementById('drugsMenu')
-var hiddenDrug = 2
 function loadSave() {
- 
  var game = JSON.parse(localStorage.getItem("gameSave"))
+ if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1}
  if (typeof game.t2 !== "undefined") {t2 = game.t2}
  if (typeof game.t3 !== "undefined") {t3 = game.t3}
@@ -74,25 +73,89 @@ function loadSave() {
  if (typeof game.t6 !== "undefined") {t6 = game.t6}
  if (typeof game.t7 !== "undefined") {t7 = game.t7}
  if (typeof game.t8 !== "undefined") {t8 = game.t8}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
- if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.farm1interval !== "undefined") {farm1interval = game.farm1interval}
+ if (typeof game.farm2interval !== "undefined") {farm2interval = game.farm2interval}
+ if (typeof game.farm3interval !== "undefined") {farm3interval = game.farm3interval}
+ if (typeof game.farm4interval !== "undefined") {farm4interval = game.farm4interval}
+ if (typeof game.farm5interval !== "undefined") {farm5interval = game.farm5interval}
+ if (typeof game.farm6interval !== "undefined") {farm6interval = game.farm6interval}
+ if (typeof game.farm7interval !== "undefined") {farm7interval = game.farm7interval}
+ if (typeof game.farm8interval !== "undefined") {farm8interval = game.farm8interval}
+ if (typeof game.boost !== "undefined") {boost = game.boost}
+ if (typeof game.boostMult !== "undefined") {boostMult = game.boostMult}
+ if (typeof game.boostReq !== "undefined") {boostReq = game.boostReq}
+ if (typeof game.farmsCost !== "undefined") {farmsCost = game.farmsCost}
+ if (typeof game.farms !== "undefined") {farms = game.farms}
+ if (typeof game.drugs !== "undefined") {drugs = game.drugs}
+ if (typeof game.drugsWorth !== "undefined") {drugsWorth = game.drugsWorth}
+ if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs}
+ if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3}
+ if (typeof game.dollars !== "undefined") {moneu = game.dollars}
+ } else {
+   moneu = 100;
+ farm1interval;
+ farm2interval;
+ farm3interval;
+ farm4interval;
+ farm5interval;
+ farm6interval;
+ farm7interval;
+ farm8interval;
+ boost = 1;
+ boostMult = 1;
+ boostReq = {
+ 'farmType':4,
+ 'farmCount':20
+}
+ farmsCost = {
+ '1':100,
+ '2':1000,
+ '3':10000,
+ '4':100000,
+ '5':1000000,
+ '6':10000000,
+ '7':100000000,
+ '8':1000000000
+}
+ farms = {
+ '1':0,
+ '2':0,
+ '3':0,
+ '4':0,
+ '5':0,
+ '6':0,
+ '7':0,
+ '8':0
+}
+ drugs = {
+ 'aderall':0,
+ 'marujuana':0,
+ 'crack':0,
+ 'meth':0
+}
+ unlockedDrugs = {
+'aderall':1,
+'marujuana':0,
+'crack':0,
+'meth':0
+}
+ drugsWorth = {
+'aderall':1,
+'marujuana':50,
+'crack':500,
+'meth':10000
+}
+ t1 = 500;
+ t2 = 500;
+ t3 = 500;
+ t4 = 500;
+ t5 = 500;
+ t6 = 500;
+ t7 = 500;
+ t8 = 500;
+ a = document.getElementById('drugsMenu')
+ hiddenDrug = 2
+ }
 };
 
 function openFarmsMenu() {
@@ -386,6 +449,7 @@ function updateDrug() {
   document.getElementById('hiddenDrug').innerHTML = 'meth for 1000000000 crack'
  } 
 }
+setInterval(saveGame, 30000)
 setInterval(updateDrug, 50);
 function saveGame() {
  const game = {
@@ -397,24 +461,26 @@ function saveGame() {
  't6':t6,
  't7':t7,
  't8':t8,
- 'farm1inte':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':,
- '':
+ 'farm1interval':farm1interval,
+ 'farm2interval':farm2interval,
+ 'farm3interval':farm3interval,
+ 'farm4interval':farm4interval,
+ 'farm5interval':farm5interval,
+ 'farm6interval':farm6interval,
+ 'farm7interval':farm7interval,
+ 'farm8interval':farm8interval,
+ 'dollars':moneu,
+ 'boost':boost,
+ 'boostReq':boostReq,
+ 'boostMult':boostMult,
+ 'farmsCost':farmsCost,
+ 'farms':farms,
+ 'drugs':drugs,
+ 'unlockedDrugs':unlockedDrugs,
+ 'drugsWorth':drugsWorth,
+ 'hiddenDrug':hiddenDrug
  }
+}
+window.beforeUnLoad = function(e) {
+ saveGame();
 }
