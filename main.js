@@ -90,7 +90,7 @@ function buyFarm1() {
   farms[1] = farms[1] + 1;
   moneu = moneu - Math.round(farmsCost[1])
   farmsCost[1] = farmsCost[1] *1.05
-  if (farms[1] > 1) {
+  if (farms[1] > 1 && t1 !== 0) {
    t1 = t1 - 50;
   }
  clearInterval(farm1interval);
@@ -104,7 +104,9 @@ function buyFarm2() {
   farmsCost[2] = farmsCost[2] *1.06
   clearInterval(farm2interval);
   farm2interval = undefined;
+  if (farms[2] > 1 && t2 !== 0) {
   t2 = t2 - 50
+  }
  }
 }
 function buyFarm3() {
@@ -114,7 +116,9 @@ function buyFarm3() {
   farmsCost[3] = farmsCost[3] *1.07
   clearInterval(farm3interval);
   farm3interval = undefined;
+  if (farms[3] > 1 && t3 !== 0) {
   t3 = t3 - 50
+  }
  }
 }
 function buyFarm4() {
@@ -124,7 +128,9 @@ function buyFarm4() {
   farmsCost[4] = farmsCost[4] *1.08
   clearInterval(farm4interval);
   farm4interval = undefined;
+  if (farms[4] > 1 && t4 !== 0) {
   t4 = t4 - 50
+  }
  }
 }
 function buyFarm5() {
@@ -134,7 +140,9 @@ function buyFarm5() {
   farmsCost[5] = farmsCost[5] *1.09
   clearInterval(farm5interval);
   farm5interval = undefined;
+  if (farms[5] > 1 && t5 !== 0) {
   t5 = t5 - 50
+  }
  }
 }
 function buyFarm6() {
@@ -144,7 +152,9 @@ function buyFarm6() {
   farmsCost[6] = farmsCost[6] *1.10
   clearInterval(farm6interval);
   farm6interval = undefined;
+  if (farms[6] > 1 && t6 !== 0) {
   t6 = t6 - 50
+  }
  }
 }
 function buyFarm7() {
@@ -154,7 +164,9 @@ function buyFarm7() {
   farmsCost[7] = farmsCost[7] *1.11
   clearInterval(farm7interval);
   farm7interval = undefined;
+  if (farms[7] > 1 && t7 !== 0) {
   t7 = t7 - 50
+  }
  }
 }
 function buyFarm8() {
@@ -164,7 +176,9 @@ function buyFarm8() {
   farmsCost[8] = farmsCost[8] *1.12
   clearInterval(farm8interval);
   farm8interval = undefined;
+  if (farms[8] > 1 && t8 !== 0) {
   t8 = t8 - 50; 
+  }
  }
 }
 function unlockNewDrug() {
