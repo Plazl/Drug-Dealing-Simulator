@@ -64,7 +64,37 @@ var t8 = 500;
 var a = document.getElementById('drugsMenu')
 var hiddenDrug = 2
 function loadSave() {
-}
+ 
+ var game = JSON.parse(localStorage.getItem("gameSave"))
+ if (typeof game.t1 !== "undefined") {t1 = game.t1}
+ if (typeof game.t2 !== "undefined") {t2 = game.t2}
+ if (typeof game.t3 !== "undefined") {t3 = game.t3}
+ if (typeof game.t4 !== "undefined") {t4 = game.t4}
+ if (typeof game.t5 !== "undefined") {t5 = game.t5}
+ if (typeof game.t6 !== "undefined") {t6 = game.t6}
+ if (typeof game.t7 !== "undefined") {t7 = game.t7}
+ if (typeof game.t8 !== "undefined") {t8 = game.t8}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+ if (typeof game.t8 !== "undefined") {t3 = game.t3}
+};
+
 function openFarmsMenu() {
  if (openTab !== 1) {
    
@@ -357,3 +387,34 @@ function updateDrug() {
  } 
 }
 setInterval(updateDrug, 50);
+function saveGame() {
+ const game = {
+ 't1':t1,
+ 't2':t2,
+ 't3':t3,
+ 't4':t4,
+ 't5':t5,
+ 't6':t6,
+ 't7':t7,
+ 't8':t8,
+ 'farm1inte':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':,
+ '':
+ }
+}
