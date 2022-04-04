@@ -1,5 +1,5 @@
 var openTab = 1;
-var moneu;
+var moneu = 100;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -52,15 +52,15 @@ var drugsWorth = {
 'crack':500,
 'meth':10000
 }
-var t1;
-var t2;
-var t3;
-var t4;
-var t5;
-var t6;
-var t7;
-var t8;
-var hiddenDrug
+var t1 = 500;
+var t2 = 500;
+var t3 = 500;
+var t4 = 500;
+var t5 = 500;
+var t6 = 500;
+var t7 = 500;
+var t8 = 500;
+var hiddenDrug = 2;
 var a = document.getElementById('drugsMenu')
 function loadSave() {
  var game = JSON.parse(localStorage.getItem("gameSave"))
