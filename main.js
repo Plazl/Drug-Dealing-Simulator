@@ -248,24 +248,6 @@ function aaa() {r = setInterval(function myFunc() {
   },t1)
  }
 }
-function newFarm2() {
-farms[2] = farms[2] + 1 * farms[3];
-}
-function newFarm3() {
-  farms[3] = farms[3] + 1 * farms[4];
-}
-function newFarm4() {
-  farms[4] = farms[4] + 1 * farms[5];
-}
-function newFarm5() {
- farms[5] = farms[5] + 1 * farms[6];
-}
-function newFarm6() {
- farms[6] = farms[6] + 1 * farms[7];
-}
-function newFarm7() {
- farms[7] = farms[7] + 1 * farms[8];
-}
 setInterval(gameLoop, 50);
 function boostFarms() {
  if (boostReq.farmType == 8 && farms[8] >= boostReq.farmCount) {
