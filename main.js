@@ -63,6 +63,8 @@ var t7 = 500;
 var t8 = 500;
 var a = document.getElementById('drugsMenu')
 var hiddenDrug = 2
+function loadSave() {
+}
 function openFarmsMenu() {
  if (openTab !== 1) {
    
@@ -199,15 +201,15 @@ function sellDrugs() {
  drugs.crack = 0
 }
 function gameLoop() {
- document.getElementById('moneu').innerHTML = moneu;
- document.getElementById('farm1price').innerHTML = farmsCost[1];
- document.getElementById('farm2price').innerHTML = farmsCost[2];
- document.getElementById('farm3price').innerHTML = farmsCost[3];
- document.getElementById('farm4price').innerHTML = farmsCost[4];
- document.getElementById('farm5price').innerHTML = farmsCost[5];
- document.getElementById('farm6price').innerHTML = farmsCost[6];
- document.getElementById('farm7price').innerHTML = farmsCost[7];
- document.getElementById('farm8price').innerHTML = farmsCost[8];
+ document.getElementById('moneu').innerHTML = Math.round(moneu);
+ document.getElementById('farm1price').innerHTML = Math.round(farmsCost[1]);
+ document.getElementById('farm2price').innerHTML = Math.round(farmsCost[2]);
+ document.getElementById('farm3price').innerHTML = Math.round(farmsCost[3]);
+ document.getElementById('farm4price').innerHTML = Math.round(farmsCost[4]);
+ document.getElementById('farm5price').innerHTML = Math.round(farmsCost[5]);
+ document.getElementById('farm6price').innerHTML = Math.round(farmsCost[6]);
+ document.getElementById('farm7price').innerHTML = Math.round(farmsCost[7]);
+ document.getElementById('farm8price').innerHTML = Math.round(farmsCost[8]);
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
   return
