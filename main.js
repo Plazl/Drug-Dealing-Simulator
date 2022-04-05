@@ -11,6 +11,7 @@ var farm8interval;
 var boost = 1;
 var boostMult = 1;
 var savedGame;
+var save;
 var boostReq = {
  'farmType':4,
  'farmCount':20
@@ -62,9 +63,10 @@ var t6 = 500;
 var t7 = 500;
 var t8 = 500;
 var hiddenDrug = 2;
+var game;
 var a = document.getElementById('drugsMenu')
 function loadSave() {
- var game = JSON.parse(localStorage.getItem("gameSave"))
+    game = JSON.parse(localStorage.getItem("gameSave"))
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1}
  if (typeof game.t2 !== "undefined") {t2 = game.t2}
@@ -481,8 +483,7 @@ function saveGame() {
  'drugsWorth':drugsWorth,
  'hiddenDrug':hiddenDrug
  }
- localStorage.setItem('gameSave', savedGame)
+   save = JSON.stringify(savedGame);
+ localStorage.setItem('gameSave', save)
 }
-window.beforeUnLoad = function(e) {
- saveGame();
-}
+window.beforeUnLoad = saveGame()
