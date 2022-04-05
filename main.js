@@ -63,37 +63,37 @@ var t6 = 500;
 var t7 = 500;
 var t8 = 500;
 var hiddenDrug = 2;
+var game = JSON.parse(localStorage.getItem('gameSave'))
 var a = document.getElementById('drugsMenu')
 function loadSave() {
-   var game = JSON.parse(localStorage.getItem('gameSave'))
  if (typeof game !== "undefined") {
- if (typeof game.t1 !== "undefined") {t1 = game.t1}
- if (typeof game.t2 !== "undefined") {t2 = game.t2}
- if (typeof game.t3 !== "undefined") {t3 = game.t3}
- if (typeof game.t4 !== "undefined") {t4 = game.t4}
- if (typeof game.t5 !== "undefined") {t5 = game.t5}
- if (typeof game.t6 !== "undefined") {t6 = game.t6}
- if (typeof game.t7 !== "undefined") {t7 = game.t7}
- if (typeof game.t8 !== "undefined") {t8 = game.t8}
- if (typeof game.farm1interval !== "undefined") {farm1interval = game.farm1interval}
- if (typeof game.farm2interval !== "undefined") {farm2interval = game.farm2interval}
- if (typeof game.farm3interval !== "undefined") {farm3interval = game.farm3interval}
- if (typeof game.farm4interval !== "undefined") {farm4interval = game.farm4interval}
- if (typeof game.farm5interval !== "undefined") {farm5interval = game.farm5interval}
- if (typeof game.farm6interval !== "undefined") {farm6interval = game.farm6interval}
- if (typeof game.farm7interval !== "undefined") {farm7interval = game.farm7interval}
- if (typeof game.farm8interval !== "undefined") {farm8interval = game.farm8interval}
- if (typeof game.boost !== "undefined") {boost = game.boost}
- if (typeof game.boostMult !== "undefined") {boostMult = game.boostMult}
- if (typeof game.boostReq !== "undefined") {boostReq = game.boostReq}
- if (typeof game.farmsCost !== "undefined") {farmsCost = game.farmsCost}
- if (typeof game.farms !== "undefined") {farms = game.farms}
- if (typeof game.drugs !== "undefined") {drugs = game.drugs}
- if (typeof game.drugsWorth !== "undefined") {drugsWorth = game.drugsWorth}
- if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs}
- if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3}
- if (typeof game.dollars !== "undefined") {moneu = game.dollars}
- }
+ if (typeof game.t1 !== "undefined") {t1 = game.t1};
+ if (typeof game.t2 !== "undefined") {t2 = game.t2};
+ if (typeof game.t3 !== "undefined") {t3 = game.t3};
+ if (typeof game.t4 !== "undefined") {t4 = game.t4};
+ if (typeof game.t5 !== "undefined") {t5 = game.t5};
+ if (typeof game.t6 !== "undefined") {t6 = game.t6};
+ if (typeof game.t7 !== "undefined") {t7 = game.t7};
+ if (typeof game.t8 !== "undefined") {t8 = game.t8};
+ if (typeof game.farm1interval !== "undefined") {farm1interval = game.farm1interval};
+ if (typeof game.farm2interval !== "undefined") {farm2interval = game.farm2interval};
+ if (typeof game.farm3interval !== "undefined") {farm3interval = game.farm3interval};
+ if (typeof game.farm4interval !== "undefined") {farm4interval = game.farm4interval};
+ if (typeof game.farm5interval !== "undefined") {farm5interval = game.farm5interval};
+ if (typeof game.farm6interval !== "undefined") {farm6interval = game.farm6interval};
+ if (typeof game.farm7interval !== "undefined") {farm7interval = game.farm7interval};
+ if (typeof game.farm8interval !== "undefined") {farm8interval = game.farm8interval};
+ if (typeof game.boost !== "undefined") {boost = game.boost};
+ if (typeof game.boostMult !== "undefined") {boostMult = game.boostMult};
+ if (typeof game.boostReq !== "undefined") {boostReq = game.boostReq};
+ if (typeof game.farmsCost !== "undefined") {farmsCost = game.farmsCost};
+ if (typeof game.farms !== "undefined") {farms = game.farms};
+ if (typeof game.drugs !== "undefined") {drugs = game.drugs};
+ if (typeof game.drugsWorth !== "undefined") {drugsWorth = game.drugsWorth};
+ if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs};
+ if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3};
+ if (typeof game.dollars !== "undefined") {moneu = game.dollars};
+ };
 };
 
 function openFarmsMenu() {
@@ -422,4 +422,3 @@ function saveGame() {
  localStorage.setItem('gameSave', save)
 }
 window.beforeUnLoad = saveGame()
-loadSave()
