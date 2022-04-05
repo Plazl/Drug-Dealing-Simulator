@@ -422,3 +422,4 @@ function saveGame() {
  localStorage.setItem('gameSave', save)
 }
 window.beforeUnLoad = saveGame()
+loadSave()
