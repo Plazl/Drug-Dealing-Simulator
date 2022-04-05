@@ -10,7 +10,7 @@ var farm7interval;
 var farm8interval;
 var boost = 1;
 var boostMult = 1;
-var gameSave;
+var savedGame;
 var boostReq = {
  'farmType':4,
  'farmCount':20
@@ -453,7 +453,7 @@ function updateDrug() {
 setInterval(saveGame, 30000)
 setInterval(updateDrug, 50);
 function saveGame() {
-   gameSave = {
+   savedGame = {
  't1':t1,
  't2':t2,
  't3':t3,
@@ -481,6 +481,7 @@ function saveGame() {
  'drugsWorth':drugsWorth,
  'hiddenDrug':hiddenDrug
  }
+ localStorage.setItem('gameSave', savedGame)
 }
 window.beforeUnLoad = function(e) {
  saveGame();
