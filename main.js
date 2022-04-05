@@ -63,10 +63,9 @@ var t6 = 500;
 var t7 = 500;
 var t8 = 500;
 var hiddenDrug = 2;
-var game;
 var a = document.getElementById('drugsMenu')
 function loadSave() {
-    game = JSON.parse(localStorage.getItem("gameSave"))
+   var game = JSON.parse(localStorage.getItem('gameSave'))
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1}
  if (typeof game.t2 !== "undefined") {t2 = game.t2}
@@ -94,70 +93,6 @@ function loadSave() {
  if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs}
  if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3}
  if (typeof game.dollars !== "undefined") {moneu = game.dollars}
- } else {
-   moneu = 100;
- farm1interval;
- farm2interval;
- farm3interval;
- farm4interval;
- farm5interval;
- farm6interval;
- farm7interval;
- farm8interval;
- boost = 1;
- boostMult = 1;
- boostReq = {
- 'farmType':4,
- 'farmCount':20
-}
- farmsCost = {
- '1':100,
- '2':1000,
- '3':10000,
- '4':100000,
- '5':1000000,
- '6':10000000,
- '7':100000000,
- '8':1000000000
-}
- farms = {
- '1':0,
- '2':0,
- '3':0,
- '4':0,
- '5':0,
- '6':0,
- '7':0,
- '8':0
-}
- drugs = {
- 'aderall':0,
- 'marujuana':0,
- 'crack':0,
- 'meth':0
-}
- unlockedDrugs = {
-'aderall':1,
-'marujuana':0,
-'crack':0,
-'meth':0
-}
- drugsWorth = {
-'aderall':1,
-'marujuana':50,
-'crack':500,
-'meth':10000
-}
- t1 = 500;
- t2 = 500;
- t3 = 500;
- t4 = 500;
- t5 = 500;
- t6 = 500;
- t7 = 500;
- t8 = 500;
- a = document.getElementById('drugsMenu')
- hiddenDrug = 2
  }
 };
 
