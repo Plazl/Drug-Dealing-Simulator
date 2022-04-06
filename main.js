@@ -75,14 +75,6 @@ function loadSave() {
  if (typeof game.t6 !== "undefined") {t6 = game.t6};
  if (typeof game.t7 !== "undefined") {t7 = game.t7};
  if (typeof game.t8 !== "undefined") {t8 = game.t8};
- if (typeof game.farm1interval !== "undefined") {farm1interval = game.farm1interval};
- if (typeof game.farm2interval !== "undefined") {farm2interval = game.farm2interval};
- if (typeof game.farm3interval !== "undefined") {farm3interval = game.farm3interval};
- if (typeof game.farm4interval !== "undefined") {farm4interval = game.farm4interval};
- if (typeof game.farm5interval !== "undefined") {farm5interval = game.farm5interval};
- if (typeof game.farm6interval !== "undefined") {farm6interval = game.farm6interval};
- if (typeof game.farm7interval !== "undefined") {farm7interval = game.farm7interval};
- if (typeof game.farm8interval !== "undefined") {farm8interval = game.farm8interval};
  if (typeof game.boost !== "undefined") {boost = game.boost};
  if (typeof game.boostMult !== "undefined") {boostMult = game.boostMult};
  if (typeof game.boostReq !== "undefined") {boostReq = game.boostReq};
@@ -94,7 +86,7 @@ function loadSave() {
  if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3};
  if (typeof game.dollars !== "undefined") {moneu = game.dollars};
  };
- gameLoop()
+ loadGame();
 };
 
 function openFarmsMenu() {
@@ -397,14 +389,6 @@ function saveGame() {
  't6':t6,
  't7':t7,
  't8':t8,
- 'farm1interval':farm1interval,
- 'farm2interval':farm2interval,
- 'farm3interval':farm3interval,
- 'farm4interval':farm4interval,
- 'farm5interval':farm5interval,
- 'farm6interval':farm6interval,
- 'farm7interval':farm7interval,
- 'farm8interval':farm8interval,
  'dollars':moneu,
  'boost':boost,
  'boostReq':boostReq,
@@ -421,8 +405,8 @@ function saveGame() {
 }
 window.beforeUnLoad = saveGame()
 gameLoop();
-function loops() {
+function loadGame() {
  setInterval(gameLoop, 50);
- setInterval(saveGame, 30000)
+ setInterval(saveGame, 30000);
  setInterval(updateDrug, 50);
 }
