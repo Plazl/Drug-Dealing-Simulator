@@ -94,6 +94,7 @@ function loadSave() {
  if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3};
  if (typeof game.dollars !== "undefined") {moneu = game.dollars};
  };
+ gameLoop()
 };
 
 function openFarmsMenu() {
@@ -370,7 +371,6 @@ function farm8int() {
   drugs.meth = drugs.meth + 8 * boost
  }
 }
-setInterval(gameLoop, 50);
 function boostFarms() {
  if (boostReq.farmType == 8 && farms[8] >= boostReq.farmCount) {
   boost = boost * 2;
@@ -387,8 +387,6 @@ function updateDrug() {
   document.getElementById('hiddenDrug').innerHTML = 'meth for 1000000000 crack'
  } 
 }
-setInterval(saveGame, 30000)
-setInterval(updateDrug, 50);
 function saveGame() {
    savedGame = {
  't1':t1,
@@ -422,3 +420,9 @@ function saveGame() {
  localStorage.setItem('gameSave', save)
 }
 window.beforeUnLoad = saveGame()
+gameLoop();
+function loops() {
+ setInterval(gameLoop, 50);
+ setInterval(saveGame, 30000)
+ setInterval(updateDrug, 50);
+}
