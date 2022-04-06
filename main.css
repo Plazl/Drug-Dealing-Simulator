@@ -96,3 +96,11 @@
  border-color: darkgrey;
  border-block-width: 3px;
 }
+#boostFarms {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+
