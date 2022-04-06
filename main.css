@@ -3,7 +3,6 @@
  top: 60%;
  width: 500px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farmBtns {
@@ -12,6 +11,7 @@
  width: 100px;
  height: 30px;
  background-color: #04AA6D;
+ color: cornsilk;
  border: 5px;
 }
 #farm1 {
@@ -19,7 +19,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm2 {
@@ -27,7 +26,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm3 {
@@ -35,7 +33,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm4 {
@@ -43,7 +40,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm5 {
@@ -51,7 +47,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm6 {
@@ -59,7 +54,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm7 {
@@ -67,7 +61,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #farm8 {
@@ -75,7 +68,6 @@
  top: 60%;
  width: 100px;
  height: 30px;
- background-color: #04AA6D;
  border: 5px;
 }
 #topMenu {
