@@ -68,9 +68,31 @@
  height: 30px;
  border: 5px;
 }
-#topMenu {
- width: 30px;
- height: 20px;
+#farmsMenu {
+ height: 30px;
+ color: cornsilk;
  background-color: #04AA6D;
- border: 5px;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+#upgrdsMenu {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+#achMenu {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+#drgsMenu {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
 }
