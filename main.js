@@ -63,8 +63,33 @@ var t6 = 500;
 var t7 = 500;
 var t8 = 500;
 var hiddenDrug = 2;
-var game = JSON.parse(localStorage.getItem('gameSave'))
-var a = document.getElementById('drugsMenu')
+var autoBuyerIntervals = {
+ '1':'off',
+ '2':'off',
+ '3':'off',
+ '4':'off',
+ '5':'off',
+ '6':'off',
+ '7':'off',
+ '8':'off',
+ 'boost':'off'
+}
+var autobuyerMults = {
+ '1':1
+ '2':1
+ '3':1
+ '4':1
+ '5':1
+ '6':1
+ '7':1
+ '8':1
+ 'boost':1
+}
+var game = JSON.parse(localStorage.getItem('gameSave'));
+var menu1 = document.getElementById('farms');
+var menu2 = document.getElementById('upgrades');
+var menu3 = document.getElementById('achivements');
+var menu4 = document.getElementById('automation');
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -409,4 +434,15 @@ function loadGame() {
  setInterval(gameLoop, 50);
  setInterval(saveGame, 30000);
  setInterval(updateDrug, 50);
+}
+function autobuyers() {
+ setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerIntervals[1])
+ setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerIntervals[2])
+ setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerIntervals[3])
+ setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerIntervals[4])
+ setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerIntervals[5])
+ setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerIntervals[6])
+ setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerIntervals[7])
+ setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerIntervals[8])
+ setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerIntervals.boost)
 }
