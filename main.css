@@ -6,13 +6,11 @@
  border: 5px;
 }
 .farmBtns {
- left: 10%;
- top: 60%;
- width: 100px;
  height: 30px;
- background-color: #04AA6D;
  color: cornsilk;
- border: 5px;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
 }
 #farm1 {
  left: 10%;
