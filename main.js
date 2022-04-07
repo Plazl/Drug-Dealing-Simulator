@@ -115,32 +115,16 @@ function loadSave() {
 };
 
 function openFarmsMenu() {
-   menu1.style.display = "block"
    openTab = 1
-  if (openTab !== 1) {
-  menu1.style.display = "none"
- }
 }
 function openUpgrdsMenu() {
-   menu2.style.display = "block"
    openTab = 2
- if (openTab !== 2) {
-  menu2.style.display = "none"
- }
 }
 function openAchMenu() {
-   menu3.style.display = "block"
    openTab = 3
- if (openTab !== 3) {
-  menu3.style.display = "none"
- }
 }
 function openAutomationMenu() {
-   menu4.style.display = "block"
    openTab = 4
- if (openTab == 4) {
-  menu4.style.display = "none"
- }
 }
 function buyFarm1() {
  if (moneu >= farmsCost[1]) {
@@ -264,6 +248,27 @@ function gameLoop() {
  document.getElementById('farm6price').innerHTML = Math.round(farmsCost[6]);
  document.getElementById('farm7price').innerHTML = Math.round(farmsCost[7]);
  document.getElementById('farm8price').innerHTML = Math.round(farmsCost[8]);
+  if (openTab !== 1) {
+  menu1.style.display = "none"
+ } else { 
+  menu1.style.display = "block"
+ }
+  if (openTab !== 2) {
+  menu2.style.display = "none"
+ } else { 
+  menu2.style.display = "block"
+ }
+  if (openTab !== 3) {
+  menu3.style.display = "none"
+ } else { 
+  menu3.style.display = "block"
+ }
+  if (openTab !== 4) {
+  menu4.style.display = "none"
+ } else { 
+  menu4.style.display = "block"
+ }
+
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
   return
