@@ -89,7 +89,21 @@
  border-color: darkgrey;
  border-block-width: 3px;
 }
-#drgsMenu {
+#automation {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+#unlockDrug {
+ height: 30px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+}
+#sell {
  height: 30px;
  color: cornsilk;
  background-color: #04AA6D;
