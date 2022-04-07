@@ -116,25 +116,31 @@ function loadSave() {
 
 function openFarmsMenu() {
  if (openTab !== 1) {
-   
+   menu1.style.display = "shown"
+ } else {
+  menu.style.display = "none"
  }
 }
 function openUpgrdsMenu() {
   if (openTab !== 2) {
-   
+   menu2.style.display = "shown"
+ } else {
+  menu2.style.display = "none"
  }
 }
 function openAchMenu() {
   if (openTab !== 3) {
-   
+   menu3.style.display = "shown"
+ } else {
+  menu3.style.display = "none"
  }
 }
-function openDrugsMenu() {
+function openAutomationMenu() {
   if (openTab !== 4) {
    openTab = 4
-   a.style.display = shown
+   menu4.style.display = "shown"
  } else {
-  a.style.display = hidden
+  menu4.style.display = "none"
  }
 }
 function buyFarm1() {
