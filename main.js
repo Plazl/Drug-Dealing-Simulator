@@ -116,21 +116,21 @@ function loadSave() {
 
 function openFarmsMenu() {
  if (openTab !== 1) {
-   menu1.style.display = "shown"
+   menu1.style.display = "block"
  } else {
   menu.style.display = "none"
  }
 }
 function openUpgrdsMenu() {
   if (openTab !== 2) {
-   menu2.style.display = "shown"
+   menu2.style.display = "block"
  } else {
   menu2.style.display = "none"
  }
 }
 function openAchMenu() {
   if (openTab !== 3) {
-   menu3.style.display = "shown"
+   menu3.style.display = "block"
  } else {
   menu3.style.display = "none"
  }
@@ -138,7 +138,7 @@ function openAchMenu() {
 function openAutomationMenu() {
   if (openTab !== 4) {
    openTab = 4
-   menu4.style.display = "shown"
+   menu4.style.display = "block"
  } else {
   menu4.style.display = "none"
  }
