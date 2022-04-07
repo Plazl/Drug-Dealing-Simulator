@@ -16,7 +16,7 @@
       <td onclick="openFarmsMenu()"><button id="farmsMenu">Farms</button></td>
       <td onclick="openUpgrdsMenu()"><button id="upgrdsMenu">Upgrades</button</td>
       <td onclick="openAchMenu()"><button id="achMenu">Achivements</button</td>
-      <td onclick="openAutomationMenu()"><button id="automation">Drugs</button</td>
+      <td onclick="openAutomationMenu()"><button id="autoMenu">Drugs</button</td>
      </tr>
     </table>
        <div class="main">
@@ -59,6 +59,7 @@
     <td id="farm8">
      <button onclick="buyFarm8()" class="farmBtns">Buy farm 8 for <span id=farm8price>1000000000</span> dollars</button>
    </td>
+        <button onclick="unlockNewDrug()" id="unlockDrug">Unlock <span id='hiddenDrug'>marujuana</span></button>
         </tr>
             <tr>
     <td>
@@ -68,16 +69,22 @@
       
         </tr>
        </div>
-       <div id='upgrades'>
-        <button id='boostFarms' onclick='boostFarms()'>Boost Farms for <span id='requiredFarms'>20 </span> Eigth Farms</button>
-       </div>
        <div id='achivements'>
         <table id='achivements'>
          <tr id='achRow1'>
+          <td></td>
+          <td></td>
+          <td></td>
           </tr>
          <tr id='achRow2'>
+          <td></td>
+          <td></td>
+          <td></td>
           </tr>
          <tr id='achRow3'>
+          <td></td>
+          <td></td>
+          <td></td>
           </tr>
         </table>
        </div>
@@ -100,7 +107,9 @@
        <td></td>
       </tr>
     </div>
-     <button onclick="unlockNewDrug()" id="unlockDrug">Unlock <span id='hiddenDrug'>marujuana</span></button>
+    <div id='upgrades'>
+        <button id='boostFarms' onclick='boostFarms()'>Boost Farms for <span id='requiredFarms'>20 </span> Eigth Farms</button>
+       </div>
    <script src="main.js"></script>
  </body>
  </html>
