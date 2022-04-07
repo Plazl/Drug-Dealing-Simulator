@@ -115,31 +115,30 @@ function loadSave() {
 };
 
 function openFarmsMenu() {
- if (openTab !== 1) {
    menu1.style.display = "block"
- } else {
-  menu.style.display = "none"
+   openTab = 1
+  if (openTab !== 1) {
+  menu1.style.display = "none"
  }
 }
 function openUpgrdsMenu() {
-  if (openTab !== 2) {
    menu2.style.display = "block"
- } else {
+   openTab = 2
+ if (openTab !== 2) {
   menu2.style.display = "none"
  }
 }
 function openAchMenu() {
-  if (openTab !== 3) {
    menu3.style.display = "block"
- } else {
+   openTab = 3
+ if (openTab !== 3) {
   menu3.style.display = "none"
  }
 }
 function openAutomationMenu() {
-  if (openTab !== 4) {
-   openTab = 4
    menu4.style.display = "block"
- } else {
+   openTab = 4
+ if (openTab == 4) {
   menu4.style.display = "none"
  }
 }
