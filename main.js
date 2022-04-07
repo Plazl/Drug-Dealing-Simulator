@@ -86,7 +86,7 @@ var autobuyerMults = {
  'boost':1
 }
 var game = JSON.parse(localStorage.getItem('gameSave'));
-var menu1 = document.getElementsByClassName('main');
+var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
 var menu3 = document.getElementById('achivements');
 var menu4 = document.getElementById('automation');
