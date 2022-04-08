@@ -63,7 +63,7 @@ var t6 = 500;
 var t7 = 500;
 var t8 = 500;
 var hiddenDrug = 2;
-var autoBuyerIntervals = {
+var autoBuyerOn = {
  '1':'off',
  '2':'off',
  '3':'off',
@@ -85,7 +85,7 @@ var autobuyerMults = {
  '8':1,
  'boost':1
 }
-var autoBuyers = {
+var autobuyers = {
  '1':0,
  '2':0,
  '3':0,
@@ -477,16 +477,85 @@ function loadGame() {
  setInterval(updateDrug, 50);
 }
 function autobuyers() {
- if (autobuyers[1] >= 1 && autoBuyerInt1 == undefined) {autoBuyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerIntervals[1])} else {clearInterval(autoBuyerInt1); autoBuyerInt1 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt2 == undefined) {autoBuyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerIntervals[2])} else {clearInterval(autoBuyerInt2); autoBuyerInt2 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt3 == undefined) {autoBuyerInt3 = setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerIntervals[3])} else {clearInterval(autoBuyerInt3); autoBuyerInt3 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt4 == undefined) {autoBuyerInt4 = setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerIntervals[4])} else {clearInterval(autoBuyerInt4); autoBuyerInt4 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt5 == undefined) {autoBuyerInt5 = setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerIntervals[5])} else {clearInterval(autoBuyerInt5); autoBuyerInt5 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt6 == undefined) {autoBuyerInt6 = setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerIntervals[6])} else {clearInterval(autoBuyerInt6); autoBuyerInt6 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt7 == undefined) {autoBuyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerIntervals[7])} else {clearInterval(autoBuyerInt7); autoBuyerInt7 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt8 == undefined) {autoBuyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerIntervals[8])} else {clearInterval(autoBuyerInt8); autoBuyerInt8 = undefined}
- if (autobuyers[1] >= 1 && autoBuyerInt9 == undefined) {autoBuyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerIntervals.boost)} else {clearInterval(autoBuyerInt9); autoBuyerInt9 = undefined}
+ if (autoBuyers[1] >= 1 && autoBuyerInt1 == undefined) {autoBuyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerInt1)} else {clearInterval(autoBuyerInt1); autoBuyerInt1 = undefined}
+ if (autoBuyers[2] >= 1 && autoBuyerInt2 == undefined) {autoBuyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerInt2)} else {clearInterval(autoBuyerInt2); autoBuyerInt2 = undefined}
+ if (autoBuyers[3] >= 1 && autoBuyerInt3 == undefined) {autoBuyerInt3 = setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerInt3)} else {clearInterval(autoBuyerInt3); autoBuyerInt3 = undefined}
+ if (autoBuyers[4] >= 1 && autoBuyerInt4 == undefined) {autoBuyerInt4 = setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerInt4)} else {clearInterval(autoBuyerInt4); autoBuyerInt4 = undefined}
+ if (autoBuyers[5] >= 1 && autoBuyerInt5 == undefined) {autoBuyerInt5 = setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerInt5)} else {clearInterval(autoBuyerInt5); autoBuyerInt5 = undefined}
+ if (autoBuyers[6] >= 1 && autoBuyerInt6 == undefined) {autoBuyerInt6 = setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerInt6)} else {clearInterval(autoBuyerInt6); autoBuyerInt6 = undefined}
+ if (autoBuyers[7] >= 1 && autoBuyerInt7 == undefined) {autoBuyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerInt7)} else {clearInterval(autoBuyerInt7); autoBuyerInt7 = undefined}
+ if (autoBuyers[8] >= 1 && autoBuyerInt8 == undefined) {autoBuyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerInt8)} else {clearInterval(autoBuyerInt8); autoBuyerInt8 = undefined}
+ if (autoBuyers[9] >= 1 && autoBuyerInt9 == undefined) {autoBuyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerInt9)} else {clearInterval(autoBuyerInt9); autoBuyerInt9 = undefined}
 }
 function buyAutoBuyer1() {
- if (
+ if (moneu >= autoBuyerPrices[1]) {
+  autobuyers[1] = autobuyers[1] + 1
+  autoBuyerInt1 = autoBuyerInt1 -= 0.50;
+  autoBuyerPrices[1] = autoBuyerPrices[1] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer2() {
+ if (moneu >= autoBuyerPrices[2]) {
+  autobuyers[2] = autobuyers[2] + 1
+  autoBuyerInt2 = autoBuyerInt2 -= 0.50;
+  autoBuyerPrices[2] = autoBuyerPrices[2] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer3() {
+ if (moneu >= autoBuyerPrices[3]) {
+  autobuyers[3] = autobuyers[3] + 1
+  autoBuyerInt3 = autoBuyerInt3 -= 0.50;
+  autoBuyerPrices[3] = autoBuyerPrices[3] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer4() {
+ if (moneu >= autoBuyerPrices[4]) {
+  autobuyers[4] = autobuyers[4] + 1
+  autoBuyerInt4 = autoBuyerInt4 -= 0.50;
+  autoBuyerPrices[4] = autoBuyerPrices[4] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer5() {
+ if (moneu >= autoBuyerPrices[5]) {
+  autobuyers[5] = autobuyers[5] + 1
+  autoBuyerInt5 = autoBuyerInt5 -= 0.50;
+  autoBuyerPrices[5] = autoBuyerPrices[5] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer6() {
+ if (moneu >= autoBuyerPrices[6]) {
+  autobuyers[6] = autobuyers[6] + 1
+  autoBuyerInt6 = autoBuyerInt6 -= 0.50;
+  autoBuyerPrices[6] = autoBuyerPrices[6] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer7() {
+ if (moneu >= autoBuyerPrices[7]) {
+  autobuyers[7] = autobuyers[7] + 1
+  autoBuyerInt7 = autoBuyerInt7 -= 0.50;
+  autoBuyerPrices[7] = autoBuyerPrices[7] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyer8() {
+ if (moneu >= autoBuyerPrices[8]) {
+  autobuyers[8] = autobuyers[8] + 1
+  autoBuyerInt8 = autoBuyerInt8 -= 0.50;
+  autoBuyerPrices[8] = autoBuyerPrices[8] += 0.75
+  autobuyers();
+ }
+}
+function buyAutoBuyerBoost() {
+ if (moneu >= autoBuyerPrices.boost) {
+  autobuyers.boost = autobuyers.boost + 1
+  autoBuyerInt9 = autoBuyerInt9 -= 0.50;
+  autoBuyerPrices.boost = autoBuyerPrices.boost += 0.75
+  autobuyers();
+ }
 }
