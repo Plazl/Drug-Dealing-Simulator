@@ -85,6 +85,26 @@ var autobuyerMults = {
  '8':1,
  'boost':1
 }
+var autoBuyers = {
+ '1':0,
+ '2':0,
+ '3':0,
+ '4':0,
+ '5':0,
+ '6':0,
+ '7':0,
+ '8':0,
+ 'boost':0
+}
+var autoBuyerInt1;
+var autoBuyerInt2;
+var autoBuyerInt3;
+var autoBuyerInt4;
+var autoBuyerInt5;
+var autoBuyerInt6;
+var autoBuyerInt7;
+var autoBuyerInt8;
+var autoBuyerInt9;
 var game = JSON.parse(localStorage.getItem('gameSave'));
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
@@ -446,13 +466,13 @@ function loadGame() {
  setInterval(updateDrug, 50);
 }
 function autobuyers() {
- setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerIntervals[1])
- setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerIntervals[2])
- setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerIntervals[3])
- setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerIntervals[4])
- setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerIntervals[5])
- setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerIntervals[6])
- setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerIntervals[7])
- setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerIntervals[8])
- setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerIntervals.boost)
+ if (autobuyers[1] >= 1 && autoBuyerInt1 == undefined) {autoBuyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerIntervals[1])} else {clearInterval(autoBuyerInt1); autoBuyerInt1 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt2 == undefined) {autoBuyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerIntervals[2])} else {clearInterval(autoBuyerInt2); autoBuyerInt2 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt3 == undefined) {autoBuyerInt3 = setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerIntervals[3])} else {clearInterval(autoBuyerInt3); autoBuyerInt3 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt4 == undefined) {autoBuyerInt4 = setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerIntervals[4])} else {clearInterval(autoBuyerInt4); autoBuyerInt4 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt5 == undefined) {autoBuyerInt5 = setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerIntervals[5])} else {clearInterval(autoBuyerInt5); autoBuyerInt5 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt6 == undefined) {autoBuyerInt6 = setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerIntervals[6])} else {clearInterval(autoBuyerInt6); autoBuyerInt6 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt7 == undefined) {autoBuyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerIntervals[7])} else {clearInterval(autoBuyerInt7); autoBuyerInt7 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt8 == undefined) {autoBuyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerIntervals[8])} else {clearInterval(autoBuyerInt8); autoBuyerInt8 = undefined}
+ if (autobuyers[1] >= 1 && autoBuyerInt9 == undefined) {autoBuyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerIntervals.boost)} else {clearInterval(autoBuyerInt9); autoBuyerInt9 = undefined}
 }
