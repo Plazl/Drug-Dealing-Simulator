@@ -72,6 +72,7 @@
 #farmsMenu {
  height: 30px;
  width: 100px;
+ left: 300px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -81,6 +82,7 @@
 #upgrdsMenu {
  height: 30px;
  width: 100px;
+ left: 400px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -90,6 +92,7 @@
 #achMenu {
  height: 30px;
  width: 100px;
+ left: 500px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -99,6 +102,7 @@
 #autoMenu {
  height: 30px;
  width: 100px;
+ left: 600px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
