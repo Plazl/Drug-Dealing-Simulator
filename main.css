@@ -7,6 +7,7 @@
 }
 .farmBtns {
  height: 30px;
+ width: 190px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -75,7 +76,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: absolute;
+ position: relative;
 }
 #upgrdsMenu {
  height: 30px;
@@ -84,7 +85,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: absolute;
+ position: relative;
 }
 #achMenu {
  height: 30px;
@@ -93,7 +94,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: absolute;
+ position: relative;
 }
 #autoMenu {
  height: 30px;
@@ -102,7 +103,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: absolute;
+ position: relative;
 }
 #unlockDrug {
  height: 30px;
@@ -126,4 +127,6 @@
  border-color: darkgrey;
  border-block-width: 3px;
 }
-
+#topMenu {
+ position: absolute;
+}
