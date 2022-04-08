@@ -96,6 +96,17 @@ var autoBuyers = {
  '8':0,
  'boost':0
 }
+var autoBuyerPrices = {
+ '1':500,
+ '2':1000,
+ '3':2000,
+ '4':4000,
+ '5':8000,
+ '6':16000,
+ '7':32000,
+ '8':64000,
+ 'boost':128000
+}
 var autoBuyerInt1;
 var autoBuyerInt2;
 var autoBuyerInt3;
@@ -475,4 +486,7 @@ function autobuyers() {
  if (autobuyers[1] >= 1 && autoBuyerInt7 == undefined) {autoBuyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerIntervals[7])} else {clearInterval(autoBuyerInt7); autoBuyerInt7 = undefined}
  if (autobuyers[1] >= 1 && autoBuyerInt8 == undefined) {autoBuyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerIntervals[8])} else {clearInterval(autoBuyerInt8); autoBuyerInt8 = undefined}
  if (autobuyers[1] >= 1 && autoBuyerInt9 == undefined) {autoBuyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, autoBuyerIntervals.boost)} else {clearInterval(autoBuyerInt9); autoBuyerInt9 = undefined}
+}
+function buyAutoBuyer1() {
+ if (
 }
