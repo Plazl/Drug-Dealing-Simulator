@@ -76,7 +76,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: relative;
+ position: absolute;
 }
 #upgrdsMenu {
  height: 30px;
@@ -85,7 +85,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: relative;
+ position: absolute;
 }
 #achMenu {
  height: 30px;
@@ -94,7 +94,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: relative;
+ position: absolute;
 }
 #autoMenu {
  height: 30px;
@@ -103,7 +103,7 @@
  background-color: #04AA6D;
  border-color: darkgrey;
  border-block-width: 3px;
- position: relative;
+ position: absolute;
 }
 #unlockDrug {
  height: 30px;
@@ -128,5 +128,5 @@
  border-block-width: 3px;
 }
 #topMenu {
- position: absolute;
+ position: relative;
 }
