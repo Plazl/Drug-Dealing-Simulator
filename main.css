@@ -134,9 +134,12 @@
 #topMenu {
  position: relative;
 }
-.autoBuyerDiv {
+#automation {
     position; relative;
     top: 25px;
+    
+}
+.autoBuyerDiv {
     border: solid 1px grey;
     width: 230px;
     height: 155px;
