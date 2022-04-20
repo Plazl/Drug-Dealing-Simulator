@@ -1,3 +1,6 @@
+body {
+ text-align: -webkit-center;
+}
 #farms {
  left: 10%;
  top: 60%;
@@ -136,7 +139,7 @@
 }
 #automation {
     position: relative !important;
-    top: 25px !important;
+    text-align: -webkit-center;
     
 }
 .autoBuyerDiv {
