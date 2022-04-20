@@ -4,9 +4,9 @@
  </head>
 <body onload="loadSave()">
  <div class="main">
- <table>
+ <table id="topBar">
  <tr>
-  <p>You have <span id="drugs">0</span> total drugs</p>
+  <p>You have <span id="drugs" style="font-size:25px; color: black">0</span> total drugs</p>
   <p>You have <span id="moneu">100</span> dollars</p>
  </tr>
   </table>
@@ -22,43 +22,125 @@
        <div id="farms">
   <table>
    <tr>
-    <td id="farm1">
-     <button onclick="buyFarm1()" class="farmBtns">Buy farm 1 for <span id=farm1price>100</span> dollars</button>
-   </td>
-    </tr>
-   <tr>
-    <td id="farm2">
-      <button onclick="buyFarm2()" class="farmBtns">Buy farm 2 for <span id=farm2price>1000</span> dollars</button>
-   </td>
-    </tr>
-   <tr>
-    <td id="farm3">
-     <button onclick="buyFarm3()" class="farmBtns">Buy farm 3 for <span id=farm3price>10000</span> dollars</button>
-   </td>
-   </tr>
-   <tr>
-    <td id="farm4">
-     <button onclick="buyFarm4()" class="farmBtns">Buy farm 4 for <span id=farm4price>100000</span> dollars</button>
-   </td>
-    </tr>
-    <td id="farm5">
-     <button onclick="buyFarm5()" class="farmBtns">Buy farm 5 for <span id=farm5price>1000000</span> dollars</button>
-   </td>
-   </tr>
-   <tr>
-    <td id="farm6">
-     <button onclick="buyFarm6()" class="farmBtns">Buy farm 6 for <span id=farm6price>10000000</span> dollars</button>
-   </td>
-    </tr>
-       <tr>
-    <td id="farm7">
-     <button onclick="buyFarm7()" class="farmBtns">Buy farm 7 for <span id=farm7price>100000000</span> dollars</button>
+    <tr id="farm1">
+     <td>
+      <p>
+       Farm 1 x
+       <span id="farm1mult">1.0</span>
+       <td>
+        <span id="1stfarms"> 0 (0)</span>
+       </td>
+      </p>
      </td>
-       </tr>
-       <tr>
-    <td id="farm8">
-     <button onclick="buyFarm8()" class="farmBtns">Buy farm 8 for <span id=farm8price>1000000000</span> dollars</button>
-   </td>
+     <td>
+     <button onclick="buyFarm1()" class="farmBtns">Cost: <span id=farm1price>100</span> dollars</button>
+   </tr>
+    </tr>
+    <tr>
+    <tr id="farm2">
+     <td>
+      <p>
+       Farm 2 x
+       <span id="farm2mult">1.0</span>
+       <td>
+        <span id="2ndfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm2()" class="farmBtns">Cost: <span id=farm2price>1000</span> dollars</button>
+   </tr>
+    </tr>
+  <tr>
+    <tr id="farm3">
+     <td>
+      <p>
+       Farm 1 x
+       <span id="farm3mult">1.0</span>
+       <td>
+        <span id="3dfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm3()" class="farmBtns">Cost: <span id=farm3price>10000</span> dollars</button>
+   </tr>
+    </tr>
+    <tr>
+    <tr id="farm4">
+     <td>
+      <p>
+       Farm 4 x
+       <span id="farm4mult">1.0</span>
+       <td>
+        <span id="4thfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm4()" class="farmBtns">Cost: <span id=farm4price>100000</span> dollars</button>
+   </tr>
+    </tr>
+    <tr>
+    <tr id="farm5">
+     <td>
+      <p>
+       Farm 5 x
+       <span id="farm5mult">1.0</span>
+       <td>
+        <span id="5thfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm5()" class="farmBtns">Cost: <span id=farm5price>1000000</span> dollars</button>
+   </tr>
+    </tr>
+  <tr>
+    <tr id="farm6">
+     <td>
+      <p>
+       Farm 6 x
+       <span id="farm6mult">1.0</span>
+       <td>
+        <span id="6stfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm6()" class="farmBtns">Cost: <span id=farm6price>10000000</span> dollars</button>
+   </tr>
+    </tr>
+  <tr>
+    <tr id="farm7">
+     <td>
+      <p>
+       Farm 7 x
+       <span id="farm7mult">1.0</span>
+       <td>
+        <span id="7thfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm7()" class="farmBtns">Cost: <span id=farm7price>100000000</span> dollars</button>
+   </tr>
+    </tr>
+ <tr>
+    <tr id="farm8">
+     <td>
+      <p>
+       Farm 8 x
+       <span id="farm8mult">1.0</span>
+       <td>
+        <span id="8thfarms"> 0 (0)</span>
+       </td>
+      </p>
+     </td>
+     <td>
+     <button onclick="buyFarm8()" class="farmBtns">Cost: <span id=farm8price>1000000000</span> dollars</button>
+   </tr>
+    </tr>
         <button onclick="unlockNewDrug()" id="unlockDrug">Unlock <span id='hiddenDrug'>marujuana</span></button>
         </tr>
             <tr>
