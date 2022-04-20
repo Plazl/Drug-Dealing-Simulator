@@ -135,8 +135,8 @@
  position: relative;
 }
 #automation {
-    position; relative;
-    top: 25px;
+    position: relative !important;
+    top: 25px !important;
     
 }
 .autoBuyerDiv {
