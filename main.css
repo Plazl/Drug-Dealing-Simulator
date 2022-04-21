@@ -2,8 +2,8 @@ body {
  text-align: -webkit-center;
 }
 #farms {
- left: 10%;
- top: 60%;
+ left: -90px;
+ top: 25%;
  width: 500px;
  height: 30px;
  border: 5px;
@@ -123,13 +123,15 @@ body {
  position: absolute;
 }
 #unlockDrug {
- height: 30px;
- width: 100px;
- color: cornsilk;
- background-color: #04AA6D;
- border-color: darkgrey;
- border-block-width: 3px;
- position: absolute;
+height: 30px;
+    width: 100px;
+    top: -50px;
+    left: 250px;
+    color: cornsilk;
+    background-color: #04AA6D;
+    border-color: darkgrey;
+    border-block-width: 3px;
+    position: absolute;
 }
 #sell {
  height: 30px;
