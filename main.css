@@ -141,6 +141,7 @@ height: 30px;
 }
 #topMenu {
  position: relative;
+ left: -35%;
 }
 #automation {
     position: relative !important;
