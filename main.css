@@ -150,10 +150,11 @@ height: 30px;
 }
 .autoBuyerDiv {
     border: solid 1px grey;
-    width: 230px;
-    height: 155px;
+    width: 150px;
+    height: 135px;
     text-align: center;
     font-size: 100%;
     padding: 10px;
     border-radius: 4px;
+    position: relative;
 }
