@@ -149,6 +149,7 @@ height: 30px;
     
 }
 .autoBuyerDiv {
+    top: 25px;
     border: solid 1px grey;
     width: 150px;
     height: 135px;
