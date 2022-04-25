@@ -160,7 +160,7 @@ height: 30px;
 #automation {
     position: relative !important;
     text-align: -webkit-center;
-    
+    height: 2px;
 }
 .autoBuyerDiv {
     top: 25px;
