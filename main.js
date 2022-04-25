@@ -493,6 +493,7 @@ function buyAutoBuyer1() {
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
   autoBuyerPrices[1] = autoBuyerPrices[1] += 0.75
   autobuyers();
+  document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
  }
 }
 function buyAutoBuyer2() {
@@ -501,6 +502,7 @@ function buyAutoBuyer2() {
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
   autoBuyerPrices[2] = autoBuyerPrices[2] += 0.75
   autobuyers();
+  document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
  }
 }
 function buyAutoBuyer3() {
