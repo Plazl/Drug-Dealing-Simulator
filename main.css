@@ -2,8 +2,18 @@ body {
  text-align: -webkit-center;
 }
 .topMnuClss {
+  top: -10%;
+  position: absolute;
+}
 
+.autoBuyerTDs {
+ top: -30px;
+ position: absolute;
+}
 
+.autoBuyerTRs {
+  top: 30px;
+  position: relative;
 }
 #farms {
  left: -90px;
