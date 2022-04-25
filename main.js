@@ -299,6 +299,15 @@ function gameLoop() {
  } else { 
   menu4.style.display = "block"
  }
+ document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
+ document.getElementById('farm2buyer').innerHTML = autoBuyerPrices[2]
+ document.getElementById('farm3buyer').innerHTML = autoBuyerPrices[3]
+ document.getElementById('farm4buyer').innerHTML = autoBuyerPrices[4]
+ document.getElementById('farm5buyer').innerHTML = autoBuyerPrices[5]
+ document.getElementById('farm6buyer').innerHTML = autoBuyerPrices[6]
+ document.getElementById('farm7buyer').innerHTML = autoBuyerPrices[7]
+ document.getElementById('farm8buyer').innerHTML = autoBuyerPrices[8]
+ document.getElementById('boostbuyer').innerHTML = autoBuyerPrices.boost
 
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
@@ -491,7 +500,7 @@ function buyAutoBuyer1() {
  if (moneu >= autoBuyerPrices[1]) {
   autobuyers[1] = autobuyers[1] + 1
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
-  autoBuyerPrices[1] = autoBuyerPrices[1] += 0.75
+  autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] += 1.11)
   autobuyers();
   document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
  }
@@ -500,7 +509,7 @@ function buyAutoBuyer2() {
  if (moneu >= autoBuyerPrices[2]) {
   autobuyers[2] = autobuyers[2] + 1
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
-  autoBuyerPrices[2] = autoBuyerPrices[2] += 0.75
+  autoBuyerPrices[2] = Math.round(autoBuyerPrices[2] += 2.22)
   autobuyers();
   document.getElementById('farm2buyer').innerHTML = autoBuyerPrices[2]
  }
@@ -509,7 +518,7 @@ function buyAutoBuyer3() {
  if (moneu >= autoBuyerPrices[3]) {
   autobuyers[3] = autobuyers[3] + 1
   autoBuyerInt3 = autoBuyerInt3 -= 0.50;
-  autoBuyerPrices[3] = autoBuyerPrices[3] += 0.75
+  autoBuyerPrices[3] = Math.round(autoBuyerPrices[3] += 3.33)
   autobuyers();
   document.getElementById('farm3buyer').innerHTML = autoBuyerPrices[3]
  }
@@ -518,7 +527,7 @@ function buyAutoBuyer4() {
  if (moneu >= autoBuyerPrices[4]) {
   autobuyers[4] = autobuyers[4] + 1
   autoBuyerInt4 = autoBuyerInt4 -= 0.50;
-  autoBuyerPrices[4] = autoBuyerPrices[4] += 0.75
+  autoBuyerPrices[4] = Math.round(autoBuyerPrices[4] += 4.44)
   autobuyers();
   document.getElementById('farm4buyer').innerHTML = autoBuyerPrices[4]
  }
@@ -527,7 +536,7 @@ function buyAutoBuyer5() {
  if (moneu >= autoBuyerPrices[5]) {
   autobuyers[5] = autobuyers[5] + 1
   autoBuyerInt5 = autoBuyerInt5 -= 0.50;
-  autoBuyerPrices[5] = autoBuyerPrices[5] += 0.75
+  autoBuyerPrices[5] = Math.round(autoBuyerPrices[5] += 5.55)
   autobuyers();
   document.getElementById('farm5buyer').innerHTML = autoBuyerPrices[5]
  }
@@ -536,7 +545,7 @@ function buyAutoBuyer6() {
  if (moneu >= autoBuyerPrices[6]) {
   autobuyers[6] = autobuyers[6] + 1
   autoBuyerInt6 = autoBuyerInt6 -= 0.50;
-  autoBuyerPrices[6] = autoBuyerPrices[6] += 0.75
+  autoBuyerPrices[6] = Math.round(autoBuyerPrices[6] += 6.66)
   autobuyers();
   document.getElementById('farm6buyer').innerHTML = autoBuyerPrices[6]
  }
@@ -545,7 +554,7 @@ function buyAutoBuyer7() {
  if (moneu >= autoBuyerPrices[7]) {
   autobuyers[7] = autobuyers[7] + 1
   autoBuyerInt7 = autoBuyerInt7 -= 0.50;
-  autoBuyerPrices[7] = autoBuyerPrices[7] += 0.75
+  autoBuyerPrices[7] = Math.round(autoBuyerPrices[7] += 7.77)
   autobuyers();
   document.getElementById('farm7buyer').innerHTML = autoBuyerPrices[7]
  }
@@ -554,7 +563,7 @@ function buyAutoBuyer8() {
  if (moneu >= autoBuyerPrices[8]) {
   autobuyers[8] = autobuyers[8] + 1
   autoBuyerInt8 = autoBuyerInt8 -= 0.50;
-  autoBuyerPrices[8] = autoBuyerPrices[8] += 0.75
+  autoBuyerPrices[8] = Math.round(autoBuyerPrices[8] += 8.88)
   autobuyers();
   document.getElementById('farm8buyer').innerHTML = autoBuyerPrices[8]
  }
@@ -563,7 +572,7 @@ function buyAutoBuyerBoost() {
  if (moneu >= autoBuyerPrices.boost) {
   autobuyers.boost = autobuyers.boost + 1
   autoBuyerInt9 = autoBuyerInt9 -= 0.50;
-  autoBuyerPrices.boost = autoBuyerPrices.boost += 0.75
+  autoBuyerPrices.boost = Math.round(autoBuyerPrices.boost *= 9.99)
   autobuyers();
   document.getElementById('boostbuyer').innerHTML = autoBuyerPrices.boost
  }
