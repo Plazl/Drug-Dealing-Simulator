@@ -502,7 +502,7 @@ function buyAutoBuyer2() {
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
   autoBuyerPrices[2] = autoBuyerPrices[2] += 0.75
   autobuyers();
-  document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
+  document.getElementById('farm2buyer').innerHTML = autoBuyerPrices[2]
  }
 }
 function buyAutoBuyer3() {
@@ -511,6 +511,7 @@ function buyAutoBuyer3() {
   autoBuyerInt3 = autoBuyerInt3 -= 0.50;
   autoBuyerPrices[3] = autoBuyerPrices[3] += 0.75
   autobuyers();
+  document.getElementById('farm3buyer').innerHTML = autoBuyerPrices[3]
  }
 }
 function buyAutoBuyer4() {
@@ -519,6 +520,7 @@ function buyAutoBuyer4() {
   autoBuyerInt4 = autoBuyerInt4 -= 0.50;
   autoBuyerPrices[4] = autoBuyerPrices[4] += 0.75
   autobuyers();
+  document.getElementById('farm4buyer').innerHTML = autoBuyerPrices[4]
  }
 }
 function buyAutoBuyer5() {
@@ -527,6 +529,7 @@ function buyAutoBuyer5() {
   autoBuyerInt5 = autoBuyerInt5 -= 0.50;
   autoBuyerPrices[5] = autoBuyerPrices[5] += 0.75
   autobuyers();
+  document.getElementById('farm5buyer').innerHTML = autoBuyerPrices[5]
  }
 }
 function buyAutoBuyer6() {
@@ -535,6 +538,7 @@ function buyAutoBuyer6() {
   autoBuyerInt6 = autoBuyerInt6 -= 0.50;
   autoBuyerPrices[6] = autoBuyerPrices[6] += 0.75
   autobuyers();
+  document.getElementById('farm6buyer').innerHTML = autoBuyerPrices[6]
  }
 }
 function buyAutoBuyer7() {
@@ -543,6 +547,7 @@ function buyAutoBuyer7() {
   autoBuyerInt7 = autoBuyerInt7 -= 0.50;
   autoBuyerPrices[7] = autoBuyerPrices[7] += 0.75
   autobuyers();
+  document.getElementById('farm7buyer').innerHTML = autoBuyerPrices[7]
  }
 }
 function buyAutoBuyer8() {
@@ -551,6 +556,7 @@ function buyAutoBuyer8() {
   autoBuyerInt8 = autoBuyerInt8 -= 0.50;
   autoBuyerPrices[8] = autoBuyerPrices[8] += 0.75
   autobuyers();
+  document.getElementById('farm8buyer').innerHTML = autoBuyerPrices[8]
  }
 }
 function buyAutoBuyerBoost() {
@@ -559,5 +565,6 @@ function buyAutoBuyerBoost() {
   autoBuyerInt9 = autoBuyerInt9 -= 0.50;
   autoBuyerPrices.boost = autoBuyerPrices.boost += 0.75
   autobuyers();
+  document.getElementById('boostbuyer').innerHTML = autoBuyerPrices.boost
  }
 }
