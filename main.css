@@ -1,18 +1,17 @@
 body {
  text-align: -webkit-center;
+ overflow: hidden;
 }
 .topMnuClss {
   top: -10%;
   position: absolute;
 }
-
 .autoBuyerTDs {
- top: -30px;
- position: absolute;
+  top: 25px;
+  position: relative;
 }
-
 .autoBuyerTRs {
-  top: 30px;
+  top: 25px;
   position: relative;
 }
 #farms {
@@ -161,6 +160,7 @@ height: 30px;
     position: relative !important;
     text-align: -webkit-center;
     height: 2px;
+    top: -25px;
 }
 .autoBuyerDiv {
     top: 25px;
