@@ -308,15 +308,15 @@ function gameLoop() {
  document.getElementById('farm7buyer').innerHTML = autoBuyerPrices[7]
  document.getElementById('farm8buyer').innerHTML = autoBuyerPrices[8]
  document.getElementById('boostbuyer').innerHTML = autoBuyerPrices.boost
- document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
- document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
- document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
- document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
- document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
- document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
- document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
- document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
- document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
+ if (autoBuyerInt1 !== undefined) {document.getElementById('buyerInt1').innerHTML = autoBuyerInt1} else {return;};
+ if (autoBuyerInt2 !== undefined) {document.getElementById('buyerInt2').innerHTML = autoBuyerInt2} else {return;};
+ if (autoBuyerInt3 !== undefined) {document.getElementById('buyerInt3').innerHTML = autoBuyerInt3} else {return;};
+ if (autoBuyerInt4 !== undefined) {document.getElementById('buyerInt4').innerHTML = autoBuyerInt4} else {return;};
+ if (autoBuyerInt5 !== undefined) {document.getElementById('buyerInt5').innerHTML = autoBuyerInt5} else {return;};
+ if (autoBuyerInt6 !== undefined) {document.getElementById('buyerInt6').innerHTML = autoBuyerInt6} else {return;};
+ if (autoBuyerInt7 !== undefined) {document.getElementById('buyerInt7').innerHTML = autoBuyerInt7} else {return;};
+ if (autoBuyerInt8 !== undefined) {document.getElementById('buyerInt8').innerHTML = autoBuyerInt8} else {return;};
+ if (autoBuyerInt9 !== undefined) {document.getElementById('buyerInt9').innerHTML = autoBuyerInt9} else {return;};
 
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
