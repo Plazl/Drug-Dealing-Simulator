@@ -299,15 +299,15 @@ function gameLoop() {
  } else { 
   menu4.style.display = "block"
  }
- document.getElementById('farm1buyer').innerHTML = autoBuyerPrices[1]
- document.getElementById('farm2buyer').innerHTML = autoBuyerPrices[2]
- document.getElementById('farm3buyer').innerHTML = autoBuyerPrices[3]
- document.getElementById('farm4buyer').innerHTML = autoBuyerPrices[4]
- document.getElementById('farm5buyer').innerHTML = autoBuyerPrices[5]
- document.getElementById('farm6buyer').innerHTML = autoBuyerPrices[6]
- document.getElementById('farm7buyer').innerHTML = autoBuyerPrices[7]
- document.getElementById('farm8buyer').innerHTML = autoBuyerPrices[8]
- document.getElementById('boostbuyer').innerHTML = autoBuyerPrices.boost
+ document.getElementById('farm1Cost').innerHTML = autoBuyerPrices[1]
+ document.getElementById('farm2Cost').innerHTML = autoBuyerPrices[2]
+ document.getElementById('farm3Cost').innerHTML = autoBuyerPrices[3]
+ document.getElementById('farm4Cost').innerHTML = autoBuyerPrices[4]
+ document.getElementById('farm5Cost').innerHTML = autoBuyerPrices[5]
+ document.getElementById('farm6Cost').innerHTML = autoBuyerPrices[6]
+ document.getElementById('farm7Cost').innerHTML = autoBuyerPrices[7]
+ document.getElementById('farm8Cost').innerHTML = autoBuyerPrices[8]
+ document.getElementById('boost9Cost').innerHTML = autoBuyerPrices.boost
  if (autoBuyerInt1 !== undefined) {document.getElementById('buyerInt1').innerHTML = autoBuyerInt1} else {return;};
  if (autoBuyerInt2 !== undefined) {document.getElementById('buyerInt2').innerHTML = autoBuyerInt2} else {return;};
  if (autoBuyerInt3 !== undefined) {document.getElementById('buyerInt3').innerHTML = autoBuyerInt3} else {return;};
