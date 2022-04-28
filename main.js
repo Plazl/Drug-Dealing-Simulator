@@ -320,41 +320,41 @@ function gameLoop() {
 
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
-  return
+  
  }
  
  if (farms[2] >= 1 && farm2interval == undefined) {
   farm2interval = setInterval(farm2int, t2)
-  return
+  
  }
  
  if (farms[3] >= 1 && farm3interval == undefined) {
   farm3interval = setInterval(farm3int, t3)
-  return
+  
  }
  if (farms[4] >= 1 && farm4interval == undefined) {
   farm4interval = setInterval(farm4int, t4)
-  return
+  
  }
  
  if (farms[5] >= 1 && farm5interval == undefined) {
   farm5interval = setInterval(farm5int, t5)
-  return
+  
  }
  
  if (farms[6] >= 1 && farm6interval == undefined) {
   farm6interval = setInterval(farm6int, t6)
-  return
+  
  }
  
  if (farms[7] >= 1 && farm7interval == undefined) {
   farm7interval = setInterval(farm7int, t7)
-  return
+  
  }
  
  if (farms[8] >= 1 && farm8interval == undefined) {
   farm8interval = setInterval(farm8int, t8)
-  return
+  
  }
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
@@ -487,13 +487,6 @@ function saveGame() {
    save = JSON.stringify(savedGame);
  localStorage.setItem('gameSave', save)
 }
-window.beforeUnLoad = saveGame()
-gameLoop();
-function loadGame() {
- setInterval(gameLoop, 50);
- setInterval(saveGame, 30000);
- setInterval(updateDrug, 50);
-}
 function autoBuyers() {
  if (autobuyers[1] >= 1 && buyerInt1 == undefined) {buyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerInt1)} else {clearInterval(buyerInt1); buyerInt1 = undefined}
  if (autobuyers[2] >= 1 && buyerInt2 == undefined) {buyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerInt2)} else {clearInterval(buyerInt2); buyerInt2 = undefined}
@@ -506,7 +499,7 @@ function autoBuyers() {
  if (autobuyers[9] >= 1 && buyerInt9 == undefined) {buyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, buyerInt9)} else {clearInterval(buyerInt9); buyerInt9 = undefined}
 }
 function buyAutoBuyer1() {
- if (moneu >= autoBuyerPrices[1]) {
+ if (moneu >= autoBuyerPrices[1] && autoBuyerInt1 <=! 0.10) {
   autobuyers[1] = autobuyers[1] + 1
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
   autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] *= 1.11)
@@ -517,7 +510,7 @@ function buyAutoBuyer1() {
  }
 }
 function buyAutoBuyer2() {
- if (moneu >= autoBuyerPrices[2]) {
+ if (moneu >= autoBuyerPrices[2] && autoBuyerInt2 <=! 0.10) {
   autobuyers[2] = autobuyers[2] + 1
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
   autoBuyerPrices[2] = Math.round(autoBuyerPrices[2] *= 2.22)
@@ -528,7 +521,7 @@ function buyAutoBuyer2() {
  }
 }
 function buyAutoBuyer3() {
- if (moneu >= autoBuyerPrices[3]) {
+ if (moneu >= autoBuyerPrices[3] && autoBuyerInt3 <=! 0.10) {
   autobuyers[3] = autobuyers[3] + 1
   autoBuyerInt3 = autoBuyerInt3 -= 0.50;
   autoBuyerPrices[3] = Math.round(autoBuyerPrices[3] *= 3.33)
@@ -539,7 +532,7 @@ function buyAutoBuyer3() {
  }
 }
 function buyAutoBuyer4() {
- if (moneu >= autoBuyerPrices[4]) {
+ if (moneu >= autoBuyerPrices[4] && autoBuyerInt4 <=! 0.10) {
   autobuyers[4] = autobuyers[4] + 1
   autoBuyerInt4 = autoBuyerInt4 -= 0.50;
   autoBuyerPrices[4] = Math.round(autoBuyerPrices[4] *= 4.44)
@@ -550,7 +543,7 @@ function buyAutoBuyer4() {
  }
 }
 function buyAutoBuyer5() {
- if (moneu >= autoBuyerPrices[5]) {
+ if (moneu >= autoBuyerPrices[5] && autoBuyerInt5 <=! 0.10) {
   autobuyers[5] = autobuyers[5] + 1
   autoBuyerInt5 = autoBuyerInt5 -= 0.50;
   autoBuyerPrices[5] = Math.round(autoBuyerPrices[5] *= 5.55)
@@ -561,7 +554,7 @@ function buyAutoBuyer5() {
  }
 }
 function buyAutoBuyer6() {
- if (moneu >= autoBuyerPrices[6]) {
+ if (moneu >= autoBuyerPrices[6] && autoBuyerInt6 <=! 0.10) {
   autobuyers[6] = autobuyers[6] + 1
   autoBuyerInt6 = autoBuyerInt6 -= 0.50;
   autoBuyerPrices[6] = Math.round(autoBuyerPrices[6] *= 6.66)
@@ -572,7 +565,7 @@ function buyAutoBuyer6() {
  }
 }
 function buyAutoBuyer7() {
- if (moneu >= autoBuyerPrices[7]) {
+ if (moneu >= autoBuyerPrices[7] && autoBuyerInt7 <=! 0.10) {
   autobuyers[7] = autobuyers[7] + 1
   autoBuyerInt7 = autoBuyerInt7 -= 0.50;
   autoBuyerPrices[7] = Math.round(autoBuyerPrices[7] *= 7.77)
@@ -583,7 +576,7 @@ function buyAutoBuyer7() {
  }
 }
 function buyAutoBuyer8() {
- if (moneu >= autoBuyerPrices[8]) {
+ if (moneu >= autoBuyerPrices[8] && autoBuyerInt8 <=! 0.10) {
   autobuyers[8] = autobuyers[8] + 1
   autoBuyerInt8 = autoBuyerInt8 -= 0.50;
   autoBuyerPrices[8] = Math.round(autoBuyerPrices[8] *= 8.88)
@@ -594,7 +587,7 @@ function buyAutoBuyer8() {
  }
 }
 function buyAutoBuyerBoost() {
- if (moneu >= autoBuyerPrices.boost) {
+ if (moneu >= autoBuyerPrices.boost && autoBuyerInt9 <=! 0.10) {
   autobuyers.boost = autobuyers.boost + 1
   autoBuyerInt9 = autoBuyerInt9 -= 0.50;
   autoBuyerPrices.boost = Math.round(autoBuyerPrices.boost *= 9.99)
@@ -604,3 +597,14 @@ function buyAutoBuyerBoost() {
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
  }
 }
+
+window.beforeUnLoad = saveGame()
+gameLoop();
+function loadGame() {
+ setInterval(gameLoop, 50);
+ setInterval(saveGame, 10000);
+ setInterval(updateDrug, 50);
+}
+var bttn = document.getElementById('unlockDrug')
+e.style.width = 150
+e.style.height = 40
