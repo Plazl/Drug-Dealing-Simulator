@@ -606,5 +606,5 @@ function loadGame() {
  setInterval(updateDrug, 50);
 }
 var bttn = document.getElementById('unlockDrug')
-e.style.width = 150
-e.style.height = 40
+bttn.style.width = 150
+bttn.style.height = 40
