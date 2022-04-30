@@ -282,17 +282,17 @@ function gameLoop() {
   if (openTab !== 1) {
   menu1.style.display = "none"
  } else { 
-  menu1.style.display = "contents"
+  menu1.style.display = "block"
  }
   if (openTab !== 2) {
   menu2.style.display = "none"
  } else { 
-  menu2.style.display = "contents"
+  menu2.style.display = "block"
  }
   if (openTab !== 3) {
   menu3.style.display = "none"
  } else { 
-  menu3.style.display = "contents"
+  menu3.style.display = "block"
  }
   if (openTab !== 4) {
   menu4.style.display = "none"
