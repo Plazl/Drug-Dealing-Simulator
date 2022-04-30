@@ -282,22 +282,22 @@ function gameLoop() {
   if (openTab !== 1) {
   menu1.style.display = "none"
  } else { 
-  menu1.style.display = "block"
+  menu1.style.display = "contents"
  }
   if (openTab !== 2) {
   menu2.style.display = "none"
  } else { 
-  menu2.style.display = "block"
+  menu2.style.display = "contents"
  }
   if (openTab !== 3) {
   menu3.style.display = "none"
  } else { 
-  menu3.style.display = "block"
+  menu3.style.display = "contents"
  }
   if (openTab !== 4) {
   menu4.style.display = "none"
  } else { 
-  menu4.style.display = "block"
+  menu4.style.display = "contents"
  }
  document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
  document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
