@@ -308,7 +308,7 @@ function gameLoop() {
  document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
  document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
  document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
- if (autoBuyerInt1 !== undefined) {document.getElementById('buyerInt1').innerHTML = autoBuyerInt1} else {return;};
+ if (autoBuyerInt1 !== undefined) {document.getElementById('buyerInt1').innerHTML = autoBuyerInt1} else {};
  if (autoBuyerInt2 !== undefined) {document.getElementById('buyerInt2').innerHTML = autoBuyerInt2} else {};
  if (autoBuyerInt3 !== undefined) {document.getElementById('buyerInt3').innerHTML = autoBuyerInt3} else {};
  if (autoBuyerInt4 !== undefined) {document.getElementById('buyerInt4').innerHTML = autoBuyerInt4} else {};
