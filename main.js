@@ -317,6 +317,15 @@ function gameLoop() {
  if (autoBuyerInt7 !== undefined) {document.getElementById('buyerInt7').innerHTML = autoBuyerInt7} else {};
  if (autoBuyerInt8 !== undefined) {document.getElementById('buyerInt8').innerHTML = autoBuyerInt8} else {};
  if (autoBuyerInt9 !== undefined) {document.getElementById('buyerInt9').innerHTML = autoBuyerInt9} else {};
+ if (autobuyers[1] >= 1 && buyerInt1 == undefined) {buyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerInt1)} else {clearInterval(buyerInt1); buyerInt1 = undefined}
+ if (autobuyers[2] >= 1 && buyerInt2 == undefined) {buyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerInt2)} else {clearInterval(buyerInt2); buyerInt2 = undefined}
+ if (autobuyers[3] >= 1 && buyerInt3 == undefined) {buyerInt3 = setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerInt3)} else {clearInterval(buyerInt3); buyerInt3 = undefined}
+ if (autobuyers[4] >= 1 && buyerInt4 == undefined) {buyerInt4 = setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerInt4)} else {clearInterval(buyerInt4); autoBuyerInt4 = undefined}
+ if (autobuyers[5] >= 1 && buyerInt5 == undefined) {buyerInt5 = setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerInt5)} else {clearInterval(buyerInt5); autoBuyerInt5 = undefined}
+ if (autobuyers[6] >= 1 && buyerInt6 == undefined) {buyerInt6 = setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerInt6)} else {clearInterval(buyerInt6); autoBuyerInt6 = undefined}
+ if (autobuyers[7] >= 1 && buyerInt7 == undefined) {buyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerInt7)} else {clearInterval(buyerInt7); autoBuyerInt7 = undefined}
+ if (autobuyers[8] >= 1 && buyerInt8 == undefined) {buyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerInt8)} else {clearInterval(buyerInt8); buyerInt8 = undefined}
+ if (autobuyers[9] >= 1 && buyerInt9 == undefined) {buyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, buyerInt9)} else {clearInterval(buyerInt9); buyerInt9 = undefined}
 
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
@@ -487,23 +496,13 @@ function saveGame() {
    save = JSON.stringify(savedGame);
  localStorage.setItem('gameSave', save)
 }
-function autoBuyers() {
- if (autobuyers[1] >= 1 && buyerInt1 == undefined) {buyerInt1 = setInterval(function(e){farms[1] = farms[1] + 1 * autobuyerMults[1]}, autoBuyerInt1)} else {clearInterval(buyerInt1); buyerInt1 = undefined}
- if (autobuyers[2] >= 1 && buyerInt2 == undefined) {buyerInt2 = setInterval(function(e){farms[2] = farms[2] + 1 * autobuyerMults[2]}, autoBuyerInt2)} else {clearInterval(buyerInt2); buyerInt2 = undefined}
- if (autobuyers[3] >= 1 && buyerInt3 == undefined) {buyerInt3 = setInterval(function(e){farms[3] = farms[3] + 1 * autobuyerMults[3]}, autoBuyerInt3)} else {clearInterval(buyerInt3); buyerInt3 = undefined}
- if (autobuyers[4] >= 1 && buyerInt4 == undefined) {buyerInt4 = setInterval(function(e){farms[4] = farms[4] + 1 * autobuyerMults[4]}, autoBuyerInt4)} else {clearInterval(buyerInt4); autoBuyerInt4 = undefined}
- if (autobuyers[5] >= 1 && buyerInt5 == undefined) {buyerInt5 = setInterval(function(e){farms[5] = farms[5] + 1 * autobuyerMults[5]}, autoBuyerInt5)} else {clearInterval(buyerInt5); autoBuyerInt5 = undefined}
- if (autobuyers[6] >= 1 && buyerInt6 == undefined) {buyerInt6 = setInterval(function(e){farms[6] = farms[6] + 1 * autobuyerMults[6]}, autoBuyerInt6)} else {clearInterval(buyerInt6); autoBuyerInt6 = undefined}
- if (autobuyers[7] >= 1 && buyerInt7 == undefined) {buyerInt7 = setInterval(function(e){farms[7] = farms[7] + 1 * autobuyerMults[7]}, autoBuyerInt7)} else {clearInterval(buyerInt7); autoBuyerInt7 = undefined}
- if (autobuyers[8] >= 1 && buyerInt8 == undefined) {buyerInt8 = setInterval(function(e){farms[8] = farms[8] + 1 * autobuyerMults[8]}, autoBuyerInt8)} else {clearInterval(buyerInt8); buyerInt8 = undefined}
- if (autobuyers[9] >= 1 && buyerInt9 == undefined) {buyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, buyerInt9)} else {clearInterval(buyerInt9); buyerInt9 = undefined}
-}
+
 function buyAutoBuyer1() {
  if (moneu >= autoBuyerPrices[1] && autoBuyerInt1 >= 0.10) {
   autobuyers[1] = autobuyers[1] + 1
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
   autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] *= 1.11)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[1]
   document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
@@ -514,7 +513,7 @@ function buyAutoBuyer2() {
   autobuyers[2] = autobuyers[2] + 1
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
   autoBuyerPrices[2] = Math.round(autoBuyerPrices[2] *= 2.22)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[2]
   document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
   document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
@@ -525,7 +524,6 @@ function buyAutoBuyer3() {
   autobuyers[3] = autobuyers[3] + 1
   autoBuyerInt3 = autoBuyerInt3 -= 0.50;
   autoBuyerPrices[3] = Math.round(autoBuyerPrices[3] *= 3.33)
-  autoBuyers();
   moneu = moneu - autoBuyerPrices[3]
   document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
   document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
@@ -536,7 +534,7 @@ function buyAutoBuyer4() {
   autobuyers[4] = autobuyers[4] + 1
   autoBuyerInt4 = autoBuyerInt4 -= 0.50;
   autoBuyerPrices[4] = Math.round(autoBuyerPrices[4] *= 4.44)
-  autobBuyers();
+  
   moneu = moneu - autoBuyerPrices[4]
   document.getElementById('buyer4Cost').innerHTML = autoBuyerPrices[4]
   document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
@@ -547,7 +545,7 @@ function buyAutoBuyer5() {
   autobuyers[5] = autobuyers[5] + 1
   autoBuyerInt5 = autoBuyerInt5 -= 0.50;
   autoBuyerPrices[5] = Math.round(autoBuyerPrices[5] *= 5.55)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[5]
   document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
@@ -558,7 +556,7 @@ function buyAutoBuyer6() {
   autobuyers[6] = autobuyers[6] + 1
   autoBuyerInt6 = autoBuyerInt6 -= 0.50;
   autoBuyerPrices[6] = Math.round(autoBuyerPrices[6] *= 6.66)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[6]
   document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
@@ -569,7 +567,7 @@ function buyAutoBuyer7() {
   autobuyers[7] = autobuyers[7] + 1
   autoBuyerInt7 = autoBuyerInt7 -= 0.50;
   autoBuyerPrices[7] = Math.round(autoBuyerPrices[7] *= 7.77)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[7]
   document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
   document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
@@ -580,7 +578,7 @@ function buyAutoBuyer8() {
   autobuyers[8] = autobuyers[8] + 1
   autoBuyerInt8 = autoBuyerInt8 -= 0.50;
   autoBuyerPrices[8] = Math.round(autoBuyerPrices[8] *= 8.88)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices[8]
   document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
   document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
@@ -591,7 +589,7 @@ function buyAutoBuyerBoost() {
   autobuyers.boost = autobuyers.boost + 1
   autoBuyerInt9 = autoBuyerInt9 -= 0.50;
   autoBuyerPrices.boost = Math.round(autoBuyerPrices.boost *= 9.99)
-  autoBuyers();
+  
   moneu = moneu - autoBuyerPrices.boost
   document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
