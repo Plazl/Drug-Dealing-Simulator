@@ -107,15 +107,15 @@ var autoBuyerPrices = {
  '8':64000,
  'boost':128000
 }
-var autoBuyerInt1;
-var autoBuyerInt2;
-var autoBuyerInt3;
-var autoBuyerInt4;
-var autoBuyerInt5;
-var autoBuyerInt6;
-var autoBuyerInt7;
-var autoBuyerInt8;
-var autoBuyerInt9;
+var autoBuyerInt1 = 100;
+var autoBuyerInt2 = 100;
+var autoBuyerInt3 = 100;
+var autoBuyerInt4 = 100;
+var autoBuyerInt5 = 100;
+var autoBuyerInt6 = 100;
+var autoBuyerInt7 = 100;
+var autoBuyerInt8 = 100;
+var autoBuyerInt9 = 100;
 var game = JSON.parse(localStorage.getItem('gameSave'));
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
@@ -499,7 +499,7 @@ function autoBuyers() {
  if (autobuyers[9] >= 1 && buyerInt9 == undefined) {buyerInt9 = setInterval(function(e){boostMult = boostMult + 1 * autobuyerMults.boost}, buyerInt9)} else {clearInterval(buyerInt9); buyerInt9 = undefined}
 }
 function buyAutoBuyer1() {
- if (moneu >= autoBuyerPrices[1] && autoBuyerInt1 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[1] && autoBuyerInt1 >= 0.10) {
   autobuyers[1] = autobuyers[1] + 1
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
   autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] *= 1.11)
@@ -510,7 +510,7 @@ function buyAutoBuyer1() {
  }
 }
 function buyAutoBuyer2() {
- if (moneu >= autoBuyerPrices[2] && autoBuyerInt2 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[2] && autoBuyerInt2 >= 0.10) {
   autobuyers[2] = autobuyers[2] + 1
   autoBuyerInt2 = autoBuyerInt2 -= 0.50;
   autoBuyerPrices[2] = Math.round(autoBuyerPrices[2] *= 2.22)
@@ -521,7 +521,7 @@ function buyAutoBuyer2() {
  }
 }
 function buyAutoBuyer3() {
- if (moneu >= autoBuyerPrices[3] && autoBuyerInt3 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[3] && autoBuyerInt3 >= 0.10) {
   autobuyers[3] = autobuyers[3] + 1
   autoBuyerInt3 = autoBuyerInt3 -= 0.50;
   autoBuyerPrices[3] = Math.round(autoBuyerPrices[3] *= 3.33)
@@ -532,7 +532,7 @@ function buyAutoBuyer3() {
  }
 }
 function buyAutoBuyer4() {
- if (moneu >= autoBuyerPrices[4] && autoBuyerInt4 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[4] && autoBuyerInt4 >= 0.10) {
   autobuyers[4] = autobuyers[4] + 1
   autoBuyerInt4 = autoBuyerInt4 -= 0.50;
   autoBuyerPrices[4] = Math.round(autoBuyerPrices[4] *= 4.44)
@@ -543,7 +543,7 @@ function buyAutoBuyer4() {
  }
 }
 function buyAutoBuyer5() {
- if (moneu >= autoBuyerPrices[5] && autoBuyerInt5 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[5] && autoBuyerInt5 >= 0.10) {
   autobuyers[5] = autobuyers[5] + 1
   autoBuyerInt5 = autoBuyerInt5 -= 0.50;
   autoBuyerPrices[5] = Math.round(autoBuyerPrices[5] *= 5.55)
@@ -554,7 +554,7 @@ function buyAutoBuyer5() {
  }
 }
 function buyAutoBuyer6() {
- if (moneu >= autoBuyerPrices[6] && autoBuyerInt6 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[6] && autoBuyerInt6 >= 0.10) {
   autobuyers[6] = autobuyers[6] + 1
   autoBuyerInt6 = autoBuyerInt6 -= 0.50;
   autoBuyerPrices[6] = Math.round(autoBuyerPrices[6] *= 6.66)
@@ -565,7 +565,7 @@ function buyAutoBuyer6() {
  }
 }
 function buyAutoBuyer7() {
- if (moneu >= autoBuyerPrices[7] && autoBuyerInt7 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[7] && autoBuyerInt7 >= 0.10) {
   autobuyers[7] = autobuyers[7] + 1
   autoBuyerInt7 = autoBuyerInt7 -= 0.50;
   autoBuyerPrices[7] = Math.round(autoBuyerPrices[7] *= 7.77)
@@ -576,7 +576,7 @@ function buyAutoBuyer7() {
  }
 }
 function buyAutoBuyer8() {
- if (moneu >= autoBuyerPrices[8] && autoBuyerInt8 <=! 0.10) {
+ if (moneu >= autoBuyerPrices[8] && autoBuyerInt8 >= 0.10) {
   autobuyers[8] = autobuyers[8] + 1
   autoBuyerInt8 = autoBuyerInt8 -= 0.50;
   autoBuyerPrices[8] = Math.round(autoBuyerPrices[8] *= 8.88)
@@ -587,7 +587,7 @@ function buyAutoBuyer8() {
  }
 }
 function buyAutoBuyerBoost() {
- if (moneu >= autoBuyerPrices.boost && autoBuyerInt9 <=! 0.10) {
+ if (moneu >= autoBuyerPrices.boost && autoBuyerInt9 >= 0.10) {
   autobuyers.boost = autobuyers.boost + 1
   autoBuyerInt9 = autoBuyerInt9 -= 0.50;
   autoBuyerPrices.boost = Math.round(autoBuyerPrices.boost *= 9.99)
