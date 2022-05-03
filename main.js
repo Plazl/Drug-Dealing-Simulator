@@ -368,92 +368,92 @@ function gameLoop() {
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
 function spawnDrugs() {
-  drugs.aderall = drugs.aderall + 1 * boost
+  drugs.aderall = drugs.aderall + 1 * farms[1] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 1 * boost
+  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 1 * boost
+  drugs.crack = drugs.crack + 1 * farms[1] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 1 * boost
+  drugs.meth = drugs.meth + 1 * farms[1] * boost
  }
 }
 
 function farm2int() {
-  drugs.aderall = drugs.aderall + 2 * boost
+  drugs.aderall = drugs.aderall + 2 * farms[2] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 2 * boost
+  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 2 * boost
+  drugs.crack = drugs.crack + 2 * farms[2] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 2 * boost
+  drugs.meth = drugs.meth + 2 * farms[2] * boost
  }
 }
 function farm3int() {
-  drugs.aderall = drugs.aderall + 3 * boost
+  drugs.aderall = drugs.aderall + 3 * farms[3] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 3 * boost
+  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 3 * boost
+  drugs.crack = drugs.crack + 3 * farms[3] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 3 * boost
+  drugs.meth = drugs.meth + 3 * farms[3] * boost
  }
 }
 function farm4int() {
-  drugs.aderall = drugs.aderall + 4 * boost
+  drugs.aderall = drugs.aderall + 4 * farms[4] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 4 * boost
+  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 4 * boost
+  drugs.crack = drugs.crack + 4 * farms[4] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 4 * boost
+  drugs.meth = drugs.meth + 4 * farms[4] * boost
  }
 }
 function farm5int() {
-  drugs.aderall = drugs.aderall + 5 * boost
+  drugs.aderall = drugs.aderall + 5 * farms[5] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 5 * boost
+  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 5 * boost
+  drugs.crack = drugs.crack + 5 * farms[5] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 5 * boost
+  drugs.meth = drugs.meth + 5 * farms[5] * boost
  }
 }
 function farm6int() {
-  drugs.aderall = drugs.aderall + 6 * boost
+  drugs.aderall = drugs.aderall + 6 * farms[6] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 6 * boost
+  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 6 * boost
+  drugs.crack = drugs.crack + 6 * farms[6] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 6 * boost
+  drugs.meth = drugs.meth + 6 * farms[6] * boost
  }
 }
 function farm7int() {
-  drugs.aderall = drugs.aderall + 7 * boost
+  drugs.aderall = drugs.aderall + 7 * farms[7] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 7 * boost
+  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 7 * boost
+  drugs.crack = drugs.crack + 7 * farms[7] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 7 * boost
+  drugs.meth = drugs.meth + 7 * farms[7] * boost
  }
 }
 function farm8int() {
-  drugs.aderall = drugs.aderall + 8 * boost
+  drugs.aderall = drugs.aderall + 8 * farms[8] * boost
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 8 * boost
+  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 8 * boost
+  drugs.crack = drugs.crack + 8 * farms[8] * boost
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 8 * boost
+  drugs.meth = drugs.meth + 8 * farms[8] * boost
  }
 }
 function boostFarms() {
