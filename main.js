@@ -502,7 +502,7 @@ function buyAutoBuyer1() {
   autobuyers[1] = autobuyers[1] + 1
   autoBuyerInt1 = autoBuyerInt1 -= 0.50;
   autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] *= 1.11)
-  autobuyermults[] += 1
+  autobuyermults[1] += 1
   moneu = moneu - autoBuyerPrices[1]
   document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
