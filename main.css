@@ -145,11 +145,14 @@ height: 30px;
  position: absolute;
 }
 #boostFarms {
- height: 30px;
- color: cornsilk;
- background-color: #04AA6D;
- border-color: darkgrey;
- border-block-width: 3px;
+    height: 30px;
+    top: 130px;
+    left: 50px;
+    color: cornsilk;
+    background-color: #04AA6D;
+    border-color: darkgrey;
+    border-block-width: 3px;
+    position: absolute;
 }
 #topMenu {
  position: relative;
