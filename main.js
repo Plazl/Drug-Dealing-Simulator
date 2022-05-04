@@ -116,6 +116,26 @@ var autoBuyerInt6 = 100;
 var autoBuyerInt7 = 100;
 var autoBuyerInt8 = 100;
 var autoBuyerInt9 = 100;
+var buyers = {
+ 'b1': parseInt(autoBuyerInt1 + "000"),
+ 'b2': parseInt(autoBuyerInt2 + "000"),
+ 'b3': parseInt(autoBuyerInt3 + "000"),
+ 'b4': parseInt(autoBuyerInt4 + "000"),
+ 'b5': parseInt(autoBuyerInt5 + "000"),
+ 'b6': parseInt(autoBuyerInt6 + "000"),
+ 'b7': parseInt(autoBuyerInt7 + "000"),
+ 'b8': parseInt(autoBuyerInt8 + "000"),
+ 'b9': parseInt(autoBuyerInt9 + "000");
+}
+var buyerInt1;
+var buyerInt2;
+var buyerInt3;
+var buyerInt4;
+var buyerInt5;
+var buyerInt6;
+var buyerInt7;
+var buyerInt8;
+var buyerInt9;
 var game = JSON.parse(localStorage.getItem('gameSave'));
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
@@ -448,7 +468,7 @@ function farm8int() {
 }
 function boostFarms() {
  if (farms[8] >= boostReq.farmCount) {
-  boost = boost * 2;
+  boost += 1;
   boostReq.farmCount = boostReq.farmCount * 2; 
   farms[8] = farms[8] - boostReq.farmCount;
  }
@@ -490,7 +510,7 @@ function saveGame() {
 function buyAutoBuyer1() {
  if (moneu >= autoBuyerPrices[1] && autoBuyerInt1 >= 0.10) {
   autobuyers[1] = autobuyers[1] + 1
-  autoBuyerInt1 = autoBuyerInt1 -= 0.50;
+  autoBuyerInt1 = autoBuyerInt1 -= 1;
   autoBuyerPrices[1] = Math.round(autoBuyerPrices[1] *= 1.11)
   autobuyerMults[1] += 1
   moneu = moneu - autoBuyerPrices[1]
@@ -499,14 +519,14 @@ function buyAutoBuyer1() {
   clearInterval(buyerInt1)
   buyerInt1 = undefined
   if (autobuyers[1] >= 1 && buyerInt1 == undefined) {
-   buyerInt1 = setInterval(autoBuyer1, parseInt(autoBuyerInt1 + "000"))
+   buyerInt1 = setInterval(autoBuyer1, b1)
   }
  }
 }
 function buyAutoBuyer2() {
  if (moneu >= autoBuyerPrices[2] && autoBuyerInt2 >= 0.10) {
   autobuyers[2] = autobuyers[2] + 1
-  autoBuyerInt2 = autoBuyerInt2 -= 0.50;
+  autoBuyerInt2 = autoBuyerInt2 -= 1;
   autoBuyerPrices[2] = Math.round(autoBuyerPrices[2] *= 2.22)
   autobuyerMults[2] += 1
   moneu = moneu - autoBuyerPrices[2]
@@ -515,14 +535,14 @@ function buyAutoBuyer2() {
   clearInterval(buyerInt2)
   buyerInt2 = undefined
   if (autobuyers[2] >= 1 && buyerInt2 == undefined) {
-   buyerInt2 = setInterval(autoBuyer2, parseInt(autoBuyerInt2 + "000"))
+   buyerInt2 = setInterval(autoBuyer2, b2)
   }
  }
 }
 function buyAutoBuyer3() {
  if (moneu >= autoBuyerPrices[3] && autoBuyerInt3 >= 0.10) {
   autobuyers[3] = autobuyers[3] + 1
-  autoBuyerInt3 = autoBuyerInt3 -= 0.50;
+  autoBuyerInt3 = autoBuyerInt3 -= 1;
   autoBuyerPrices[3] = Math.round(autoBuyerPrices[3] *= 3.33)
   autobuyerMults[3] += 1
   moneu = moneu - autoBuyerPrices[3]
@@ -531,14 +551,14 @@ function buyAutoBuyer3() {
   clearInterval(buyerInt3)
   buyerInt3 = undefined
   if (autobuyers[3] >= 1 && buyerInt3 == undefined) {
-   buyerInt3 = setInterval(autoBuyer3, parseInt(autoBuyerInt3 + "000"))
+   buyerInt3 = setInterval(autoBuyer3, b3)
   }
  }
 }
 function buyAutoBuyer4() {
  if (moneu >= autoBuyerPrices[4] && autoBuyerInt4 >= 0.10) {
   autobuyers[4] = autobuyers[4] + 1
-  autoBuyerInt4 = autoBuyerInt4 -= 0.50;
+  autoBuyerInt4 = autoBuyerInt4 -= 1;
   autoBuyerPrices[4] = Math.round(autoBuyerPrices[4] *= 4.44)
   autobuyerMMults[4] += 1
   moneu = moneu - autoBuyerPrices[4]
@@ -547,14 +567,14 @@ function buyAutoBuyer4() {
   clearInterval(buyerInt4)
   buyerInt4 = undefined
   if (autobuyers[4] >= 1 && buyerInt4 == undefined) {
-   buyerInt4 = setInterval(autoBuyer4, parseInt(autoBuyerInt4 + "000"))
+   buyerInt4 = setInterval(autoBuyer4, b4)
   }
  }
 }
 function buyAutoBuyer5() {
  if (moneu >= autoBuyerPrices[5] && autoBuyerInt5 >= 0.10) {
   autobuyers[5] = autobuyers[5] + 1
-  autoBuyerInt5 = autoBuyerInt5 -= 0.50;
+  autoBuyerInt5 = autoBuyerInt5 -= 1;
   autoBuyerPrices[5] = Math.round(autoBuyerPrices[5] *= 5.55)
   autobuyerMults[5] += 1
   moneu = moneu - autoBuyerPrices[5]
@@ -563,14 +583,14 @@ function buyAutoBuyer5() {
   clearInterval(buyerInt5)
   buyerInt5 = undefined
   if (autobuyers[5] >= 1 && buyerInt5 == undefined) {
-   buyerInt5 = setInterval(autoBuyer5, parseInt(autoBuyerInt5 + "000"))
+   buyerInt5 = setInterval(autoBuyer5, b5)
   }
  }
 }
 function buyAutoBuyer6() {
  if (moneu >= autoBuyerPrices[6] && autoBuyerInt6 >= 0.10) {
   autobuyers[6] = autobuyers[6] + 1
-  autoBuyerInt6 = autoBuyerInt6 -= 0.50;
+  autoBuyerInt6 = autoBuyerInt6 -= 1;
   autoBuyerPrices[6] = Math.round(autoBuyerPrices[6] *= 6.66)
   autobuyerMults[6] += 1
   moneu = moneu - autoBuyerPrices[6]
@@ -579,14 +599,14 @@ function buyAutoBuyer6() {
   clearInterval(buyerInt6)
   buyerInt6 = undefined
   if (autobuyers[6] >= 1 && buyerInt6 == undefined) {
-   buyerInt6 = setInterval(autoBuyer6, parseInt(autoBuyerInt6 + "000"))
+   buyerInt6 = setInterval(autoBuyer6, b6)
   }
  }
 }
 function buyAutoBuyer7() {
  if (moneu >= autoBuyerPrices[7] && autoBuyerInt7 >= 0.10) {
   autobuyers[7] = autobuyers[7] + 1
-  autoBuyerInt7 = autoBuyerInt7 -= 0.50;
+  autoBuyerInt7 = autoBuyerInt7 -= 1;
   autoBuyerPrices[7] = Math.round(autoBuyerPrices[7] *= 7.77)
   autobuyerMults[7] += 1
   moneu = moneu - autoBuyerPrices[7]
@@ -595,14 +615,14 @@ function buyAutoBuyer7() {
   clearInterval(buyerInt7)
   buyerInt7 = undefined
   if (autobuyers[7] >= 1 && buyerInt1 == undefined) {
-   buyerInt7 = setInterval(autoBuyer7, parseInt(autoBuyerInt7 + "000"))
+   buyerInt7 = setInterval(autoBuyer7, b7)
   }
  }
 }
 function buyAutoBuyer8() {
  if (moneu >= autoBuyerPrices[8] && autoBuyerInt8 >= 0.10) {
   autobuyers[8] = autobuyers[8] + 1
-  autoBuyerInt8 = autoBuyerInt8 -= 0.50;
+  autoBuyerInt8 = autoBuyerInt8 -= 1;
   autoBuyerPrices[8] = Math.round(autoBuyerPrices[8] *= 8.88)
   autobuyerMults[8] += 1
   moneu = moneu - autoBuyerPrices[8]
@@ -611,14 +631,14 @@ function buyAutoBuyer8() {
   clearInterval(buyerInt8)
   buyerInt8 = undefined
   if (autobuyers[8] >= 1 && buyerInt8 == undefined) {
-   buyerInt8 = setInterval(autoBuyer8, parseInt(autoBuyerInt8 + "000"))
+   buyerInt8 = setInterval(autoBuyer8, b8)
   }
  }
 }
 function buyAutoBuyerBoost() {
  if (moneu >= autoBuyerPrices.boost && autoBuyerInt9 >= 0.10) {
   autobuyers.boost = autobuyers.boost + 1
-  autoBuyerInt9 = autoBuyerInt9 -= 0.50;
+  autoBuyerInt9 = autoBuyerInt9 -= 1;
   autoBuyerPrices.boost = Math.round(autoBuyerPrices.boost *= 9.99)
   autobuyerMults.boost += 1
   moneu = moneu - autoBuyerPrices.boost
@@ -627,7 +647,7 @@ function buyAutoBuyerBoost() {
   clearInterval(buyerInt9)
   buyerInt9 = undefined
   if (autobuyers.boost >= 1 && buyerInt9 == undefined) {
-   buyerInt9 = setInterval(autoBuyer9, parseInt(autoBuyerInt9 + "000"))
+   buyerInt9 = setInterval(autoBuyer9, b9)
   }
  }
 }
