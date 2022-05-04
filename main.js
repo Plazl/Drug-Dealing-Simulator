@@ -317,16 +317,6 @@ function gameLoop() {
  if (autoBuyerInt7 !== undefined) {document.getElementById('buyerInt7').innerHTML = autoBuyerInt7} else {};
  if (autoBuyerInt8 !== undefined) {document.getElementById('buyerInt8').innerHTML = autoBuyerInt8} else {};
  if (autoBuyerInt9 !== undefined) {document.getElementById('buyerInt9').innerHTML = autoBuyerInt9} else {};
- if (autobuyers[1] >= 1 ) {buyerInt1 = setInterval(function(e){if (moneu >= autoBuyerPrices[1]){farms[1] = farms[1] + 1 * autobuyerMults[1]; moneu -= autoBuyerPrices[1]}}, autoBuyerInt1)} else {clearInterval(buyerInt1); buyerInt1 = undefined}
- if (autobuyers[2] >= 1 ) {buyerInt2 = setInterval(function(e){if (moneu >= autoBuyerPrices[2]){farms[2] = farms[2] + 1 * autobuyerMults[2]; moneu -= autoBuyerPrices[2]}}, autoBuyerInt2)} else {clearInterval(buyerInt2); buyerInt2 = undefined}
- if (autobuyers[3] >= 1 ) {buyerInt3 = setInterval(function(e){if (moneu >= autoBuyerPrices[3]){farms[3] = farms[3] + 1 * autobuyerMults[3]; moneu -= autoBuyerPrices[3]}}, autoBuyerInt3)} else {clearInterval(buyerInt3); buyerInt3 = undefined}
- if (autobuyers[4] >= 1 ) {buyerInt4 = setInterval(function(e){if (moneu >= autoBuyerPrices[4]){farms[4] = farms[4] + 1 * autobuyerMults[4]; moneu -= autoBuyerPrices[4]}}, autoBuyerInt4)} else {clearInterval(buyerInt4); autoBuyerInt4 = undefined}
- if (autobuyers[5] >= 1 ) {buyerInt5 = setInterval(function(e){if (moneu >= autoBuyerPrices[5]){farms[5] = farms[5] + 1 * autobuyerMults[5]; moneu -= autoBuyerPrices[5]}}, autoBuyerInt5)} else {clearInterval(buyerInt5); autoBuyerInt5 = undefined}
- if (autobuyers[6] >= 1 ) {buyerInt6 = setInterval(function(e){if (moneu >= autoBuyerPrices[6]){farms[6] = farms[6] + 1 * autobuyerMults[6]; moneu -= autoBuyerPrices[6]}}, autoBuyerInt6)} else {clearInterval(buyerInt6); autoBuyerInt6 = undefined}
- if (autobuyers[7] >= 1 ) {buyerInt7 = setInterval(function(e){if (moneu >= autoBuyerPrices[7]){farms[7] = farms[7] + 1 * autobuyerMults[7]; moneu -= autoBuyerPrices[7]}}, autoBuyerInt7)} else {clearInterval(buyerInt7); autoBuyerInt7 = undefined}
- if (autobuyers[8] >= 1 ) {buyerInt8 = setInterval(function(e){if (moneu >= autoBuyerPrices[8]){farms[8] = farms[8] + 1 * autobuyerMults[8]; moneu -= autoBuyerPrices[8]}}, autoBuyerInt8)} else {clearInterval(buyerInt8); buyerInt8 = undefined}
- if (autobuyers[9] >= 1 ) {buyerInt9 = setInterval(function(e){if (moneu >= autoBuyerPrices.boost){boost += 1 * autobuyerMults.boost; moneu -= autoBuyerPrices.boost}}, autoBuyerInt9)} else {clearInterval(buyerInt9); buyerInt9 = undefined}
-
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
   
@@ -506,6 +496,10 @@ function buyAutoBuyer1() {
   moneu = moneu - autoBuyerPrices[1]
   document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
+  buyerInt1 = undefined
+  if (autoBuyers[1] >= 1 && buyerInt1 == undefined) {
+   setInterval(autoBuyer1, autoBuyerInt1)
+  }
  }
 }
 function buyAutoBuyer2() {
@@ -517,6 +511,10 @@ function buyAutoBuyer2() {
   moneu = moneu - autoBuyerPrices[2]
   document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
   document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
+  buyerInt2 = undefined
+  if (autoBuyers[2] >= 1 && buyerInt2 == undefined) {
+   setInterval(autoBuyer2, autoBuyerInt2)
+  }
  }
 }
 function buyAutoBuyer3() {
@@ -528,6 +526,10 @@ function buyAutoBuyer3() {
   moneu = moneu - autoBuyerPrices[3]
   document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
   document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
+  buyerInt3 = undefined
+  if (autoBuyers[3] >= 1 && buyerInt3 == undefined) {
+   setInterval(autoBuyer3, autoBuyerInt3)
+  }
  }
 }
 function buyAutoBuyer4() {
@@ -539,6 +541,10 @@ function buyAutoBuyer4() {
   moneu = moneu - autoBuyerPrices[4]
   document.getElementById('buyer4Cost').innerHTML = autoBuyerPrices[4]
   document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
+  buyerInt4 = undefined
+  if (autoBuyers[4] >= 1 && buyerInt4 == undefined) {
+   setInterval(autoBuyer4, autoBuyerInt4)
+  }
  }
 }
 function buyAutoBuyer5() {
@@ -550,6 +556,10 @@ function buyAutoBuyer5() {
   moneu = moneu - autoBuyerPrices[5]
   document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
+  buyerInt1 = undefined
+  if (autoBuyers[5] >= 1 && buyerInt5 == undefined) {
+   setInterval(autoBuyer5, autoBuyerInt5)
+  }
  }
 }
 function buyAutoBuyer6() {
@@ -561,6 +571,10 @@ function buyAutoBuyer6() {
   moneu = moneu - autoBuyerPrices[6]
   document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
+  buyerInt1 = undefined
+  if (autoBuyers[6] >= 1 && buyerInt6 == undefined) {
+   setInterval(autoBuyer6, autoBuyerInt6)
+  }
  }
 }
 function buyAutoBuyer7() {
@@ -572,6 +586,10 @@ function buyAutoBuyer7() {
   moneu = moneu - autoBuyerPrices[7]
   document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
   document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
+  buyerInt7 = undefined
+  if (autoBuyers[7] >= 1 && buyerInt1 == undefined) {
+   setInterval(autoBuyer7, autoBuyerInt7)
+  }
  }
 }
 function buyAutoBuyer8() {
@@ -583,6 +601,10 @@ function buyAutoBuyer8() {
   moneu = moneu - autoBuyerPrices[8]
   document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
   document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
+  buyerInt8 = undefined
+  if (autoBuyers[8] >= 1 && buyerInt8 == undefined) {
+   setInterval(autoBuyer8, autoBuyerInt8)
+  }
  }
 }
 function buyAutoBuyerBoost() {
@@ -594,6 +616,10 @@ function buyAutoBuyerBoost() {
   moneu = moneu - autoBuyerPrices.boost
   document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
+  buyerInt9 = undefined
+  if (autoBuyers.boost >= 1 && buyerInt9 == undefined) {
+   setInterval(autoBuyer9, autoBuyerInt9)
+  }
  }
 }
 
