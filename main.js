@@ -107,15 +107,15 @@ var autoBuyerPrices = {
  '8':64000,
  'boost':128000
 }
-var autoBuyerInt1 = 100000;
-var autoBuyerInt2 = 100000;
-var autoBuyerInt3 = 100000;
-var autoBuyerInt4 = 100000;
-var autoBuyerInt5 = 100000;
-var autoBuyerInt6 = 100000;
-var autoBuyerInt7 = 100000;
-var autoBuyerInt8 = 100000;
-var autoBuyerInt9 = 100000;
+var autoBuyerInt1 = 100;
+var autoBuyerInt2 = 100;
+var autoBuyerInt3 = 100;
+var autoBuyerInt4 = 100;
+var autoBuyerInt5 = 100;
+var autoBuyerInt6 = 100;
+var autoBuyerInt7 = 100;
+var autoBuyerInt8 = 100;
+var autoBuyerInt9 = 100;
 var game = JSON.parse(localStorage.getItem('gameSave'));
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
@@ -556,7 +556,7 @@ function buyAutoBuyer5() {
   moneu = moneu - autoBuyerPrices[5]
   document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
-  buyerInt1 = undefined
+  buyerInt5 = undefined
   if (autoBuyers[5] >= 1 && buyerInt5 == undefined) {
    setInterval(autoBuyer5, autoBuyerInt5)
   }
@@ -571,7 +571,7 @@ function buyAutoBuyer6() {
   moneu = moneu - autoBuyerPrices[6]
   document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
-  buyerInt1 = undefined
+  buyerInt6 = undefined
   if (autoBuyers[6] >= 1 && buyerInt6 == undefined) {
    setInterval(autoBuyer6, autoBuyerInt6)
   }
@@ -633,3 +633,39 @@ function loadGame() {
 var bttn = document.getElementById('unlockDrug')
 bttn.style.width = 150
 bttn.style.height = 40
+function autoBuyer1() {
+ farms[1] += 1 * autoBuyers[1] * boost
+ moneu -= farmsCost[1]
+}
+function autoBuyer2() {
+ farms[2] += 1 * autoBuyers[2] * boost
+ moneu -= farmsCost[2]
+}
+function autoBuyer3() {
+ farms[3] += 1 * autoBuyers[3] * boost
+ moneu -= farmsCost[3]
+}
+function autoBuyer4() {
+ farms[4] += 1 * autoBuyers[4] * boost
+ moneu -= farmsCost[4]
+}
+function autoBuyer5() {
+ farms[5] += 1 * autoBuyers[5] * boost
+ moneu -= farmsCost[5]
+}
+function autoBuyer6() {
+ farms[6] += 1 * autoBuyers[6] * boost
+ moneu -= farmsCost[6]
+}
+function autoBuyer7() {
+ farms[7] += 1 * autoBuyers[7] * boost
+ moneu -= farmsCost[7]
+}
+function autoBuyer8() {
+ farms[8] += 1 * autoBuyers[8] * boost
+ moneu -= farmsCost[8]
+}
+function autoBuyer9() {
+ boost += 1 * autoBuyers.boost * boost
+ farms[8] -= boostReq.farmCount
+}
