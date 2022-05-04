@@ -13,7 +13,7 @@ var boostMult = 1;
 var savedGame;
 var save;
 var boostReq = {
- 'farmType':4,
+ 'farmType':8,
  'farmCount':20
 }
 var farmsCost = {
@@ -447,7 +447,7 @@ function farm8int() {
  }
 }
 function boostFarms() {
- if (boostReq.farmType == 8 && farms[8] >= boostReq.farmCount) {
+ if (farms[8] >= boostReq.farmCount) {
   boost = boost * 2;
   boostReq.farmCount = boostReq.farmCount * 2; 
   farms[8] = farms[8] - boostReq.farmCount;
