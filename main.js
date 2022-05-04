@@ -643,38 +643,56 @@ var bttn = document.getElementById('unlockDrug')
 bttn.style.width = 150
 bttn.style.height = 40
 function autoBuyer1() {
+ if (moneu >= farmsCost[1]) {
  farms[1] += 1 * autobuyers[1] * boost
  moneu -= farmsCost[1]
+ }
 }
 function autoBuyer2() {
+ if (moneu >= farmsCost[2]) {
  farms[2] += 1 * autobuyers[2] * boost
  moneu -= farmsCost[2]
+ }
 }
 function autoBuyer3() {
+ if (moneu >= farmsCost[3]) {
  farms[3] += 1 * autobuyers[3] * boost
  moneu -= farmsCost[3]
+ }
 }
 function autoBuyer4() {
+ if (moneu >= farmsCost[4]) {
  farms[4] += 1 * autobuyers[4] * boost
  moneu -= farmsCost[4]
+ }
 }
 function autoBuyer5() {
+ if (moneu >= farmsCost[5]) {
  farms[5] += 1 * autobuyers[5] * boost
  moneu -= farmsCost[5]
+ }
 }
 function autoBuyer6() {
+ if (moneu >= farmsCost[6]) {
  farms[6] += 1 * autobuyers[6] * boost
  moneu -= farmsCost[6]
+ }
 }
 function autoBuyer7() {
+ if (moneu >= farmsCost[7]) {
  farms[7] += 1 * autobuyers[7] * boost
  moneu -= farmsCost[7]
+ }
 }
 function autoBuyer8() {
+ if (moneu >= farmsCost[8]) {
  farms[8] += 1 * autobuyers[8] * boost
  moneu -= farmsCost[8]
+ }
 }
 function autoBuyer9() {
+ if (farms[8] >= boostReq.farmCount) {
  boost += 1 * autobuyers.boost * boost
  farms[8] -= boostReq.farmCount
+ }
 }
