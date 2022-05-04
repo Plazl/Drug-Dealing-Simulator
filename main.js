@@ -498,7 +498,7 @@ function buyAutoBuyer1() {
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
   clearInterval(buyerInt1)
   buyerInt1 = undefined
-  if (autoBuyers[1] >= 1 && buyerInt1 == undefined) {
+  if (autobuyers[1] >= 1 && buyerInt1 == undefined) {
    buyerInt1 = setInterval(autoBuyer1, parseInt(autoBuyerInt1 + "000"))
   }
  }
@@ -514,7 +514,7 @@ function buyAutoBuyer2() {
   document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
   clearInterval(buyerInt2)
   buyerInt2 = undefined
-  if (autoBuyers[2] >= 1 && buyerInt2 == undefined) {
+  if (autobuyers[2] >= 1 && buyerInt2 == undefined) {
    buyerInt2 = setInterval(autoBuyer2, parseInt(autoBuyerInt2 + "000"))
   }
  }
@@ -530,7 +530,7 @@ function buyAutoBuyer3() {
   document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
   clearInterval(buyerInt3)
   buyerInt3 = undefined
-  if (autoBuyers[3] >= 1 && buyerInt3 == undefined) {
+  if (autobuyers[3] >= 1 && buyerInt3 == undefined) {
    buyerInt3 = setInterval(autoBuyer3, parseInt(autoBuyerInt3 + "000"))
   }
  }
@@ -546,7 +546,7 @@ function buyAutoBuyer4() {
   document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
   clearInterval(buyerInt4)
   buyerInt4 = undefined
-  if (autoBuyers[4] >= 1 && buyerInt4 == undefined) {
+  if (autobuyers[4] >= 1 && buyerInt4 == undefined) {
    buyerInt4 = setInterval(autoBuyer4, parseInt(autoBuyerInt4 + "000"))
   }
  }
@@ -562,7 +562,7 @@ function buyAutoBuyer5() {
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
   clearInterval(buyerInt5)
   buyerInt5 = undefined
-  if (autoBuyers[5] >= 1 && buyerInt5 == undefined) {
+  if (autobuyers[5] >= 1 && buyerInt5 == undefined) {
    buyerInt5 = setInterval(autoBuyer5, parseInt(autoBuyerInt5 + "000"))
   }
  }
@@ -578,7 +578,7 @@ function buyAutoBuyer6() {
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
   clearInterval(buyerInt6)
   buyerInt6 = undefined
-  if (autoBuyers[6] >= 1 && buyerInt6 == undefined) {
+  if (autobuyers[6] >= 1 && buyerInt6 == undefined) {
    buyerInt6 = setInterval(autoBuyer6, parseInt(autoBuyerInt6 + "000"))
   }
  }
@@ -594,7 +594,7 @@ function buyAutoBuyer7() {
   document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
   clearInterval(buyerInt7)
   buyerInt7 = undefined
-  if (autoBuyers[7] >= 1 && buyerInt1 == undefined) {
+  if (autobuyers[7] >= 1 && buyerInt1 == undefined) {
    buyerInt7 = setInterval(autoBuyer7, parseInt(autoBuyerInt7 + "000"))
   }
  }
@@ -610,7 +610,7 @@ function buyAutoBuyer8() {
   document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
   clearInterval(buyerInt8)
   buyerInt8 = undefined
-  if (autoBuyers[8] >= 1 && buyerInt8 == undefined) {
+  if (autobuyers[8] >= 1 && buyerInt8 == undefined) {
    buyerInt8 = setInterval(autoBuyer8, parseInt(autoBuyerInt8 + "000"))
   }
  }
@@ -626,7 +626,7 @@ function buyAutoBuyerBoost() {
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
   clearInterval(buyerInt9)
   buyerInt9 = undefined
-  if (autoBuyers.boost >= 1 && buyerInt9 == undefined) {
+  if (autobuyers.boost >= 1 && buyerInt9 == undefined) {
    buyerInt9 = setInterval(autoBuyer9, parseInt(autoBuyerInt9 + "000"))
   }
  }
@@ -643,38 +643,38 @@ var bttn = document.getElementById('unlockDrug')
 bttn.style.width = 150
 bttn.style.height = 40
 function autoBuyer1() {
- farms[1] += 1 * autoBuyers[1] * boost
+ farms[1] += 1 * autobuyers[1] * boost
  moneu -= farmsCost[1]
 }
 function autoBuyer2() {
- farms[2] += 1 * autoBuyers[2] * boost
+ farms[2] += 1 * autobuyers[2] * boost
  moneu -= farmsCost[2]
 }
 function autoBuyer3() {
- farms[3] += 1 * autoBuyers[3] * boost
+ farms[3] += 1 * autobuyers[3] * boost
  moneu -= farmsCost[3]
 }
 function autoBuyer4() {
- farms[4] += 1 * autoBuyers[4] * boost
+ farms[4] += 1 * autobuyers[4] * boost
  moneu -= farmsCost[4]
 }
 function autoBuyer5() {
- farms[5] += 1 * autoBuyers[5] * boost
+ farms[5] += 1 * autobuyers[5] * boost
  moneu -= farmsCost[5]
 }
 function autoBuyer6() {
- farms[6] += 1 * autoBuyers[6] * boost
+ farms[6] += 1 * autobuyers[6] * boost
  moneu -= farmsCost[6]
 }
 function autoBuyer7() {
- farms[7] += 1 * autoBuyers[7] * boost
+ farms[7] += 1 * autobuyers[7] * boost
  moneu -= farmsCost[7]
 }
 function autoBuyer8() {
- farms[8] += 1 * autoBuyers[8] * boost
+ farms[8] += 1 * autobuyers[8] * boost
  moneu -= farmsCost[8]
 }
 function autoBuyer9() {
- boost += 1 * autoBuyers.boost * boost
+ boost += 1 * autobuyers.boost * boost
  farms[8] -= boostReq.farmCount
 }
