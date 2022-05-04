@@ -496,9 +496,10 @@ function buyAutoBuyer1() {
   moneu = moneu - autoBuyerPrices[1]
   document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
+  clearInterval(buyerInt1)
   buyerInt1 = undefined
   if (autoBuyers[1] >= 1 && buyerInt1 == undefined) {
-   setInterval(autoBuyer1, autoBuyerInt1)
+   buyerInt1 = setInterval(autoBuyer1, parseInt(autoBuyerInt1 + "000"))
   }
  }
 }
@@ -511,9 +512,10 @@ function buyAutoBuyer2() {
   moneu = moneu - autoBuyerPrices[2]
   document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
   document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
+  clearInterval(buyerInt2)
   buyerInt2 = undefined
   if (autoBuyers[2] >= 1 && buyerInt2 == undefined) {
-   setInterval(autoBuyer2, autoBuyerInt2)
+   buyerInt2 = setInterval(autoBuyer2, parseInt(autoBuyerInt2 + "000"))
   }
  }
 }
@@ -526,9 +528,10 @@ function buyAutoBuyer3() {
   moneu = moneu - autoBuyerPrices[3]
   document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
   document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
+  clearInterval(buyerInt3)
   buyerInt3 = undefined
   if (autoBuyers[3] >= 1 && buyerInt3 == undefined) {
-   setInterval(autoBuyer3, autoBuyerInt3)
+   buyerInt3 = setInterval(autoBuyer3, parseInt(autoBuyerInt3 + "000"))
   }
  }
 }
@@ -541,9 +544,10 @@ function buyAutoBuyer4() {
   moneu = moneu - autoBuyerPrices[4]
   document.getElementById('buyer4Cost').innerHTML = autoBuyerPrices[4]
   document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
+  clearInterval(buyerInt4)
   buyerInt4 = undefined
   if (autoBuyers[4] >= 1 && buyerInt4 == undefined) {
-   setInterval(autoBuyer4, autoBuyerInt4)
+   buyerInt4 = setInterval(autoBuyer4, parseInt(autoBuyerInt4 + "000"))
   }
  }
 }
@@ -556,9 +560,10 @@ function buyAutoBuyer5() {
   moneu = moneu - autoBuyerPrices[5]
   document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
+  clearInterval(buyerInt5)
   buyerInt5 = undefined
   if (autoBuyers[5] >= 1 && buyerInt5 == undefined) {
-   setInterval(autoBuyer5, autoBuyerInt5)
+   buyerInt5 = setInterval(autoBuyer5, parseInt(autoBuyerInt5 + "000"))
   }
  }
 }
@@ -571,9 +576,10 @@ function buyAutoBuyer6() {
   moneu = moneu - autoBuyerPrices[6]
   document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
+  clearInterval(buyerInt6)
   buyerInt6 = undefined
   if (autoBuyers[6] >= 1 && buyerInt6 == undefined) {
-   setInterval(autoBuyer6, autoBuyerInt6)
+   buyerInt6 = setInterval(autoBuyer6, parseInt(autoBuyerInt6 + "000"))
   }
  }
 }
@@ -586,9 +592,10 @@ function buyAutoBuyer7() {
   moneu = moneu - autoBuyerPrices[7]
   document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
   document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
+  clearInterval(buyerInt7)
   buyerInt7 = undefined
   if (autoBuyers[7] >= 1 && buyerInt1 == undefined) {
-   setInterval(autoBuyer7, autoBuyerInt7)
+   buyerInt7 = setInterval(autoBuyer7, parseInt(autoBuyerInt7 + "000"))
   }
  }
 }
@@ -601,9 +608,10 @@ function buyAutoBuyer8() {
   moneu = moneu - autoBuyerPrices[8]
   document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
   document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
+  clearInterval(buyerInt8)
   buyerInt8 = undefined
   if (autoBuyers[8] >= 1 && buyerInt8 == undefined) {
-   setInterval(autoBuyer8, autoBuyerInt8)
+   buyerInt8 = setInterval(autoBuyer8, parseInt(autoBuyerInt8 + "000"))
   }
  }
 }
@@ -616,9 +624,10 @@ function buyAutoBuyerBoost() {
   moneu = moneu - autoBuyerPrices.boost
   document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
+  clearInterval(buyerInt9)
   buyerInt9 = undefined
   if (autoBuyers.boost >= 1 && buyerInt9 == undefined) {
-   setInterval(autoBuyer9, autoBuyerInt9)
+   buyerInt9 = setInterval(autoBuyer9, parseInt(autoBuyerInt9 + "000"))
   }
  }
 }
