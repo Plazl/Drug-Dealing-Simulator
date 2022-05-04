@@ -159,7 +159,7 @@ function loadSave() {
  if (typeof game.drugs !== "undefined") {drugs = game.drugs};
  if (typeof game.drugsWorth !== "undefined") {drugsWorth = game.drugsWorth};
  if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs};
- if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.t3};
+ if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.hiddenDrug};
  if (typeof game.dollars !== "undefined") {moneu = game.dollars};
  };
  loadGame();
