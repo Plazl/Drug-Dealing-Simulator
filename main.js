@@ -125,7 +125,7 @@ var buyers = {
  'b6': parseInt(autoBuyerInt6 + "000"),
  'b7': parseInt(autoBuyerInt7 + "000"),
  'b8': parseInt(autoBuyerInt8 + "000"),
- 'b9': parseInt(autoBuyerInt9 + "000");
+ 'b9': parseInt(autoBuyerInt9 + "000")
 }
 var buyerInt1;
 var buyerInt2;
