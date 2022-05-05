@@ -12,6 +12,16 @@ var boost = 1;
 var boostMult = 1;
 var savedGame;
 var save;
+var farmMults = {
+ '1': 1,
+ '2': 1,
+ '3': 1,
+ '4': 1,
+ '5': 1,
+ '6': 1,
+ '7': 1,
+ '8': 1
+}
 var boostReq = {
  'farmType':8,
  'farmCount':20
@@ -196,6 +206,7 @@ function buyFarm2() {
   farmsCost[2] = farmsCost[2] *1.06
   clearInterval(farm2interval);
   farm2interval = undefined;
+  farmMults[1] += 1
   if (farms[2] > 1 && t2 !== 0) {
   t2 = t2 - 50
   }
@@ -208,6 +219,7 @@ function buyFarm3() {
   farmsCost[3] = farmsCost[3] *1.07
   clearInterval(farm3interval);
   farm3interval = undefined;
+  farmMults[2] += 1
   if (farms[3] > 1 && t3 !== 0) {
   t3 = t3 - 50
   }
@@ -220,6 +232,7 @@ function buyFarm4() {
   farmsCost[4] = farmsCost[4] *1.08
   clearInterval(farm4interval);
   farm4interval = undefined;
+  farmMults[3] += 1
   if (farms[4] > 1 && t4 !== 0) {
   t4 = t4 - 50
   }
@@ -232,6 +245,7 @@ function buyFarm5() {
   farmsCost[5] = farmsCost[5] *1.09
   clearInterval(farm5interval);
   farm5interval = undefined;
+  farmMults[4] += 1
   if (farms[5] > 1 && t5 !== 0) {
   t5 = t5 - 50
   }
@@ -244,6 +258,7 @@ function buyFarm6() {
   farmsCost[6] = farmsCost[6] *1.10
   clearInterval(farm6interval);
   farm6interval = undefined;
+  farmMults[5] += 1
   if (farms[6] > 1 && t6 !== 0) {
   t6 = t6 - 50
   }
@@ -256,6 +271,7 @@ function buyFarm7() {
   farmsCost[7] = farmsCost[7] *1.11
   clearInterval(farm7interval);
   farm7interval = undefined;
+  farmMults[6] += 1
   if (farms[7] > 1 && t7 !== 0) {
   t7 = t7 - 50
   }
@@ -268,6 +284,8 @@ function buyFarm8() {
   farmsCost[8] = farmsCost[8] *1.12
   clearInterval(farm8interval);
   farm8interval = undefined;
+  farmMults[7] += 1
+  farmMults[8] += 1
   if (farms[8] > 1 && t8 !== 0) {
   t8 = t8 - 50; 
   }
@@ -337,6 +355,22 @@ function gameLoop() {
  if (autoBuyerInt7 !== undefined) {document.getElementById('buyerInt7').innerHTML = autoBuyerInt7} else {};
  if (autoBuyerInt8 !== undefined) {document.getElementById('buyerInt8').innerHTML = autoBuyerInt8} else {};
  if (autoBuyerInt9 !== undefined) {document.getElementById('buyerInt9').innerHTML = autoBuyerInt9} else {};
+ document.getElementById('farm1mult').innerHTML = farmsMult[1]
+ document.getElementById('farm2mult').innerHTML = farmsMult[2]
+ document.getElementById('farm3mult').innerHTML = farmsMult[3]
+ document.getElementById('farm4mult').innerHTML = farmsMult[4]
+ document.getElementById('farm5mult').innerHTML = farmsMult[5]
+ document.getElementById('farm6mult').innerHTML = farmsMult[6]
+ document.getElementById('farm7mult').innerHTML = farmsMult[7]
+ document.getElementById('farm8mult').innerHTML = farmsMult[8]
+ document.getElementById('1stfarms').innerHTML = farms[1]
+ document.getElementById('2ndfarms').innerHTML = farms[2]
+ document.getElementById('3dfarms').innerHTML = farms[3]
+ document.getElementById('4thfarms').innerHTML = farms[4]
+ document.getElementById('5thfarms').innerHTML = farms[5]
+ document.getElementById('6thfarms').innerHTML = farms[6]
+ document.getElementById('7thfarms').innerHTML = farms[7]
+ document.getElementById('8thfarms').innerHTML = farms[8]
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
   
@@ -378,92 +412,92 @@ function gameLoop() {
  document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 }
 function spawnDrugs() {
-  drugs.aderall = drugs.aderall + 1 * farms[1] * boost
+  drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost
+  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost * farmMults[1]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 1 * farms[1] * boost
+  drugs.crack = drugs.crack + 1 * farms[1] * boost * farmMults[1]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 1 * farms[1] * boost
+  drugs.meth = drugs.meth + 1 * farms[1] * boost * farmMults[1]
  }
 }
 
 function farm2int() {
-  drugs.aderall = drugs.aderall + 2 * farms[2] * boost
+  drugs.aderall = drugs.aderall + 2 * farms[2] * boost * farmMults[2]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost
+  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost * farmMults[2]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 2 * farms[2] * boost
+  drugs.crack = drugs.crack + 2 * farms[2] * boost * farmMults[2]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 2 * farms[2] * boost
+  drugs.meth = drugs.meth + 2 * farms[2] * boost * farmMults[2]
  }
 }
 function farm3int() {
-  drugs.aderall = drugs.aderall + 3 * farms[3] * boost
+  drugs.aderall = drugs.aderall + 3 * farms[3] * boost * farmMults[3] 
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost
+  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost * farmMults[3]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 3 * farms[3] * boost
+  drugs.crack = drugs.crack + 3 * farms[3] * boost * farmMults[3]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 3 * farms[3] * boost
+  drugs.meth = drugs.meth + 3 * farms[3] * boost * farmMults[3]
  }
 }
 function farm4int() {
-  drugs.aderall = drugs.aderall + 4 * farms[4] * boost
+  drugs.aderall = drugs.aderall + 4 * farms[4] * boost * farmMults[4] 
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost
+  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost * farmMults[4]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 4 * farms[4] * boost
+  drugs.crack = drugs.crack + 4 * farms[4] * boost * farmMults[4]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 4 * farms[4] * boost
+  drugs.meth = drugs.meth + 4 * farms[4] * boost * farmMults[4]
  }
 }
 function farm5int() {
-  drugs.aderall = drugs.aderall + 5 * farms[5] * boost
+  drugs.aderall = drugs.aderall + 5 * farms[5] * boost * farmMults[5]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost
+  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost * farmMults[5]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 5 * farms[5] * boost
+  drugs.crack = drugs.crack + 5 * farms[5] * boost * farmMults[5]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 5 * farms[5] * boost
+  drugs.meth = drugs.meth + 5 * farms[5] * boost * farmMults[5]
  }
 }
 function farm6int() {
-  drugs.aderall = drugs.aderall + 6 * farms[6] * boost
+  drugs.aderall = drugs.aderall + 6 * farms[6] * boost * farmMults[6]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost
+  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost * farmMults[6]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 6 * farms[6] * boost
+  drugs.crack = drugs.crack + 6 * farms[6] * boost * farmMults[6]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 6 * farms[6] * boost
+  drugs.meth = drugs.meth + 6 * farms[6] * boost * farmMults[6]
  }
 }
 function farm7int() {
-  drugs.aderall = drugs.aderall + 7 * farms[7] * boost
+  drugs.aderall = drugs.aderall + 7 * farms[7] * boost * farmMults[7]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost
+  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost * farmMults[7]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 7 * farms[7] * boost
+  drugs.crack = drugs.crack + 7 * farms[7] * boost * farmMults[7]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 7 * farms[7] * boost
+  drugs.meth = drugs.meth + 7 * farms[7] * boost * farmMults[7]
  }
 }
 function farm8int() {
-  drugs.aderall = drugs.aderall + 8 * farms[8] * boost
+  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults]
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost
+  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8]
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 8 * farms[8] * boost
+  drugs.crack = drugs.crack + 8 * farms[8] * boost * farmMults[8]
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 8 * farms[8] * boost
+  drugs.meth = drugs.meth + 8 * farms[8] * boost * farmMults[8]
  }
 }
 function boostFarms() {
@@ -516,10 +550,11 @@ function buyAutoBuyer1() {
   moneu = moneu - autoBuyerPrices[1]
   document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
   document.getElementById('buyerInt1').innerHTML = autoBuyerInt1
+  buyers.b1 -= 1;
   clearInterval(buyerInt1)
   buyerInt1 = undefined
   if (autobuyers[1] >= 1 && buyerInt1 == undefined) {
-   buyerInt1 = setInterval(autoBuyer1, b1)
+   buyerInt1 = setInterval(autoBuyer1, buyers.b1)
   }
  }
 }
@@ -532,10 +567,11 @@ function buyAutoBuyer2() {
   moneu = moneu - autoBuyerPrices[2]
   document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
   document.getElementById('buyerInt2').innerHTML = autoBuyerInt2
+  buyers.b2 -= 1;
   clearInterval(buyerInt2)
   buyerInt2 = undefined
   if (autobuyers[2] >= 1 && buyerInt2 == undefined) {
-   buyerInt2 = setInterval(autoBuyer2, b2)
+   buyerInt2 = setInterval(autoBuyer2, buyers.b2)
   }
  }
 }
@@ -548,10 +584,11 @@ function buyAutoBuyer3() {
   moneu = moneu - autoBuyerPrices[3]
   document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
   document.getElementById('buyerInt3').innerHTML = autoBuyerInt3
+  buyers.b3 -= 1;
   clearInterval(buyerInt3)
   buyerInt3 = undefined
   if (autobuyers[3] >= 1 && buyerInt3 == undefined) {
-   buyerInt3 = setInterval(autoBuyer3, b3)
+   buyerInt3 = setInterval(autoBuyer3, buyers.b3)
   }
  }
 }
@@ -564,10 +601,11 @@ function buyAutoBuyer4() {
   moneu = moneu - autoBuyerPrices[4]
   document.getElementById('buyer4Cost').innerHTML = autoBuyerPrices[4]
   document.getElementById('buyerInt4').innerHTML = autoBuyerInt4
+  buyers.b4 -= 1;
   clearInterval(buyerInt4)
   buyerInt4 = undefined
   if (autobuyers[4] >= 1 && buyerInt4 == undefined) {
-   buyerInt4 = setInterval(autoBuyer4, b4)
+   buyerInt4 = setInterval(autoBuyer4, buyers.b4)
   }
  }
 }
@@ -580,10 +618,11 @@ function buyAutoBuyer5() {
   moneu = moneu - autoBuyerPrices[5]
   document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
   document.getElementById('buyerInt5').innerHTML = autoBuyerInt5
+  buyers.b5 -= 1;
   clearInterval(buyerInt5)
   buyerInt5 = undefined
   if (autobuyers[5] >= 1 && buyerInt5 == undefined) {
-   buyerInt5 = setInterval(autoBuyer5, b5)
+   buyerInt5 = setInterval(autoBuyer5, buyers.b5)
   }
  }
 }
@@ -596,10 +635,11 @@ function buyAutoBuyer6() {
   moneu = moneu - autoBuyerPrices[6]
   document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
   document.getElementById('buyerInt6').innerHTML = autoBuyerInt6
+  buyers.b6 -= 1;
   clearInterval(buyerInt6)
   buyerInt6 = undefined
   if (autobuyers[6] >= 1 && buyerInt6 == undefined) {
-   buyerInt6 = setInterval(autoBuyer6, b6)
+   buyerInt6 = setInterval(autoBuyer6, buyers.b6)
   }
  }
 }
@@ -612,10 +652,11 @@ function buyAutoBuyer7() {
   moneu = moneu - autoBuyerPrices[7]
   document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
   document.getElementById('buyerInt7').innerHTML = autoBuyerInt7
+  buyers.b7 -= 1;
   clearInterval(buyerInt7)
   buyerInt7 = undefined
   if (autobuyers[7] >= 1 && buyerInt1 == undefined) {
-   buyerInt7 = setInterval(autoBuyer7, b7)
+   buyerInt7 = setInterval(autoBuyer7, buyers.b7)
   }
  }
 }
@@ -628,10 +669,11 @@ function buyAutoBuyer8() {
   moneu = moneu - autoBuyerPrices[8]
   document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
   document.getElementById('buyerInt8').innerHTML = autoBuyerInt8
+  buyers.b8 -= 1;
   clearInterval(buyerInt8)
   buyerInt8 = undefined
   if (autobuyers[8] >= 1 && buyerInt8 == undefined) {
-   buyerInt8 = setInterval(autoBuyer8, b8)
+   buyerInt8 = setInterval(autoBuyer8, buyers.b8)
   }
  }
 }
@@ -644,10 +686,11 @@ function buyAutoBuyerBoost() {
   moneu = moneu - autoBuyerPrices.boost
   document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
   document.getElementById('buyerInt9').innerHTML = autoBuyerInt9
+  buyers.b9 -= 1;
   clearInterval(buyerInt9)
   buyerInt9 = undefined
   if (autobuyers.boost >= 1 && buyerInt9 == undefined) {
-   buyerInt9 = setInterval(autoBuyer9, b9)
+   buyerInt9 = setInterval(autoBuyer9, buyers.b9)
   }
  }
 }
