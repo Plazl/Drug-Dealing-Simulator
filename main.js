@@ -490,7 +490,7 @@ function farm7int() {
  }
 }
 function farm8int() {
-  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults]
+  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults[8]
  if (unlockedDrugs.marujuana == 1) {
   drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8]
   
