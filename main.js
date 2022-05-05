@@ -355,14 +355,14 @@ function gameLoop() {
  if (autoBuyerInt7 !== undefined) {document.getElementById('buyerInt7').innerHTML = autoBuyerInt7} else {};
  if (autoBuyerInt8 !== undefined) {document.getElementById('buyerInt8').innerHTML = autoBuyerInt8} else {};
  if (autoBuyerInt9 !== undefined) {document.getElementById('buyerInt9').innerHTML = autoBuyerInt9} else {};
- document.getElementById('farm1mult').innerHTML = farmsMult[1]
- document.getElementById('farm2mult').innerHTML = farmsMult[2]
- document.getElementById('farm3mult').innerHTML = farmsMult[3]
- document.getElementById('farm4mult').innerHTML = farmsMult[4]
- document.getElementById('farm5mult').innerHTML = farmsMult[5]
- document.getElementById('farm6mult').innerHTML = farmsMult[6]
- document.getElementById('farm7mult').innerHTML = farmsMult[7]
- document.getElementById('farm8mult').innerHTML = farmsMult[8]
+ document.getElementById('farm1mult').innerHTML = farmMults[1]
+ document.getElementById('farm2mult').innerHTML = farmMults[2]
+ document.getElementById('farm3mult').innerHTML = farmMults[3]
+ document.getElementById('farm4mult').innerHTML = farmMults[4]
+ document.getElementById('farm5mult').innerHTML = farmMults[5]
+ document.getElementById('farm6mult').innerHTML = farmMults[6]
+ document.getElementById('farm7mult').innerHTML = farmMults[7]
+ document.getElementById('farm8mult').innerHTML = farmMults[8]
  document.getElementById('1stfarms').innerHTML = farms[1]
  document.getElementById('2ndfarms').innerHTML = farms[2]
  document.getElementById('3dfarms').innerHTML = farms[3]
