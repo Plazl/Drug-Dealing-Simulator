@@ -308,7 +308,7 @@ function sellDrugs() {
  drugs.crack = 0
 }
 function gameLoop() {
- document.getElementById('moneu').innerHTML = Math.round(moneu);
+ document.getElementById('moneu').innerHTML = convert(Math.round(moneu));
  document.getElementById('farm1price').innerHTML = Math.round(farmsCost[1]);
  document.getElementById('farm2price').innerHTML = Math.round(farmsCost[2]);
  document.getElementById('farm3price').innerHTML = Math.round(farmsCost[3]);
@@ -759,3 +759,16 @@ function autoBuyer9() {
  farms[8] -= boostReq.farmCount
  }
 }
+var convert = moneu => {
+	           if (moneu < 1e3) return moneu;
+	           if (moneu >= 1e3 && moneu < 1e6) return +(moneu / 1e3).toFixed(2) + "K";
+	           if (moneu >= 1e6 && moneu < 1e9) return +(moneu / 1e6).toFixed(2) + "M";
+	           if (moneu >= 1e9 && moneu < 1e12) return +(moneu / 1e9).toFixed(2) + "B";
+	           if (moneu >= 1e12 && moneu < 1e15) return +(moneu / 1e12).toFixed(2) + "T";
+            if (moneu >= 1e15 && moneu < 1e18) return +(moneu / 1e15).toFixed(2) + "Qa";
+            if (moneu >= 1e18 && moneu < 1e21) return +(moneu / 1e18).toFixed(2) + "Qi";
+            if (moneu >= 1e21 && moneu < 1e24) return +(moneu / 1e21).toFixed(2) + "Sx";
+            if (moneu >= 1e24 && moneu < 1e27) return +(moneu / 1e24).toFixed(2) + "Sp";
+            if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
+            if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
+            if (moneu >= 1e31) return moneu.toExponential(2);
