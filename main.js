@@ -151,6 +151,20 @@ var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
 var menu3 = document.getElementById('achivements');
 var menu4 = document.getElementById('automation');
+var convert = moneu => {
+	    if (moneu < 1e3) return moneu;
+	    if (moneu >= 1e3 && moneu < 1e6) return +(moneu / 1e3).toFixed(2) + "K";
+            if (moneu >= 1e6 && moneu < 1e9) return +(moneu / 1e6).toFixed(2) + "M";
+	    if (moneu >= 1e9 && moneu < 1e12) return +(moneu / 1e9).toFixed(2) + "B";
+	    if (moneu >= 1e12 && moneu < 1e15) return +(moneu / 1e12).toFixed(2) + "T";
+            if (moneu >= 1e15 && moneu < 1e18) return +(moneu / 1e15).toFixed(2) + "Qa";
+            if (moneu >= 1e18 && moneu < 1e21) return +(moneu / 1e18).toFixed(2) + "Qi";
+            if (moneu >= 1e21 && moneu < 1e24) return +(moneu / 1e21).toFixed(2) + "Sx";
+            if (moneu >= 1e24 && moneu < 1e27) return +(moneu / 1e24).toFixed(2) + "Sp";
+            if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
+            if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
+            if (moneu >= 1e31) return moneu.toExponential(2);
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -758,18 +772,4 @@ function autoBuyer9() {
  boost += 1 * autobuyers.boost * boost
  farms[8] -= boostReq.farmCount
  }
-}
-var convert = moneu => {
-	           if (moneu < 1e3) return moneu;
-	           if (moneu >= 1e3 && moneu < 1e6) return +(moneu / 1e3).toFixed(2) + "K";
-	           if (moneu >= 1e6 && moneu < 1e9) return +(moneu / 1e6).toFixed(2) + "M";
-	           if (moneu >= 1e9 && moneu < 1e12) return +(moneu / 1e9).toFixed(2) + "B";
-	           if (moneu >= 1e12 && moneu < 1e15) return +(moneu / 1e12).toFixed(2) + "T";
-            if (moneu >= 1e15 && moneu < 1e18) return +(moneu / 1e15).toFixed(2) + "Qa";
-            if (moneu >= 1e18 && moneu < 1e21) return +(moneu / 1e18).toFixed(2) + "Qi";
-            if (moneu >= 1e21 && moneu < 1e24) return +(moneu / 1e21).toFixed(2) + "Sx";
-            if (moneu >= 1e24 && moneu < 1e27) return +(moneu / 1e24).toFixed(2) + "Sp";
-            if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
-            if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
-            if (moneu >= 1e31) return moneu.toExponential(2);
 }
