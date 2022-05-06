@@ -772,3 +772,4 @@ var convert = moneu => {
             if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
             if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
             if (moneu >= 1e31) return moneu.toExponential(2);
+}
