@@ -12,6 +12,10 @@ var boost = 1;
 var boostMult = 1;
 var savedGame;
 var save;
+var displayMoney = moneu.toExponential();
+var moneyExponent = moneu => {
+ if (moneu >= 1e31) displayMoney = displayMoney.replace("+", "")
+}
 var farmMults = {
  '1': 1,
  '2': 1,
@@ -163,7 +167,7 @@ var convert = moneu => {
             if (moneu >= 1e24 && moneu < 1e27) return +(moneu / 1e24).toFixed(2) + "Sp";
             if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
             if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
-            if (moneu >= 1e31) return moneu.toExponential(2);
+            if (moneu >= 1e31) return moneu.toExponential(2); 
 }
 function loadSave() {
  if (typeof game !== "undefined") {
