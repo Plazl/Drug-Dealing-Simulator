@@ -572,7 +572,7 @@ function gameLoop() {
  document.getElementById('6thfarms').innerHTML = convert6(farms[6]);
  document.getElementById('7thfarms').innerHTML = convert7(farms[7]);
  document.getElementById('8thfarms').innerHTML = convert8(farms[8]);
- document.getElementById('farm1price').innerHTML = conver9(farmsCost[1]);
+ document.getElementById('farm1price').innerHTML = convert9(farmsCost[1]);
  document.getElementById('farm2price').innerHTML = convert10(farmsCost[2]);
  document.getElementById('farm3price').innerHTML = convert11(farmsCost[3]);
  document.getElementById('farm4price').innerHTML = convert12(farmsCost[4]);
