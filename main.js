@@ -163,6 +163,10 @@ var displayFarmsCost5 = farmsCost[5].toExponential(2);
 var displayFarmsCost6 = farmsCost[6].toExponential(2);
 var displayFarmsCost7 = farmsCost[7].toExponential(2);
 var displayFarmsCost8 = farmsCost[8].toExponential(2);
+var displayDrugs1 = drugs.aderall.toExponential(2);
+var displayDrugs2 = drugs.marujuana.toExponential(2);
+var displayDrugs3 = drugs.crack.toExponential(2);
+var displayDrugs4 = drugs.meth.toExponential(2);
 var game = JSON.parse(localStorage.getItem('gameSave'));
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
@@ -406,6 +410,62 @@ var convert16 = farmsCost => {
             if (farmsCost[8] >= 1e30 && farmsCost[8] < 1e33) return +(farmsCost[8] / 1e30).toFixed(2) + "No";
             if (farmsCost[8] >= 1e31) return displayFarmsCost8.replace("+", "");; 
 }
+var convert17 = drugs => {
+	    if (drugs.aderall < 1e3) return drugs.aderall;
+	    if (drugs.aderall >= 1e3 && drugs.aderall < 1e6) return +(drugs.aderall / 1e3).toFixed(2) + "K";
+            if (drugs.aderall >= 1e6 && drugs.aderall < 1e9) return +(drugs.aderall / 1e6).toFixed(2) + "M";
+	    if (drugs.aderall >= 1e9 && drugs.aderall < 1e12) return +(drugs.aderall / 1e9).toFixed(2) + "B";
+	    if (drugs.aderall >= 1e12 && drugs.aderall < 1e15) return +(drugs.aderall / 1e12).toFixed(2) + "T";
+            if (drugs.aderall >= 1e15 && drugs.aderall < 1e18) return +(drugs.aderall / 1e15).toFixed(2) + "Qa";
+            if (drugs.aderall >= 1e18 && drugs.aderall < 1e21) return +(drugs.aderall / 1e18).toFixed(2) + "Qi";
+            if (drugs.aderall >= 1e21 && drugs.aderall < 1e24) return +(drugs.aderall / 1e21).toFixed(2) + "Sx";
+            if (drugs.aderall >= 1e24 && drugs.aderall < 1e27) return +(drugs.aderall / 1e24).toFixed(2) + "Sp";
+            if (drugs.aderall >= 1e27 && drugs.aderall < 1e30) return +(drugs.aderall / 1e27).toFixed(2) + "Oc";
+            if (drugs.aderall >= 1e30 && drugs.aderall < 1e33) return +(drugs.aderall / 1e30).toFixed(2) + "No";
+            if (drugs.aderall >= 1e31) return displayDrugs1.replace("+", "");; 
+}
+var convert18 = drugs => {
+	    if (drugs.marujuana < 1e3) return drugs.marujuana;
+	    if (drugs.marujuana >= 1e3 && drugs.marujuana < 1e6) return +(drugs.marujuana / 1e3).toFixed(2) + "K";
+            if (drugs.marujuana >= 1e6 && drugs.marujuana < 1e9) return +(drugs.marujuana / 1e6).toFixed(2) + "M";
+	    if (drugs.marujuana >= 1e9 && drugs.marujuana < 1e12) return +(drugs.marujuana / 1e9).toFixed(2) + "B";
+	    if (drugs.marujuana >= 1e12 && drugs.marujuana < 1e15) return +(drugs.marujuana / 1e12).toFixed(2) + "T";
+            if (drugs.marujuana >= 1e15 && drugs.marujuana < 1e18) return +(drugs.marujuana / 1e15).toFixed(2) + "Qa";
+            if (drugs.marujuana >= 1e18 && drugs.marujuana < 1e21) return +(drugs.marujuana / 1e18).toFixed(2) + "Qi";
+            if (drugs.marujuana >= 1e21 && drugs.marujuana < 1e24) return +(drugs.marujuana / 1e21).toFixed(2) + "Sx";
+            if (drugs.marujuana >= 1e24 && drugs.marujuana < 1e27) return +(drugs.marujuana / 1e24).toFixed(2) + "Sp";
+            if (drugs.marujuana >= 1e27 && drugs.marujuana < 1e30) return +(drugs.marujuana / 1e27).toFixed(2) + "Oc";
+            if (drugs.marujuana >= 1e30 && drugs.marujuana < 1e33) return +(drugs.marujuana / 1e30).toFixed(2) + "No";
+            if (drugs.marujuana >= 1e31) return displayDrugs2.replace("+", "");; 
+}
+var convert19 = drugs => {
+	    if (drugs.crack < 1e3) return drugs.crack;
+	    if (drugs.crack >= 1e3 && drugs.crack < 1e6) return +(drugs.crack / 1e3).toFixed(2) + "K";
+            if (drugs.crack >= 1e6 && drugs.crack < 1e9) return +(drugs.crack / 1e6).toFixed(2) + "M";
+	    if (drugs.crack >= 1e9 && drugs.crack < 1e12) return +(drugs.crack / 1e9).toFixed(2) + "B";
+	    if (drugs.crack >= 1e12 && drugs.crack < 1e15) return +(drugs.crack / 1e12).toFixed(2) + "T";
+            if (drugs.crack >= 1e15 && drugs.crack < 1e18) return +(drugs.crack / 1e15).toFixed(2) + "Qa";
+            if (drugs.crack >= 1e18 && drugs.crack < 1e21) return +(drugs.crack / 1e18).toFixed(2) + "Qi";
+            if (drugs.crack >= 1e21 && drugs.crack < 1e24) return +(drugs.crack / 1e21).toFixed(2) + "Sx";
+            if (drugs.crack >= 1e24 && drugs.crack < 1e27) return +(drugs.crack / 1e24).toFixed(2) + "Sp";
+            if (drugs.crack >= 1e27 && drugs.crack < 1e30) return +(drugs.crack / 1e27).toFixed(2) + "Oc";
+            if (drugs.crack >= 1e30 && drugs.crack < 1e33) return +(drugs.crack / 1e30).toFixed(2) + "No";
+            if (drugs.crack >= 1e31) return displayDrugs3.replace("+", "");; 
+}
+var convert20 = drugs => {
+	    if (drugs.meth < 1e3) return drugs.meth;
+	    if (drugs.meth >= 1e3 && drugs.meth < 1e6) return +(drugs.meth / 1e3).toFixed(2) + "K";
+            if (drugs.meth >= 1e6 && drugs.meth < 1e9) return +(drugs.meth / 1e6).toFixed(2) + "M";
+	    if (drugs.meth >= 1e9 && drugs.meth < 1e12) return +(drugs.meth / 1e9).toFixed(2) + "B";
+	    if (drugs.meth >= 1e12 && drugs.meth < 1e15) return +(drugs.meth / 1e12).toFixed(2) + "T";
+            if (drugs.meth >= 1e15 && drugs.meth < 1e18) return +(drugs.meth / 1e15).toFixed(2) + "Qa";
+            if (drugs.meth >= 1e18 && drugs.meth < 1e21) return +(drugs.meth / 1e18).toFixed(2) + "Qi";
+            if (drugs.meth >= 1e21 && drugs.meth < 1e24) return +(drugs.meth / 1e21).toFixed(2) + "Sx";
+            if (drugs.meth >= 1e24 && drugs.meth < 1e27) return +(drugs.meth / 1e24).toFixed(2) + "Sp";
+            if (drugs.meth >= 1e27 && drugs.meth < 1e30) return +(drugs.meth / 1e27).toFixed(2) + "Oc";
+            if (drugs.meth >= 1e30 && drugs.meth < 1e33) return +(drugs.meth / 1e30).toFixed(2) + "No";
+            if (drugs.meth >= 1e31) return displayDrugs4.replace("+", "");; 
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -553,7 +613,9 @@ function unlockNewDrug() {
   unlockedDrugs.crack = 1;
 } else if (unlockedDrugs.meth == 0 && drugs.crack >= 1000000000) {
   unlockedDrugs.meth = 1;
-}
+} else if (unlockedDrugs.aderall == 1 && unlockedDrugs.marujuana == 1 && unlockedDrugs.crack == 1 && unlockedDrugs.meth == 1{
+  bttn.style.display = 'none'
+} else if (unlockedDrugs.marujuana == 0 || unlockedDrugs.crack == 0 || unlockedDrugs.meth == 0) {bttn.style.display = 'block'; return;}
 }
 function sellDrugs() {
    moneu = moneu + drugsWorth.meth * drugs.meth + drugsWorth.crack * drugs.crack + drugsWorth.marujuana * drugs.marujuana + drugsWorth.aderall * drugs.aderall
@@ -681,7 +743,7 @@ function gameLoop() {
   farm8interval = setInterval(farm8int, t8)
   
  }
- document.getElementById('drugs').innerHTML = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
+ document.getElementById('drugs').innerHTML = convert17() + convert18() + convert19() + convert20();
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
@@ -775,17 +837,17 @@ function farm8int() {
 function boostFarms() {
  if (farms[8] >= boostReq.farmCount) {
   boost += 1;
-  boostReq.farmCount = boostReq.farmCount * 2; 
   farms[8] = farms[8] - boostReq.farmCount;
+  boostReq.farmCount = boostReq.farmCount * 2; 
  }
 }
 function updateDrug() {
  if (unlockedDrugs.marujuana == 0 && unlockedDrugs.aderall == 1) {
-  document.getElementById('hiddenDrug').innerHTML = 'marujuana for 100000 aderall'
+  document.getElementById('hiddenDrug').innerHTML = 'marujuana for 100K aderall'
  } else if (unlockedDrugs.crack == 0 && unlockedDrugs.marujuana == 1) {
-  document.getElementById('hiddenDrug').innerHTML = 'crack for 10000000 marujuana'
+  document.getElementById('hiddenDrug').innerHTML = 'crack for 10M marujuana'
  } else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack == 1) {
-  document.getElementById('hiddenDrug').innerHTML = 'meth for 1000000000 crack'
+  document.getElementById('hiddenDrug').innerHTML = 'meth for 1B crack'
  } 
 }
 function saveGame() {
