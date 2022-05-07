@@ -613,7 +613,7 @@ function unlockNewDrug() {
   unlockedDrugs.crack = 1;
 } else if (unlockedDrugs.meth == 0 && drugs.crack >= 1000000000) {
   unlockedDrugs.meth = 1;
-} else if (unlockedDrugs.aderall == 1 && unlockedDrugs.marujuana == 1 && unlockedDrugs.crack == 1 && unlockedDrugs.meth == 1{
+} else if (unlockedDrugs.aderall == 1 && unlockedDrugs.marujuana == 1 && unlockedDrugs.crack == 1 && unlockedDrugs.meth == 1){
   bttn.style.display = 'none'
 } else if (unlockedDrugs.marujuana == 0 || unlockedDrugs.crack == 0 || unlockedDrugs.meth == 0) {bttn.style.display = 'block'; return;}
 }
