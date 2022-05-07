@@ -13,6 +13,22 @@ var boostMult = 1;
 var savedGame;
 var save;
 var displayMoney = moneu.toExponential(2);
+var displayFarms1 = farms[1].toExponential(2);
+var displayFarms2 = farms[2].toExponential(2);
+var displayFarms3 = farms[3].toExponential(2);
+var displayFarms4 = farms[4].toExponential(2);
+var displayFarms5 = farms[5].toExponential(2);
+var displayFarms6 = farms[6].toExponential(2);
+var displayFarms7 = farms[7].toExponential(2);
+var displayFarms8 = farms[8].toExponential(2);
+var displayFarmsCost1 = farmsCost[1].toExponential(2);
+var displayFarmsCost2 = farmsCost[2].toExponential(2);
+var displayFarmsCost3 = farmsCost[3].toExponential(2);
+var displayFarmsCost4 = farmsCost[4].toExponential(2);
+var displayFarmsCost5 = farmsCost[5].toExponential(2);
+var displayFarmsCost6 = farmsCost[6].toExponential(2);
+var displayFarmsCost7 = farmsCost[7].toExponential(2);
+var displayFarmsCost8 = farmsCost[8].toExponential(2);
 var farmMults = {
  '1': 1,
  '2': 1,
@@ -165,6 +181,230 @@ var convert = moneu => {
             if (moneu >= 1e27 && moneu < 1e30) return +(moneu / 1e27).toFixed(2) + "Oc";
             if (moneu >= 1e30 && moneu < 1e33) return +(moneu / 1e30).toFixed(2) + "No";
             if (moneu >= 1e31) return displayMoney.replace("+", "");; 
+}
+var convert1 = farms[1] => {
+	    if (farms[1] < 1e3) return farms[1];
+	    if (farms[1] >= 1e3 && farms[1] < 1e6) return +(farms[1] / 1e3).toFixed(2) + "K";
+            if (farms[1] >= 1e6 && farms[1] < 1e9) return +(farms[1] / 1e6).toFixed(2) + "M";
+	    if (farms[1] >= 1e9 && farms[1] < 1e12) return +(farms[1] / 1e9).toFixed(2) + "B";
+	    if (farms[1] >= 1e12 && farms[1] < 1e15) return +(farms[1] / 1e12).toFixed(2) + "T";
+            if (farms[1] >= 1e15 && farms[1] < 1e18) return +(farms[1] / 1e15).toFixed(2) + "Qa";
+            if (farms[1] >= 1e18 && farms[1] < 1e21) return +(farms[1] / 1e18).toFixed(2) + "Qi";
+            if (farms[1] >= 1e21 && farms[1] < 1e24) return +(farms[1] / 1e21).toFixed(2) + "Sx";
+            if (farms[1] >= 1e24 && farms[1] < 1e27) return +(farms[1] / 1e24).toFixed(2) + "Sp";
+            if (farms[1] >= 1e27 && farms[1] < 1e30) return +(farms[1] / 1e27).toFixed(2) + "Oc";
+            if (farms[1] >= 1e30 && farms[1] < 1e33) return +(farms[1] / 1e30).toFixed(2) + "No";
+            if (farms[1] >= 1e31) return displayFarms1.replace("+", "");; 
+}
+var convert2 = farms[2] => {
+	    if (farms[2] < 1e3) return farms[2];
+	    if (farms[2] >= 1e3 && farms[2] < 1e6) return +(farms[2] / 1e3).toFixed(2) + "K";
+            if (farms[2] >= 1e6 && farms[2] < 1e9) return +(farms[2] / 1e6).toFixed(2) + "M";
+	    if (farms[2] >= 1e9 && farms[2] < 1e12) return +(farms[2] / 1e9).toFixed(2) + "B";
+	    if (farms[2] >= 1e12 && farms[2] < 1e15) return +(farms[2] / 1e12).toFixed(2) + "T";
+            if (farms[2] >= 1e15 && farms[2] < 1e18) return +(farms[2] / 1e15).toFixed(2) + "Qa";
+            if (farms[2] >= 1e18 && farms[2] < 1e21) return +(farms[2] / 1e18).toFixed(2) + "Qi";
+            if (farms[2] >= 1e21 && farms[2] < 1e24) return +(farms[2] / 1e21).toFixed(2) + "Sx";
+            if (farms[2] >= 1e24 && farms[2] < 1e27) return +(farms[2] / 1e24).toFixed(2) + "Sp";
+            if (farms[2] >= 1e27 && farms[2] < 1e30) return +(farms[2] / 1e27).toFixed(2) + "Oc";
+            if (farms[2] >= 1e30 && farms[2] < 1e33) return +(farms[2] / 1e30).toFixed(2) + "No";
+            if (farms[2] >= 1e31) return displayFarms2.replace("+", "");; 
+}
+var convert3 = farms[3] => {
+	    if (farms[3] < 1e3) return farms[3];
+	    if (farms[3] >= 1e3 && farms[3] < 1e6) return +(farms[3] / 1e3).toFixed(2) + "K";
+            if (farms[3] >= 1e6 && farms[3] < 1e9) return +(farms[3] / 1e6).toFixed(2) + "M";
+	    if (farms[3] >= 1e9 && farms[3] < 1e12) return +(farms[3] / 1e9).toFixed(2) + "B";
+	    if (farms[3] >= 1e12 && farms[3] < 1e15) return +(farms[3] / 1e12).toFixed(2) + "T";
+            if (farms[3] >= 1e15 && farms[3] < 1e18) return +(farms[3] / 1e15).toFixed(2) + "Qa";
+            if (farms[3] >= 1e18 && farms[3] < 1e21) return +(farms[3] / 1e18).toFixed(2) + "Qi";
+            if (farms[3] >= 1e21 && farms[3] < 1e24) return +(farms[3] / 1e21).toFixed(2) + "Sx";
+            if (farms[3] >= 1e24 && farms[3] < 1e27) return +(farms[3] / 1e24).toFixed(2) + "Sp";
+            if (farms[3] >= 1e27 && farms[3] < 1e30) return +(farms[3] / 1e27).toFixed(2) + "Oc";
+            if (farms[3] >= 1e30 && farms[3] < 1e33) return +(farms[3] / 1e30).toFixed(2) + "No";
+            if (farms[3] >= 1e31) return displayFarms3.replace("+", "");; 
+}
+var convert4 = farms[4] => {
+	    if (farms[4] < 1e3) return farms[4];
+	    if (farms[4] >= 1e3 && farms[4] < 1e6) return +(farms[4] / 1e3).toFixed(2) + "K";
+            if (farms[4] >= 1e6 && farms[4] < 1e9) return +(farms[4] / 1e6).toFixed(2) + "M";
+	    if (farms[4] >= 1e9 && farms[4] < 1e12) return +(farms[4] / 1e9).toFixed(2) + "B";
+	    if (farms[4] >= 1e12 && farms[4] < 1e15) return +(farms[4] / 1e12).toFixed(2) + "T";
+            if (farms[4] >= 1e15 && farms[4] < 1e18) return +(farms[4] / 1e15).toFixed(2) + "Qa";
+            if (farms[4] >= 1e18 && farms[4] < 1e21) return +(farms[4] / 1e18).toFixed(2) + "Qi";
+            if (farms[4] >= 1e21 && farms[4] < 1e24) return +(farms[4] / 1e21).toFixed(2) + "Sx";
+            if (farms[4] >= 1e24 && farms[4] < 1e27) return +(farms[4] / 1e24).toFixed(2) + "Sp";
+            if (farms[4] >= 1e27 && farms[4] < 1e30) return +(farms[4] / 1e27).toFixed(2) + "Oc";
+            if (farms[4] >= 1e30 && farms[4] < 1e33) return +(farms[4] / 1e30).toFixed(2) + "No";
+            if (farms[4] >= 1e31) return displayFarms4.replace("+", "");; 
+}
+var convert5 = farms[5] => {
+	    if (farms[5] < 1e3) return farms[5];
+	    if (farms[5] >= 1e3 && farms[5] < 1e6) return +(farms[5] / 1e3).toFixed(2) + "K";
+            if (farms[5] >= 1e6 && farms[5] < 1e9) return +(farms[5] / 1e6).toFixed(2) + "M";
+	    if (farms[5] >= 1e9 && farms[5] < 1e12) return +(farms[5] / 1e9).toFixed(2) + "B";
+	    if (farms[5] >= 1e12 && farms[5] < 1e15) return +(farms[5] / 1e12).toFixed(2) + "T";
+            if (farms[5] >= 1e15 && farms[5] < 1e18) return +(farms[5] / 1e15).toFixed(2) + "Qa";
+            if (farms[5] >= 1e18 && farms[5] < 1e21) return +(farms[5] / 1e18).toFixed(2) + "Qi";
+            if (farms[5] >= 1e21 && farms[5] < 1e24) return +(farms[5] / 1e21).toFixed(2) + "Sx";
+            if (farms[5] >= 1e24 && farms[5] < 1e27) return +(farms[5] / 1e24).toFixed(2) + "Sp";
+            if (farms[5] >= 1e27 && farms[5] < 1e30) return +(farms[5] / 1e27).toFixed(2) + "Oc";
+            if (farms[5] >= 1e30 && farms[5] < 1e33) return +(farms[5] / 1e30).toFixed(2) + "No";
+            if (farms[5] >= 1e31) return displayFarms5.replace("+", "");; 
+}
+var convert6 = farms[6] => {
+	    if (farms[6] < 1e3) return farms[6];
+	    if (farms[6] >= 1e3 && farms[6] < 1e6) return +(farms[6] / 1e3).toFixed(2) + "K";
+            if (farms[6] >= 1e6 && farms[6] < 1e9) return +(farms[6] / 1e6).toFixed(2) + "M";
+	    if (farms[6] >= 1e9 && farms[6] < 1e12) return +(farms[6] / 1e9).toFixed(2) + "B";
+	    if (farms[6] >= 1e12 && farms[6] < 1e15) return +(farms[6] / 1e12).toFixed(2) + "T";
+            if (farms[6] >= 1e15 && farms[6] < 1e18) return +(farms[6] / 1e15).toFixed(2) + "Qa";
+            if (farms[6] >= 1e18 && farms[6] < 1e21) return +(farms[6] / 1e18).toFixed(2) + "Qi";
+            if (farms[6] >= 1e21 && farms[6] < 1e24) return +(farms[6] / 1e21).toFixed(2) + "Sx";
+            if (farms[6] >= 1e24 && farms[6] < 1e27) return +(farms[6] / 1e24).toFixed(2) + "Sp";
+            if (farms[6] >= 1e27 && farms[6] < 1e30) return +(farms[6] / 1e27).toFixed(2) + "Oc";
+            if (farms[6] >= 1e30 && farms[6] < 1e33) return +(farms[6] / 1e30).toFixed(2) + "No";
+            if (farms[6] >= 1e31) return displayFarms6.replace("+", "");; 
+}
+var convert7 = farms[7] => {
+	    if (farms[7] < 1e3) return farms[7];
+	    if (farms[7] >= 1e3 && farms[7] < 1e6) return +(farms[7] / 1e3).toFixed(2) + "K";
+            if (farms[7] >= 1e6 && farms[7] < 1e9) return +(farms[7] / 1e6).toFixed(2) + "M";
+	    if (farms[7] >= 1e9 && farms[7] < 1e12) return +(farms[7] / 1e9).toFixed(2) + "B";
+	    if (farms[7] >= 1e12 && farms[7] < 1e15) return +(farms[7] / 1e12).toFixed(2) + "T";
+            if (farms[7] >= 1e15 && farms[7] < 1e18) return +(farms[7] / 1e15).toFixed(2) + "Qa";
+            if (farms[7] >= 1e18 && farms[7] < 1e21) return +(farms[7] / 1e18).toFixed(2) + "Qi";
+            if (farms[7] >= 1e21 && farms[7] < 1e24) return +(farms[7] / 1e21).toFixed(2) + "Sx";
+            if (farms[7] >= 1e24 && farms[7] < 1e27) return +(farms[7] / 1e24).toFixed(2) + "Sp";
+            if (farms[7] >= 1e27 && farms[7] < 1e30) return +(farms[7] / 1e27).toFixed(2) + "Oc";
+            if (farms[7] >= 1e30 && farms[7] < 1e33) return +(farms[7] / 1e30).toFixed(2) + "No";
+            if (farms[7] >= 1e31) return displayFarms7.replace("+", "");; 
+}
+var convert8 = farms[8] => {
+	    if (farms[8] < 1e3) return farms[8];
+	    if (farms[8] >= 1e3 && farms[8] < 1e6) return +(farms[8] / 1e3).toFixed(2) + "K";
+            if (farms[8] >= 1e6 && farms[8] < 1e9) return +(farms[8] / 1e6).toFixed(2) + "M";
+	    if (farms[8] >= 1e9 && farms[8] < 1e12) return +(farms[8] / 1e9).toFixed(2) + "B";
+	    if (farms[8] >= 1e12 && farms[8] < 1e15) return +(farms[8] / 1e12).toFixed(2) + "T";
+            if (farms[8] >= 1e15 && farms[8] < 1e18) return +(farms[8] / 1e15).toFixed(2) + "Qa";
+            if (farms[8] >= 1e18 && farms[8] < 1e21) return +(farms[8] / 1e18).toFixed(2) + "Qi";
+            if (farms[8] >= 1e21 && farms[8] < 1e24) return +(farms[8] / 1e21).toFixed(2) + "Sx";
+            if (farms[8] >= 1e24 && farms[8] < 1e27) return +(farms[8] / 1e24).toFixed(2) + "Sp";
+            if (farms[8] >= 1e27 && farms[8] < 1e30) return +(farms[8] / 1e27).toFixed(2) + "Oc";
+            if (farms[8] >= 1e30 && farms[8] < 1e33) return +(farms[8] / 1e30).toFixed(2) + "No";
+            if (farms[8] >= 1e31) return displayFarms8.replace("+", "");; 
+}
+var convert9 = farmsCost[1] => {
+	    if (farmsCost[1] < 1e3) return farmsCost[1];
+	    if (farmsCost[1] >= 1e3 && farmsCost[1] < 1e6) return +(farmsCost[1] / 1e3).toFixed(2) + "K";
+            if (farmsCost[1] >= 1e6 && farmsCost[1] < 1e9) return +(farmsCost[1] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[1] >= 1e9 && farmsCost[1] < 1e12) return +(farmsCost[1] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[1] >= 1e12 && farmsCost[1] < 1e15) return +(farmsCost[1] / 1e12).toFixed(2) + "T";
+            if (farmsCost[1] >= 1e15 && farmsCost[1] < 1e18) return +(farmsCost[1] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[1] >= 1e18 && farmsCost[1] < 1e21) return +(farmsCost[1] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[1] >= 1e21 && farmsCost[1] < 1e24) return +(farmsCost[1] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[1] >= 1e24 && farmsCost[1] < 1e27) return +(farmsCost[1] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[1] >= 1e27 && farmsCost[1] < 1e30) return +(farmsCost[1] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[1] >= 1e30 && farmsCost[1] < 1e33) return +(farmsCost[1] / 1e30).toFixed(2) + "No";
+            if (farmsCost[1] >= 1e31) return displayFarmsCost1.replace("+", "");; 
+}
+var convert10 = farmsCost[2] => {
+	    if (farmsCost[2] < 1e3) return farmsCost[2];
+	    if (farmsCost[2] >= 1e3 && farmsCost[2] < 1e6) return +(farmsCost[2] / 1e3).toFixed(2) + "K";
+            if (farmsCost[2] >= 1e6 && farmsCost[2] < 1e9) return +(farmsCost[2] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[2] >= 1e9 && farmsCost[2] < 1e12) return +(farmsCost[2] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[2] >= 1e12 && farmsCost[2] < 1e15) return +(farmsCost[2] / 1e12).toFixed(2) + "T";
+            if (farmsCost[2] >= 1e15 && farmsCost[2] < 1e18) return +(farmsCost[2] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[2] >= 1e18 && farmsCost[2] < 1e21) return +(farmsCost[2] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[2] >= 1e21 && farmsCost[2] < 1e24) return +(farmsCost[2] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[2] >= 1e24 && farmsCost[2] < 1e27) return +(farmsCost[2] / 1e24).toFixed(2) + "Sp";
+            if (farmCost[2] >= 1e27 && farmsCost[2] < 1e30) return +(farmsCost[2] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[2] >= 1e30 && farmsCost[2] < 1e33) return +(farms[2] / 1e30).toFixed(2) + "No";
+            if (farmsCost[2] >= 1e31) return displayFarmsCost2.replace("+", "");; 
+}
+var convert11 = farmsCost[3] => {
+	    if (farmsCost[3] < 1e3) return farmsCost[3];
+	    if (farmsCost[3] >= 1e3 && farmsCost[3] < 1e6) return +(farmsCost[3] / 1e3).toFixed(2) + "K";
+            if (farmsCost[3] >= 1e6 && farmsCost[3] < 1e9) return +(farmsCost[3] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[3] >= 1e9 && farmsCost[3] < 1e12) return +(farmsCost[3] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[3] >= 1e12 && farmsCost[3] < 1e15) return +(farmsCost[3] / 1e12).toFixed(2) + "T";
+            if (farmsCost[3] >= 1e15 && farmsCost[3] < 1e18) return +(farmsCost[3] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[3] >= 1e18 && farmsCost[3] < 1e21) return +(farmsCost[3] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[3] >= 1e21 && farmsCost[3] < 1e24) return +(farmsCost[3] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[3] >= 1e24 && farmsCost[3] < 1e27) return +(farmsCost[3] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[3] >= 1e27 && farmsCost[3] < 1e30) return +(farmsCost[3] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[3] >= 1e30 && farmsCost[3] < 1e33) return +(farmsCost[3] / 1e30).toFixed(2) + "No";
+            if (farmsCost[3] >= 1e31) return displayFarmsCost3.replace("+", "");; 
+}
+var convert12 = farmsCost[4] => {
+	    if (farmsCost[4] < 1e3) return farmsCost[4];
+	    if (farmsCost[4] >= 1e3 && farmsCost[4] < 1e6) return +(farmsCost[4] / 1e3).toFixed(2) + "K";
+            if (farmsCost[4] >= 1e6 && farmsCost[4] < 1e9) return +(farmsCost[4] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[4] >= 1e9 && farmsCost[4] < 1e12) return +(farmsCost[4] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[4] >= 1e12 && farmsCost[4] < 1e15) return +(farmsCost[4] / 1e12).toFixed(2) + "T";
+            if (farmsCost[4] >= 1e15 && farmsCost[4] < 1e18) return +(farmsCost[4] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[4] >= 1e18 && farmsCost[4] < 1e21) return +(farmsCost[4] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[4] >= 1e21 && farmsCost[4] < 1e24) return +(farmsCost[4] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[4] >= 1e24 && farmsCost[4] < 1e27) return +(farmsCost[4] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[4] >= 1e27 && farmsCost[4] < 1e30) return +(farmsCost[4] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[4] >= 1e30 && farmsCost[4] < 1e33) return +(farmsCost[4] / 1e30).toFixed(2) + "No";
+            if (farmsCost[4] >= 1e31) return displayFarmsCost4.replace("+", "");; 
+}
+var convert13 = farmsCost[5] => {
+	    if (farmsCost[5] < 1e3) return farmsCost[5];
+	    if (farmsCost[5] >= 1e3 && farmsCost[5] < 1e6) return +(farmsCost[5] / 1e3).toFixed(2) + "K";
+            if (farmsCost[5] >= 1e6 && farmsCost[5] < 1e9) return +(farmsCost[5] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[5] >= 1e9 && farmsCost[5] < 1e12) return +(farmsCost[5] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[5] >= 1e12 && farmsCost[5] < 1e15) return +(farmsCost[5] / 1e12).toFixed(2) + "T";
+            if (farmsCost[5] >= 1e15 && farmsCost[5] < 1e18) return +(farmsCost[5] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[5] >= 1e18 && farmsCost[5] < 1e21) return +(farmsCost[5] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[5] >= 1e21 && farmsCost[5] < 1e24) return +(farmsCost[5] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[5] >= 1e24 && farmsCost[5] < 1e27) return +(farmsCost[5] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[5] >= 1e27 && farmsCost[5] < 1e30) return +(farmsCost[5] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[5] >= 1e30 && farmsCost[5] < 1e33) return +(farmsCost[5] / 1e30).toFixed(2) + "No";
+            if (farmsCost[5] >= 1e31) return displayFarmsCost5.replace("+", "");; 
+}
+var convert14 = farmsCost[6] => {
+	    if (farmsCost[6] < 1e3) return farmsCost[6];
+	    if (farmsCost[6] >= 1e3 && farmsCost[6] < 1e6) return +(farmsCost[6] / 1e3).toFixed(2) + "K";
+            if (farmsCost[6] >= 1e6 && farmsCost[6] < 1e9) return +(farmsCost[6] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[6] >= 1e9 && farmsCost[6] < 1e12) return +(farmsCost[6] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[6] >= 1e12 && farmsCost[6] < 1e15) return +(farmsCost[6] / 1e12).toFixed(2) + "T";
+            if (farmsCost[6] >= 1e15 && farmsCost[6] < 1e18) return +(farmsCost[6] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[6] >= 1e18 && farmsCost[6] < 1e21) return +(farmsCost[6] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[6] >= 1e21 && farmsCost[6] < 1e24) return +(farmsCost[6] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[6] >= 1e24 && farmsCost[6] < 1e27) return +(farmsCost[6] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[6] >= 1e27 && farmsCost[6] < 1e30) return +(farmsCost[6] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[6] >= 1e30 && farmsCost[6] < 1e33) return +(farmsCost[6] / 1e30).toFixed(2) + "No";
+            if (farmsCost[6] >= 1e31) return displayFarmsCost6.replace("+", "");; 
+}
+var convert15 = farmsCost[7] => {
+	    if (farmsCost[7] < 1e3) return farmsCost[7];
+	    if (farmsCost[7] >= 1e3 && farmsCost[7] < 1e6) return +(farmsCost[7] / 1e3).toFixed(2) + "K";
+            if (farmsCost[7] >= 1e6 && farmsCost[7] < 1e9) return +(farmsCost[7] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[7] >= 1e9 && farmsCost[7] < 1e12) return +(farmsCost[7] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[7] >= 1e12 && farmsCost[7] < 1e15) return +(farmsCost[7] / 1e12).toFixed(2) + "T";
+            if (farmsCost[7] >= 1e15 && farmsCost[7] < 1e18) return +(farmsCost[7] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[7] >= 1e18 && farmsCost[7] < 1e21) return +(farmsCost[7] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[7] >= 1e21 && farmsCost[7] < 1e24) return +(farmsCost[7] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[7] >= 1e24 && farmsCost[7] < 1e27) return +(farmsCost[7] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[7] >= 1e27 && farmsCost[7] < 1e30) return +(farmsCost[7] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[7] >= 1e30 && farmsCost[7] < 1e33) return +(farmsCost[7] / 1e30).toFixed(2) + "No";
+            if (farmsCost[7] >= 1e31) return displayFarmsCost7.replace("+", "");; 
+}
+var convert16 = farmsCost[8] => {
+	    if (farmsCost[8] < 1e3) return farmsCost[8];
+	    if (farmsCost[8] >= 1e3 && farmsCost[8] < 1e6) return +(farmsCost[8] / 1e3).toFixed(2) + "K";
+            if (farmsCost[8] >= 1e6 && farmsCost[8] < 1e9) return +(farmsCost[8] / 1e6).toFixed(2) + "M";
+	    if (farmsCost[8] >= 1e9 && farmsCost[8] < 1e12) return +(farmsCost[8] / 1e9).toFixed(2) + "B";
+	    if (farmsCost[8] >= 1e12 && farmsCost[8] < 1e15) return +(farmsCost[8] / 1e12).toFixed(2) + "T";
+            if (farmsCost[8] >= 1e15 && farmsCost[8] < 1e18) return +(farmsCost[8] / 1e15).toFixed(2) + "Qa";
+            if (farmsCost[8] >= 1e18 && farmsCost[8] < 1e21) return +(farmsCost[8] / 1e18).toFixed(2) + "Qi";
+            if (farmsCost[8] >= 1e21 && farmsCost[8] < 1e24) return +(farmsCost[8] / 1e21).toFixed(2) + "Sx";
+            if (farmsCost[8] >= 1e24 && farmsCost[8] < 1e27) return +(farmsCost[8] / 1e24).toFixed(2) + "Sp";
+            if (farmsCost[8] >= 1e27 && farmsCost[8] < 1e30) return +(farmsCost[8] / 1e27).toFixed(2) + "Oc";
+            if (farmsCost[8] >= 1e30 && farmsCost[8] < 1e33) return +(farmsCost[8] / 1e30).toFixed(2) + "No";
+            if (farmsCost[8] >= 1e31) return displayFarmsCost8.replace("+", "");; 
 }
 function loadSave() {
  if (typeof game !== "undefined") {
@@ -324,15 +564,39 @@ function sellDrugs() {
 }
 function gameLoop() {
  document.getElementById('moneu').innerHTML = convert(Math.round(moneu));
- document.getElementById('farm1price').innerHTML = Math.round(farmsCost[1]);
- document.getElementById('farm2price').innerHTML = Math.round(farmsCost[2]);
- document.getElementById('farm3price').innerHTML = Math.round(farmsCost[3]);
- document.getElementById('farm4price').innerHTML = Math.round(farmsCost[4]);
- document.getElementById('farm5price').innerHTML = Math.round(farmsCost[5]);
- document.getElementById('farm6price').innerHTML = Math.round(farmsCost[6]);
- document.getElementById('farm7price').innerHTML = Math.round(farmsCost[7]);
- document.getElementById('farm8price').innerHTML = Math.round(farmsCost[8]);
+ document.getElementById('1stfarms').innerHTML = convert1(farms[1]);
+ document.getElementById('2ndfarms').innerHTML = convert2(farms[2]);
+ document.getElementById('3dfarms').innerHTML = convert3(farms[3]);
+ document.getElementById('4thfarms').innerHTML = convert4(farms[4]);
+ document.getElementById('5thfarms').innerHTML = convert5(farms[5]);
+ document.getElementById('6thfarms').innerHTML = convert6(farms[6]);
+ document.getElementById('7thfarms').innerHTML = convert7(farms[7]);
+ document.getElementById('8thfarms').innerHTML = convert8(farms[8]);
+ document.getElementById('farm1price').innerHTML = conver9(farmsCost[1]);
+ document.getElementById('farm2price').innerHTML = convert10(farmsCost[2]);
+ document.getElementById('farm3price').innerHTML = convert11(farmsCost[3]);
+ document.getElementById('farm4price').innerHTML = convert12(farmsCost[4]);
+ document.getElementById('farm5price').innerHTML = convert13(farmsCost[5]);
+ document.getElementById('farm6price').innerHTML = convert14(farmsCost[6]);
+ document.getElementById('farm7price').innerHTML = convert15(farmsCost[7]);
+ document.getElementById('farm8price').innerHTML = convert16(farmsCost[8]);
 	displayMoney = moneu.toExponential(2)
+	displayFarms1 = farms[1].toExponential(2);
+	displayFarms2 = farms[2].toExponential(2);
+	displayFarms3 = farms[3].toExponential(2);
+	displayFarms4 = farms[4].toExponential(2);
+	displayFarms5 = farms[5].toExponential(2);
+	displayFarms6 = farms[6].toExponential(2);
+	displayFarms7 = farms[7].toExponential(2);
+	displayFarms8 = farms[8].toExponential(2);
+	displayFarmsCost1 = farmsCost[1].toExponential(2);
+	displayFarmsCost2 = farmsCost[2].toExponential(2);
+	displayFarmsCost3 = farmsCost[3].toExponential(2);
+	displayFarmsCost4 = farmsCost[4].toExponential(2);
+	displayFarmsCost5 = farmsCost[5].toExponential(2);
+	displayFarmsCost6 = farmsCost[6].toExponential(2);
+	displayFarmsCost7 = farmsCost[7].toExponential(2);
+	displayFarmsCost8 = farmsCost[8].toExponential(2);
   if (openTab !== 1) {
   menu1.style.display = "none"
  } else { 
@@ -379,14 +643,6 @@ function gameLoop() {
  document.getElementById('farm6mult').innerHTML = farmMults[6]
  document.getElementById('farm7mult').innerHTML = farmMults[7]
  document.getElementById('farm8mult').innerHTML = farmMults[8]
- document.getElementById('1stfarms').innerHTML = farms[1]
- document.getElementById('2ndfarms').innerHTML = farms[2]
- document.getElementById('3dfarms').innerHTML = farms[3]
- document.getElementById('4thfarms').innerHTML = farms[4]
- document.getElementById('5thfarms').innerHTML = farms[5]
- document.getElementById('6thfarms').innerHTML = farms[6]
- document.getElementById('7thfarms').innerHTML = farms[7]
- document.getElementById('8thfarms').innerHTML = farms[8]
  if (farms[1] >= 1 && farm1interval == undefined) {
    farm1interval = setInterval(spawnDrugs, t1);
   
