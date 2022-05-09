@@ -411,7 +411,7 @@ var convert16 = farmsCost => {
             if (farmsCost[8] >= 1e31) return displayFarmsCost8.replace("+", "");; 
 }
 var convert17 = drugs => {
-	    if (drugs.aderall < 1e3) return drugs.aderall;
+	    if (drugs.aderall <= 1e3) return drugs.aderall;
 	    if (drugs.aderall >= 1e3 && drugs.aderall < 1e6) return +(drugs.aderall / 1e3).toFixed(2) + "K";
             if (drugs.aderall >= 1e6 && drugs.aderall < 1e9) return +(drugs.aderall / 1e6).toFixed(2) + "M";
 	    if (drugs.aderall >= 1e9 && drugs.aderall < 1e12) return +(drugs.aderall / 1e9).toFixed(2) + "B";
@@ -425,7 +425,7 @@ var convert17 = drugs => {
             if (drugs.aderall >= 1e31) return displayDrugs1.replace("+", "");; 
 }
 var convert18 = drugs => {
-	    if (drugs.marujuana < 1e3) return drugs.marujuana;
+	    if (drugs.marujuana <= 1e3) return drugs.marujuana;
 	    if (drugs.marujuana >= 1e3 && drugs.marujuana < 1e6) return +(drugs.marujuana / 1e3).toFixed(2) + "K";
             if (drugs.marujuana >= 1e6 && drugs.marujuana < 1e9) return +(drugs.marujuana / 1e6).toFixed(2) + "M";
 	    if (drugs.marujuana >= 1e9 && drugs.marujuana < 1e12) return +(drugs.marujuana / 1e9).toFixed(2) + "B";
@@ -439,7 +439,7 @@ var convert18 = drugs => {
             if (drugs.marujuana >= 1e31) return displayDrugs2.replace("+", "");; 
 }
 var convert19 = drugs => {
-	    if (drugs.crack < 1e3) return drugs.crack;
+	    if (drugs.crack <= 1e3) return drugs.crack;
 	    if (drugs.crack >= 1e3 && drugs.crack < 1e6) return +(drugs.crack / 1e3).toFixed(2) + "K";
             if (drugs.crack >= 1e6 && drugs.crack < 1e9) return +(drugs.crack / 1e6).toFixed(2) + "M";
 	    if (drugs.crack >= 1e9 && drugs.crack < 1e12) return +(drugs.crack / 1e9).toFixed(2) + "B";
@@ -453,7 +453,7 @@ var convert19 = drugs => {
             if (drugs.crack >= 1e31) return displayDrugs3.replace("+", "");; 
 }
 var convert20 = drugs => {
-	    if (drugs.meth < 1e3) return drugs.meth;
+	    if (drugs.meth <= 1e3) return drugs.meth;
 	    if (drugs.meth >= 1e3 && drugs.meth < 1e6) return +(drugs.meth / 1e3).toFixed(2) + "K";
             if (drugs.meth >= 1e6 && drugs.meth < 1e9) return +(drugs.meth / 1e6).toFixed(2) + "M";
 	    if (drugs.meth >= 1e9 && drugs.meth < 1e12) return +(drugs.meth / 1e9).toFixed(2) + "B";
