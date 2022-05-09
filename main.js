@@ -411,60 +411,60 @@ var convert16 = farmsCost => {
             if (farmsCost[8] >= 1e31) return displayFarmsCost8.replace("+", "");; 
 }
 var convert17 = drugs => {
-	    if (drugs.aderall <= 1e3) return drugs.aderall;
-	    if (drugs.aderall >= 1e3 && drugs.aderall < 1e6) return +(drugs.aderall / 1e3).toFixed(2) + "K";
-            if (drugs.aderall >= 1e6 && drugs.aderall < 1e9) return +(drugs.aderall / 1e6).toFixed(2) + "M";
-	    if (drugs.aderall >= 1e9 && drugs.aderall < 1e12) return +(drugs.aderall / 1e9).toFixed(2) + "B";
-	    if (drugs.aderall >= 1e12 && drugs.aderall < 1e15) return +(drugs.aderall / 1e12).toFixed(2) + "T";
-            if (drugs.aderall >= 1e15 && drugs.aderall < 1e18) return +(drugs.aderall / 1e15).toFixed(2) + "Qa";
-            if (drugs.aderall >= 1e18 && drugs.aderall < 1e21) return +(drugs.aderall / 1e18).toFixed(2) + "Qi";
-            if (drugs.aderall >= 1e21 && drugs.aderall < 1e24) return +(drugs.aderall / 1e21).toFixed(2) + "Sx";
-            if (drugs.aderall >= 1e24 && drugs.aderall < 1e27) return +(drugs.aderall / 1e24).toFixed(2) + "Sp";
-            if (drugs.aderall >= 1e27 && drugs.aderall < 1e30) return +(drugs.aderall / 1e27).toFixed(2) + "Oc";
-            if (drugs.aderall >= 1e30 && drugs.aderall < 1e33) return +(drugs.aderall / 1e30).toFixed(2) + "No";
-            if (drugs.aderall >= 1e31) return displayDrugs1.replace("+", "");; 
+	    if (drugs["aderall"] <= 1e3) return drugs["aderall"];
+	    if (drugs["aderall"] >= 1e3 && drugs["aderall"] < 1e6) return +(drugs["aderall"] / 1e3).toFixed(2) + "K";
+            if (drugs["aderall"] >= 1e6 && drugs["aderall"] < 1e9) return +(drugs["aderall"] / 1e6).toFixed(2) + "M";
+	    if (drugs["aderall"] >= 1e9 && drugs["aderall"] < 1e12) return +(drugs["aderall"] / 1e9).toFixed(2) + "B";
+	    if (drugs["aderall"] >= 1e12 && drugs["aderall"] < 1e15) return +(drugs["aderall"] / 1e12).toFixed(2) + "T";
+            if (drugs["aderall"] >= 1e15 && drugs["aderall"] < 1e18) return +(drugs["aderall"] / 1e15).toFixed(2) + "Qa";
+            if (drugs["aderall"] >= 1e18 && drugs["aderall"] < 1e21) return +(drugs["aderall"] / 1e18).toFixed(2) + "Qi";
+            if (drugs["aderall"] >= 1e21 && drugs["aderall"] < 1e24) return +(drugs["aderall"] / 1e21).toFixed(2) + "Sx";
+            if (drugs["aderall"] >= 1e24 && drugs["aderall"] < 1e27) return +(drugs["aderall"] / 1e24).toFixed(2) + "Sp";
+            if (drugs["aderall"] >= 1e27 && drugs["aderall"] < 1e30) return +(drugs["aderall"] / 1e27).toFixed(2) + "Oc";
+            if (drugs["aderall"] >= 1e30 && drugs["aderall"] < 1e33) return +(drugs["aderall"] / 1e30).toFixed(2) + "No";
+            if (drugs["aderall"] >= 1e31) return displayDrugs1.replace("+", "");; 
 }
 var convert18 = drugs => {
-	    if (drugs.marujuana <= 1e3) return drugs.marujuana;
-	    if (drugs.marujuana >= 1e3 && drugs.marujuana < 1e6) return +(drugs.marujuana / 1e3).toFixed(2) + "K";
-            if (drugs.marujuana >= 1e6 && drugs.marujuana < 1e9) return +(drugs.marujuana / 1e6).toFixed(2) + "M";
-	    if (drugs.marujuana >= 1e9 && drugs.marujuana < 1e12) return +(drugs.marujuana / 1e9).toFixed(2) + "B";
-	    if (drugs.marujuana >= 1e12 && drugs.marujuana < 1e15) return +(drugs.marujuana / 1e12).toFixed(2) + "T";
-            if (drugs.marujuana >= 1e15 && drugs.marujuana < 1e18) return +(drugs.marujuana / 1e15).toFixed(2) + "Qa";
-            if (drugs.marujuana >= 1e18 && drugs.marujuana < 1e21) return +(drugs.marujuana / 1e18).toFixed(2) + "Qi";
-            if (drugs.marujuana >= 1e21 && drugs.marujuana < 1e24) return +(drugs.marujuana / 1e21).toFixed(2) + "Sx";
-            if (drugs.marujuana >= 1e24 && drugs.marujuana < 1e27) return +(drugs.marujuana / 1e24).toFixed(2) + "Sp";
-            if (drugs.marujuana >= 1e27 && drugs.marujuana < 1e30) return +(drugs.marujuana / 1e27).toFixed(2) + "Oc";
-            if (drugs.marujuana >= 1e30 && drugs.marujuana < 1e33) return +(drugs.marujuana / 1e30).toFixed(2) + "No";
-            if (drugs.marujuana >= 1e31) return displayDrugs2.replace("+", "");; 
+	    if (drugs["marujuana"] <= 1e3) return drugs["marujuana"];
+	    if (drugs["marujuana"] >= 1e3 && drugs["marujuana"] < 1e6) return +(drugs["marujuana"] / 1e3).toFixed(2) + "K";
+            if (drugs["marujuana"] >= 1e6 && drugs["marujuana"] < 1e9) return +(drugs["marujuana"] / 1e6).toFixed(2) + "M";
+	    if (drugs["marujuana"] >= 1e9 && drugs["marujuana"] < 1e12) return +(drugs["marujuana"] / 1e9).toFixed(2) + "B";
+	    if (drugs["marujuana"] >= 1e12 && drugs["marujuana"] < 1e15) return +(drugs["marujuana"] / 1e12).toFixed(2) + "T";
+            if (drugs["marujuana"] >= 1e15 && drugs["marujuana"] < 1e18) return +(drugs["marujuana"] / 1e15).toFixed(2) + "Qa";
+            if (drugs["marujuana"] >= 1e18 && drugs["marujuana"] < 1e21) return +(drugs["marujuana"] / 1e18).toFixed(2) + "Qi";
+            if (drugs["marujuana"] >= 1e21 && drugs["marujuana"] < 1e24) return +(drugs["marujuana"] / 1e21).toFixed(2) + "Sx";
+            if (drugs["marujuana"] >= 1e24 && drugs["marujuana"] < 1e27) return +(drugs["marujuana"] / 1e24).toFixed(2) + "Sp";
+            if (drugs["marujuana"] >= 1e27 && drugs["marujuana"] < 1e30) return +(drugs["marujuana"] / 1e27).toFixed(2) + "Oc";
+            if (drugs["marujuana"] >= 1e30 && drugs["marujuana"] < 1e33) return +(drugs["marujuana"] / 1e30).toFixed(2) + "No";
+            if (drugs["marujuana"] >= 1e31) return displayDrugs2.replace("+", "");; 
 }
 var convert19 = drugs => {
-	    if (drugs.crack <= 1e3) return drugs.crack;
-	    if (drugs.crack >= 1e3 && drugs.crack < 1e6) return +(drugs.crack / 1e3).toFixed(2) + "K";
-            if (drugs.crack >= 1e6 && drugs.crack < 1e9) return +(drugs.crack / 1e6).toFixed(2) + "M";
-	    if (drugs.crack >= 1e9 && drugs.crack < 1e12) return +(drugs.crack / 1e9).toFixed(2) + "B";
-	    if (drugs.crack >= 1e12 && drugs.crack < 1e15) return +(drugs.crack / 1e12).toFixed(2) + "T";
-            if (drugs.crack >= 1e15 && drugs.crack < 1e18) return +(drugs.crack / 1e15).toFixed(2) + "Qa";
-            if (drugs.crack >= 1e18 && drugs.crack < 1e21) return +(drugs.crack / 1e18).toFixed(2) + "Qi";
-            if (drugs.crack >= 1e21 && drugs.crack < 1e24) return +(drugs.crack / 1e21).toFixed(2) + "Sx";
-            if (drugs.crack >= 1e24 && drugs.crack < 1e27) return +(drugs.crack / 1e24).toFixed(2) + "Sp";
-            if (drugs.crack >= 1e27 && drugs.crack < 1e30) return +(drugs.crack / 1e27).toFixed(2) + "Oc";
-            if (drugs.crack >= 1e30 && drugs.crack < 1e33) return +(drugs.crack / 1e30).toFixed(2) + "No";
-            if (drugs.crack >= 1e31) return displayDrugs3.replace("+", "");; 
+	    if (drugs["crack"] <= 1e3) return drugs["crack"];
+	    if (drugs["crack"] >= 1e3 && drugs["crack"] < 1e6) return +(drugs["crack"] / 1e3).toFixed(2) + "K";
+            if (drugs["crack"] >= 1e6 && drugs["crack"] < 1e9) return +(drugs["crack"] / 1e6).toFixed(2) + "M";
+	    if (drugs["crack"] >= 1e9 && drugs["crack"] < 1e12) return +(drugs["crack"] / 1e9).toFixed(2) + "B";
+	    if (drugs["crack"] >= 1e12 && drugs["crack"] < 1e15) return +(drugs["crack"] / 1e12).toFixed(2) + "T";
+            if (drugs["crack"] >= 1e15 && drugs["crack"] < 1e18) return +(drugs["crack"] / 1e15).toFixed(2) + "Qa";
+            if (drugs["crack"] >= 1e18 && drugs["crack"] < 1e21) return +(drugs["crack"] / 1e18).toFixed(2) + "Qi";
+            if (drugs["crack"] >= 1e21 && drugs["crack"] < 1e24) return +(drugs["crack"] / 1e21).toFixed(2) + "Sx";
+            if (drugs["crack"] >= 1e24 && drugs["crack"] < 1e27) return +(drugs["crack"] / 1e24).toFixed(2) + "Sp";
+            if (drugs["crack"] >= 1e27 && drugs["crack"] < 1e30) return +(drugs["crack"] / 1e27).toFixed(2) + "Oc";
+            if (drugs["crack"] >= 1e30 && drugs["crack"] < 1e33) return +(drugs["crack"] / 1e30).toFixed(2) + "No";
+            if (drugs["crack"] >= 1e31) return displayDrugs3.replace("+", "");; 
 }
 var convert20 = drugs => {
-	    if (drugs.meth <= 1e3) return drugs.meth;
-	    if (drugs.meth >= 1e3 && drugs.meth < 1e6) return +(drugs.meth / 1e3).toFixed(2) + "K";
-            if (drugs.meth >= 1e6 && drugs.meth < 1e9) return +(drugs.meth / 1e6).toFixed(2) + "M";
-	    if (drugs.meth >= 1e9 && drugs.meth < 1e12) return +(drugs.meth / 1e9).toFixed(2) + "B";
-	    if (drugs.meth >= 1e12 && drugs.meth < 1e15) return +(drugs.meth / 1e12).toFixed(2) + "T";
-            if (drugs.meth >= 1e15 && drugs.meth < 1e18) return +(drugs.meth / 1e15).toFixed(2) + "Qa";
-            if (drugs.meth >= 1e18 && drugs.meth < 1e21) return +(drugs.meth / 1e18).toFixed(2) + "Qi";
-            if (drugs.meth >= 1e21 && drugs.meth < 1e24) return +(drugs.meth / 1e21).toFixed(2) + "Sx";
-            if (drugs.meth >= 1e24 && drugs.meth < 1e27) return +(drugs.meth / 1e24).toFixed(2) + "Sp";
-            if (drugs.meth >= 1e27 && drugs.meth < 1e30) return +(drugs.meth / 1e27).toFixed(2) + "Oc";
-            if (drugs.meth >= 1e30 && drugs.meth < 1e33) return +(drugs.meth / 1e30).toFixed(2) + "No";
-            if (drugs.meth >= 1e31) return displayDrugs4.replace("+", "");; 
+	    if (drugs["meth"] <= 1e3) return drugs["meth"];
+	    if (drugs["meth"] >= 1e3 && drugs["meth"] < 1e6) return +(drugs["meth"] / 1e3).toFixed(2) + "K";
+            if (drugs["meth"] >= 1e6 && drugs["meth"] < 1e9) return +(drugs["meth"] / 1e6).toFixed(2) + "M";
+	    if (drugs["meth"] >= 1e9 && drugs["meth"] < 1e12) return +(drugs["meth"] / 1e9).toFixed(2) + "B";
+	    if (drugs["meth"] >= 1e12 && drugs["meth"] < 1e15) return +(drugs["meth"] / 1e12).toFixed(2) + "T";
+            if (drugs["meth"] >= 1e15 && drugs["meth"] < 1e18) return +(drugs["meth"] / 1e15).toFixed(2) + "Qa";
+            if (drugs["meth"] >= 1e18 && drugs["meth"] < 1e21) return +(drugs["meth"] / 1e18).toFixed(2) + "Qi";
+            if (drugs["meth"] >= 1e21 && drugs["meth"] < 1e24) return +(drugs["meth"] / 1e21).toFixed(2) + "Sx";
+            if (drugs["meth"] >= 1e24 && drugs["meth"] < 1e27) return +(drugs["meth"] / 1e24).toFixed(2) + "Sp";
+            if (drugs["meth"] >= 1e27 && drugs["meth"] < 1e30) return +(drugs["meth"] / 1e27).toFixed(2) + "Oc";
+            if (drugs["meth"] >= 1e30 && drugs["meth"] < 1e33) return +(drugs["meth"] / 1e30).toFixed(2) + "No";
+            if (drugs["meth"] >= 1e31) return displayDrugs4.replace("+", "");; 
 }
 function loadSave() {
  if (typeof game !== "undefined") {
