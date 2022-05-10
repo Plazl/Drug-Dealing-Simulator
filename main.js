@@ -12,6 +12,7 @@ var boost = 1;
 var boostMult = 1;
 var savedGame;
 var save;
+var convertedDrugs;
 var displayMoney = moneu.toExponential(2);
 var farmMults = {
  '1': 1,
@@ -743,7 +744,12 @@ function gameLoop() {
   farm8interval = setInterval(farm8int, t8)
   
  }
- document.getElementById('drugs').innerHTML = convert17() + convert18() + convert19() + convert20();
+ convertedDrugs = convert17(drugs) + convert18(drugs) + convert19(drugs) + convert20(drugs); convertedDrugs = convertedDrugs.toString(); 
+	if (convertedDrugs.length == 6) {
+		document.getElementById('drugs').innerHTML = convertedDrugs.slice(0, 6)
+	} else if (convertedDrugs.length == 5) {
+	        document.getElementById('drugs').innerHTML = convertedDrugs.slice(0, 5)
+	}
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
