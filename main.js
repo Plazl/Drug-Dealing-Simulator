@@ -1122,33 +1122,33 @@ function updateAchivements() {
  else if (unlockedAchs[8] !== 1 && farms[8] == 1) {
   unlockedAchs[8] == 1
  }
- else if (unlockedAchs[9] !== 1 && farms[9] == 1) {
+ else if (unlockedAchs[9] !== 1 && moneu == 100000000000) {
   unlockedAchs[9] == 1
  }
- else if (unlockedAchs[10] !== 1 && farms[10] == 1) {
+ else if (unlockedAchs[10] !== 1 && moneu == 1000000000000) {
   unlockedAchs[10] == 1
  }
- else if (unlockedAchs[11] !== 1 && farms[11] == 1) {
+ else if (unlockedAchs[11] !== 1) {
   unlockedAchs[11] == 1
  }
- else if (unlockedAchs[12] !== 1 && farms[12] == 1) {
+ else if (unlockedAchs[12] !== 1) {
   unlockedAchs[12] == 1
  }
- else if (unlockedAchs[13] !== 1 && farms[13] == 1) {
+ else if (unlockedAchs[13] !== 1) {
   unlockedAchs[13] == 1
  } 
- else if (unlockedAchs[14] !== 1 && farms[14] == 1) {
+ else if (unlockedAchs[14] !== 1) {
   unlockedAchs[14] == 1
  }
- else if (unlockedAchs[15] !== 1 && farms[15] == 1) {
+ else if (unlockedAchs[15] !== 1) {
   unlockedAchs[15] == 1
  }
- else if (unlockedAchs[16] !== 1 && farms[16] == 1) {
+ else if (unlockedAchs[16] !== 1) {
   unlockedAchs[16] == 1
  }
- else if (unlockedAchs[17] !== 1 && farms[17] == 1) {
+ else if (unlockedAchs[17] !== 1) {
   unlockedAchs[17] == 1
  } 
- else if (unlockedAchs[18] !== 1 && farms[18] == 1) {
+ else if (unlockedAchs[18] !== 1) {
   unlockedAchs[18] == 1
  }
