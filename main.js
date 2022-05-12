@@ -173,7 +173,7 @@ var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
 var menu3 = document.getElementById('achivements');
 var menu4 = document.getElementById('automation');
-displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
+var displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 var convert = moneu => {
 	    if (moneu < 1e3) return moneu;
 	    if (moneu >= 1e3 && moneu < 1e6) return +(moneu / 1e3).toFixed(2) + "K";
@@ -704,7 +704,7 @@ displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
   farm8interval = setInterval(farm8int, t8)
   
  }	
- document.getElementById('drugs').innerHTML = displayDrugs;
+ document.getElementById('drugs').innerHTML = convertDrugs(displayDrugs);
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
