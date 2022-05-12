@@ -173,6 +173,7 @@ var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
 var menu3 = document.getElementById('achivements');
 var menu4 = document.getElementById('automation');
+displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth;
 var convert = moneu => {
 	    if (moneu < 1e3) return moneu;
 	    if (moneu >= 1e3 && moneu < 1e6) return +(moneu / 1e3).toFixed(2) + "K";
@@ -411,61 +412,19 @@ var convert16 = farmsCost => {
             if (farmsCost[8] >= 1e30 && farmsCost[8] < 1e33) return +(farmsCost[8] / 1e30).toFixed(2) + "No";
             if (farmsCost[8] >= 1e31) return displayFarmsCost8.replace("+", "");; 
 }
-var convert17 = drugs => {
-	    if (drugs["aderall"] <= 1e3) return drugs["aderall"];
-	    if (drugs["aderall"] >= 1e3 && drugs["aderall"] < 1e6) return +(drugs["aderall"] / 1e3).toFixed(2) + "K";
-            if (drugs["aderall"] >= 1e6 && drugs["aderall"] < 1e9) return +(drugs["aderall"] / 1e6).toFixed(2) + "M";
-	    if (drugs["aderall"] >= 1e9 && drugs["aderall"] < 1e12) return +(drugs["aderall"] / 1e9).toFixed(2) + "B";
-	    if (drugs["aderall"] >= 1e12 && drugs["aderall"] < 1e15) return +(drugs["aderall"] / 1e12).toFixed(2) + "T";
-            if (drugs["aderall"] >= 1e15 && drugs["aderall"] < 1e18) return +(drugs["aderall"] / 1e15).toFixed(2) + "Qa";
-            if (drugs["aderall"] >= 1e18 && drugs["aderall"] < 1e21) return +(drugs["aderall"] / 1e18).toFixed(2) + "Qi";
-            if (drugs["aderall"] >= 1e21 && drugs["aderall"] < 1e24) return +(drugs["aderall"] / 1e21).toFixed(2) + "Sx";
-            if (drugs["aderall"] >= 1e24 && drugs["aderall"] < 1e27) return +(drugs["aderall"] / 1e24).toFixed(2) + "Sp";
-            if (drugs["aderall"] >= 1e27 && drugs["aderall"] < 1e30) return +(drugs["aderall"] / 1e27).toFixed(2) + "Oc";
-            if (drugs["aderall"] >= 1e30 && drugs["aderall"] < 1e33) return +(drugs["aderall"] / 1e30).toFixed(2) + "No";
-            if (drugs["aderall"] >= 1e31) return displayDrugs1.replace("+", "");; 
-}
-var convert18 = drugs => {
-	    if (drugs["marujuana"] <= 1e3) return drugs["marujuana"];
-	    if (drugs["marujuana"] >= 1e3 && drugs["marujuana"] < 1e6) return +(drugs["marujuana"] / 1e3).toFixed(2) + "K";
-            if (drugs["marujuana"] >= 1e6 && drugs["marujuana"] < 1e9) return +(drugs["marujuana"] / 1e6).toFixed(2) + "M";
-	    if (drugs["marujuana"] >= 1e9 && drugs["marujuana"] < 1e12) return +(drugs["marujuana"] / 1e9).toFixed(2) + "B";
-	    if (drugs["marujuana"] >= 1e12 && drugs["marujuana"] < 1e15) return +(drugs["marujuana"] / 1e12).toFixed(2) + "T";
-            if (drugs["marujuana"] >= 1e15 && drugs["marujuana"] < 1e18) return +(drugs["marujuana"] / 1e15).toFixed(2) + "Qa";
-            if (drugs["marujuana"] >= 1e18 && drugs["marujuana"] < 1e21) return +(drugs["marujuana"] / 1e18).toFixed(2) + "Qi";
-            if (drugs["marujuana"] >= 1e21 && drugs["marujuana"] < 1e24) return +(drugs["marujuana"] / 1e21).toFixed(2) + "Sx";
-            if (drugs["marujuana"] >= 1e24 && drugs["marujuana"] < 1e27) return +(drugs["marujuana"] / 1e24).toFixed(2) + "Sp";
-            if (drugs["marujuana"] >= 1e27 && drugs["marujuana"] < 1e30) return +(drugs["marujuana"] / 1e27).toFixed(2) + "Oc";
-            if (drugs["marujuana"] >= 1e30 && drugs["marujuana"] < 1e33) return +(drugs["marujuana"] / 1e30).toFixed(2) + "No";
-            if (drugs["marujuana"] >= 1e31) return displayDrugs2.replace("+", "");; 
-}
-var convert19 = drugs => {
-	    if (drugs["crack"] <= 1e3) return drugs["crack"];
-	    if (drugs["crack"] >= 1e3 && drugs["crack"] < 1e6) return +(drugs["crack"] / 1e3).toFixed(2) + "K";
-            if (drugs["crack"] >= 1e6 && drugs["crack"] < 1e9) return +(drugs["crack"] / 1e6).toFixed(2) + "M";
-	    if (drugs["crack"] >= 1e9 && drugs["crack"] < 1e12) return +(drugs["crack"] / 1e9).toFixed(2) + "B";
-	    if (drugs["crack"] >= 1e12 && drugs["crack"] < 1e15) return +(drugs["crack"] / 1e12).toFixed(2) + "T";
-            if (drugs["crack"] >= 1e15 && drugs["crack"] < 1e18) return +(drugs["crack"] / 1e15).toFixed(2) + "Qa";
-            if (drugs["crack"] >= 1e18 && drugs["crack"] < 1e21) return +(drugs["crack"] / 1e18).toFixed(2) + "Qi";
-            if (drugs["crack"] >= 1e21 && drugs["crack"] < 1e24) return +(drugs["crack"] / 1e21).toFixed(2) + "Sx";
-            if (drugs["crack"] >= 1e24 && drugs["crack"] < 1e27) return +(drugs["crack"] / 1e24).toFixed(2) + "Sp";
-            if (drugs["crack"] >= 1e27 && drugs["crack"] < 1e30) return +(drugs["crack"] / 1e27).toFixed(2) + "Oc";
-            if (drugs["crack"] >= 1e30 && drugs["crack"] < 1e33) return +(drugs["crack"] / 1e30).toFixed(2) + "No";
-            if (drugs["crack"] >= 1e31) return displayDrugs3.replace("+", "");; 
-}
-var convert20 = drugs => {
-	    if (drugs["meth"] <= 1e3) return drugs["meth"];
-	    if (drugs["meth"] >= 1e3 && drugs["meth"] < 1e6) return +(drugs["meth"] / 1e3).toFixed(2) + "K";
-            if (drugs["meth"] >= 1e6 && drugs["meth"] < 1e9) return +(drugs["meth"] / 1e6).toFixed(2) + "M";
-	    if (drugs["meth"] >= 1e9 && drugs["meth"] < 1e12) return +(drugs["meth"] / 1e9).toFixed(2) + "B";
-	    if (drugs["meth"] >= 1e12 && drugs["meth"] < 1e15) return +(drugs["meth"] / 1e12).toFixed(2) + "T";
-            if (drugs["meth"] >= 1e15 && drugs["meth"] < 1e18) return +(drugs["meth"] / 1e15).toFixed(2) + "Qa";
-            if (drugs["meth"] >= 1e18 && drugs["meth"] < 1e21) return +(drugs["meth"] / 1e18).toFixed(2) + "Qi";
-            if (drugs["meth"] >= 1e21 && drugs["meth"] < 1e24) return +(drugs["meth"] / 1e21).toFixed(2) + "Sx";
-            if (drugs["meth"] >= 1e24 && drugs["meth"] < 1e27) return +(drugs["meth"] / 1e24).toFixed(2) + "Sp";
-            if (drugs["meth"] >= 1e27 && drugs["meth"] < 1e30) return +(drugs["meth"] / 1e27).toFixed(2) + "Oc";
-            if (drugs["meth"] >= 1e30 && drugs["meth"] < 1e33) return +(drugs["meth"] / 1e30).toFixed(2) + "No";
-            if (drugs["meth"] >= 1e31) return displayDrugs4.replace("+", "");; 
+var convertDrugs = displayDrugs => {
+	    if (displayDrugs < 1e3) return displayDrugs;
+	    if (displayDrugs >= 1e3 && displayDrugs < 1e6) return +(displayDrugs / 1e3).toFixed(2) + "K";
+            if (displayDrugs >= 1e6 && displayDrugs < 1e9) return +(displayDrugs / 1e6).toFixed(2) + "M";
+	    if (displayDrugs >= 1e9 && displayDrugs < 1e12) return +(displayDrugs / 1e9).toFixed(2) + "B";
+	    if (displayDrugs >= 1e12 && displayDrugs < 1e15) return +(displayDrugs / 1e12).toFixed(2) + "T";
+            if (displayDrugs >= 1e15 && displayDrugs < 1e18) return +(displayDrugs / 1e15).toFixed(2) + "Qa";
+            if (displayDrugs >= 1e18 && displayDrugs < 1e21) return +(displayDrugs / 1e18).toFixed(2) + "Qi";
+            if (displayDrugs >= 1e21 && displayDrugs < 1e24) return +(displayDrugs / 1e21).toFixed(2) + "Sx";
+            if (displayDrugs >= 1e24 && displayDrugs < 1e27) return +(displayDrugs / 1e24).toFixed(2) + "Sp";
+            if (displayDrugs >= 1e27 && displayDrugs < 1e30) return +(displayDrugs / 1e27).toFixed(2) + "Oc";
+            if (displayDrugs >= 1e30 && displayDrugs < 1e33) return +(displayDrugs / 1e30).toFixed(2) + "No";
+            if (displayDrugs >= 1e31) return displayDrugs.replace("+", "");; 
 }
 function loadSave() {
  if (typeof game !== "undefined") {
@@ -680,6 +639,7 @@ function gameLoop() {
  } else { 
   menu4.style.display = "contents"
  }
+displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
  document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
  document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
  document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
@@ -743,13 +703,8 @@ function gameLoop() {
  if (farms[8] >= 1 && farm8interval == undefined) {
   farm8interval = setInterval(farm8int, t8)
   
- }
- convertedDrugs = convert17(drugs) + convert18(drugs) + convert19(drugs) + convert20(drugs); convertedDrugs = convertedDrugs.toString(); 
-	if (convertedDrugs.length == 6) {
-		document.getElementById('drugs').innerHTML = convertedDrugs.slice(0, 6)
-	} else if (convertedDrugs.length == 5) {
-	        document.getElementById('drugs').innerHTML = convertedDrugs.slice(0, 5)
-	}
+ }	
+ document.getElementById('drugs').innerHTML = displayDrugs;
 }
 function spawnDrugs() {
   drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
