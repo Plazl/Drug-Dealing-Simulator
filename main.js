@@ -1152,3 +1152,4 @@ function updateAchivements() {
  else if (unlockedAchs[18] !== 1) {
   unlockedAchs[18] == 1
  }
+}
