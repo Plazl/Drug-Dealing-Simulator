@@ -32,7 +32,7 @@ var achivements = {
  '16thAch': 'Automation 7, the sad',
  '17thAch': 'Automation 8, the final',
  '18thAch': 'Automation 9, another one?',
- '19thAch': 'INFINITY!';
+ '19thAch': 'INFINITY!'
 }
 var unlockedAchs = {
 '1':0,
@@ -52,7 +52,7 @@ var unlockedAchs = {
 '15':0,
 '16':0,
 '17':0,
-'18':0;
+'18':0
 }
 var displayMoney = moneu.toExponential(2);
 var farmMults = {
