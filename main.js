@@ -680,6 +680,7 @@ function gameLoop() {
  } else { 
   menu4.style.display = "contents"
  }
+updateAchivements();
 displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
  document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
  document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
@@ -1095,3 +1096,59 @@ function autoBuyer9() {
  farms[8] -= boostReq.farmCount
  }
 }
+
+function updateAchivements() {
+ if (unlockedAchs[1] !== 1 && farms[1] == 1 && moneu == 0) {
+  unlockedAchs[1] == 1
+ } 
+ else if (unlockedAchs[2] !== 1 && farms[2] == 1) {
+  unlockedAchs[2] == 1
+ } 
+ else if (unlockedAchs[3] !== 1 && farms[3] == 1) {
+  unlockedAchs[3] == 1
+ }
+ else if (unlockedAchs[4] !== 1 && farms[4] == 1) {
+  unlockedAchs[4] == 1
+ }
+ else if (unlockedAchs[5] !== 1 && farms[5] == 1) {
+  unlockedAchs[5] == 1
+ }
+ else if (unlockedAchs[6] !== 1 && farms[6] == 1) {
+  unlockedAchs[6] == 1
+ }
+ else if (unlockedAchs[7] !== 1 && farms[7] == 1) {
+  unlockedAchs[7] == 1
+ }
+ else if (unlockedAchs[8] !== 1 && farms[8] == 1) {
+  unlockedAchs[8] == 1
+ }
+ else if (unlockedAchs[9] !== 1 && farms[9] == 1) {
+  unlockedAchs[9] == 1
+ }
+ else if (unlockedAchs[10] !== 1 && farms[10] == 1) {
+  unlockedAchs[10] == 1
+ }
+ else if (unlockedAchs[11] !== 1 && farms[11] == 1) {
+  unlockedAchs[11] == 1
+ }
+ else if (unlockedAchs[12] !== 1 && farms[12] == 1) {
+  unlockedAchs[12] == 1
+ }
+ else if (unlockedAchs[13] !== 1 && farms[13] == 1) {
+  unlockedAchs[13] == 1
+ } 
+ else if (unlockedAchs[14] !== 1 && farms[14] == 1) {
+  unlockedAchs[14] == 1
+ }
+ else if (unlockedAchs[15] !== 1 && farms[15] == 1) {
+  unlockedAchs[15] == 1
+ }
+ else if (unlockedAchs[16] !== 1 && farms[16] == 1) {
+  unlockedAchs[16] == 1
+ }
+ else if (unlockedAchs[17] !== 1 && farms[17] == 1) {
+  unlockedAchs[17] == 1
+ } 
+ else if (unlockedAchs[18] !== 1 && farms[18] == 1) {
+  unlockedAchs[18] == 1
+ }
