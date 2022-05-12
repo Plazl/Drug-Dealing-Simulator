@@ -13,6 +13,47 @@ var boostMult = 1;
 var savedGame;
 var save;
 var convertedDrugs;
+var achivements = {
+ '1stAch': 'You gotta start somewhere',
+ '2ndAch': 'Why do you play this?',
+ '3dAch': 'Do you have problems?',
+ '4thAch': 'Do I need to get you a therapist?',
+ '5thAch': 'Stop playing and take a break',
+ '6thAch': 'I told you to take a break from this joke',
+ '7thAch': 'oHH MAN, YOU REACHED A 7TH FARM',
+ '8thAch': 'Too far to go back',
+ '9thAch': 'Hard drugs',
+ '10thAch': 'Automation 1, the addict',
+ '11thAch': 'Automation 2, the problematic',
+ '12thAch': 'Automation 3, the untrusted',
+ '13thAch': 'Automation 4, the bored',
+ '14thAch': 'Automation 5, the boring',
+ '15thAch': 'Automation 6, the tired',
+ '16thAch': 'Automation 7, the sad',
+ '17thAch': 'Automation 8, the final',
+ '18thAch': 'Automation 9, another one?'
+ '19thAch': 'INFINITY!';
+}
+var unlockedAchs = {
+'1':0,
+'2':0,
+'3':0,
+'4':0,
+'5':0,
+'6':0,
+'7':0,
+'8':0,
+'9':0,
+'10':0,
+'11':0,
+'12':0,
+'13':0,
+'14':0,
+'15':0,
+'16':0,
+'17':0,
+'18':0;
+}
 var displayMoney = moneu.toExponential(2);
 var farmMults = {
  '1': 1,
