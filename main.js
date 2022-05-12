@@ -31,7 +31,7 @@ var achivements = {
  '15thAch': 'Automation 6, the tired',
  '16thAch': 'Automation 7, the sad',
  '17thAch': 'Automation 8, the final',
- '18thAch': 'Automation 9, another one?'
+ '18thAch': 'Automation 9, another one?',
  '19thAch': 'INFINITY!';
 }
 var unlockedAchs = {
