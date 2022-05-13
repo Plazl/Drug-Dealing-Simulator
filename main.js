@@ -487,6 +487,7 @@ function loadSave() {
  if (typeof game.unlockedDrugs !== "undefined") {unlockedDrugs = game.unlockedDrugs};
  if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.hiddenDrug};
  if (typeof game.dollars !== "undefined") {moneu = game.dollars};
+ 
  };
  loadGame();
 };
@@ -872,7 +873,8 @@ function saveGame() {
  'drugs':drugs,
  'unlockedDrugs':unlockedDrugs,
  'drugsWorth':drugsWorth,
- 'hiddenDrug':hiddenDrug
+ 'hiddenDrug':hiddenDrug,
+ 'farmMults':farmMults
  }
    save = JSON.stringify(savedGame);
  localStorage.setItem('gameSave', save)
