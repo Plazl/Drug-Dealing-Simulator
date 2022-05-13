@@ -510,7 +510,7 @@ function buyFarm1() {
   moneu = moneu - Math.round(farmsCost[1])
   farmsCost[1] = farmsCost[1] *1.05
   if (farmsCost[1] < 1000) {
-   farmsCost[1] = Math.round(farmsCost[1]
+   farmsCost[1] = Math.round(farmsCost[1])
   }
   if (farms[1] > 1 && t1 !== 0) {
    t1 = t1 - 50;
