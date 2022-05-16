@@ -467,6 +467,20 @@ var convertDrugs = displayDrugs => {
             if (displayDrugs >= 1e30 && displayDrugs < 1e33) return +(displayDrugs / 1e30).toFixed(2) + "No";
             if (displayDrugs >= 1e31) return displayDrugs.replace("+", "");; 
 }
+var convert16 = farmMults => {
+	    if (farmMults[1] < 1e3) return farmMults[8];
+	    if (farmMults[8] >= 1e3 && farmMults[8] < 1e6) return +(farmMults[8] / 1e3).toFixed(2) + "K";
+            if (farmMults[8] >= 1e6 && farmMults[8] < 1e9) return +(farmMults[8] / 1e6).toFixed(2) + "M";
+	    if (farmMults[8] >= 1e9 && farmMults[8] < 1e12) return +(farmMults[8] / 1e9).toFixed(2) + "B";
+	    if (farmMults[8] >= 1e12 && farmMults[8] < 1e15) return +(farmMults[8] / 1e12).toFixed(2) + "T";
+            if (farmMults[8] >= 1e15 && farmMults[8] < 1e18) return +(farmMults[8] / 1e15).toFixed(2) + "Qa";
+            if (farmMults[8] >= 1e18 && farmMults[8] < 1e21) return +(farmMults[8] / 1e18).toFixed(2) + "Qi";
+            if (farmMults[8] >= 1e21 && farmMults[8] < 1e24) return +(farmMults[8] / 1e21).toFixed(2) + "Sx";
+            if (farmMults[8] >= 1e24 && farmMults[8] < 1e27) return +(farmMults[8] / 1e24).toFixed(2) + "Sp";
+            if (farmMults[8] >= 1e27 && farmMults[8] < 1e30) return +(farmMults[8] / 1e27).toFixed(2) + "Oc";
+            if (farmMults[8] >= 1e30 && farmMults[8] < 1e33) return +(farmMults[8] / 1e30).toFixed(2) + "No";
+            if (farmMults[8] >= 1e31) return farmMults[1];; 
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
