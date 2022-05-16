@@ -107,14 +107,14 @@ var drugsWorth = {
 'crack':500,
 'meth':10000
 }
-var t1 = 10000;
-var t2 = 10000;
-var t3 = 10000;
-var t4 = 10000;
-var t5 = 10000;
-var t6 = 10000;
-var t7 = 10000;
-var t8 = 10000;
+var t1 = 1500;
+var t2 = 1500;
+var t3 = 1500;
+var t4 = 1500;
+var t5 = 1500;
+var t6 = 1500;
+var t7 = 1500;
+var t8 = 1500;
 var hiddenDrug = 2;
 var autoBuyerOn = {
  '1':'off',
