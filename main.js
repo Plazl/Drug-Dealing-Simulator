@@ -579,6 +579,132 @@ var convert24 = farmMults => {
             if (farmMults[8] >= 1e30 && farmMults[8] < 1e33) return +(farmMults[8] / 1e30).toFixed(2) + "No";
             if (farmMults[8] >= 1e31) return farmMults[8];; 
 }
+var convert25 = autoBuyerPrices => {
+	    if (autoBuyerPrices[1] < 1e3) return autoBuyerPrices[1];
+	    if (autoBuyerPrices[1] >= 1e3 && autoBuyerPrices[1] < 1e6) return +(autoBuyerPrices[1] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[1] >= 1e6 && autoBuyerPrices[1] < 1e9) return +(autoBuyerPrices[1] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[1] >= 1e9 && autoBuyerPrices[1] < 1e12) return +(autoBuyerPrices[1] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[1] >= 1e12 && autoBuyerPrices[1] < 1e15) return +(autoBuyerPrices[1] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[1] >= 1e15 && autoBuyerPrices[1] < 1e18) return +(autoBuyerPrices[1] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[1] >= 1e18 && autoBuyerPrices[1] < 1e21) return +(autoBuyerPrices[1] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[1] >= 1e21 && autoBuyerPrices[1] < 1e24) return +(autoBuyerPrices[1] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[1] >= 1e24 && autoBuyerPrices[1] < 1e27) return +(autoBuyerPrices[1] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[1] >= 1e27 && autoBuyerPrices[1] < 1e30) return +(autoBuyerPrices[1] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[1] >= 1e30 && autoBuyerPrices[1] < 1e33) return +(autoBuyerPrices[1] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[1] >= 1e31) return autoBuyerPrices[1];; 
+}
+var convert26 = autoBuyerPrices => {
+	    if (autoBuyerPrices[2] < 1e3) return autoBuyerPrices[2];
+	    if (autoBuyerPrices[2] >= 1e3 && autoBuyerPrices[2] < 1e6) return +(autoBuyerPrices[2] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[2] >= 1e6 && autoBuyerPrices[2] < 1e9) return +(autoBuyerPrices[2] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[2] >= 1e9 && autoBuyerPrices[2] < 1e12) return +(autoBuyerPrices[2] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[2] >= 1e12 && autoBuyerPrices[2] < 1e15) return +(autoBuyerPrices[2] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[2] >= 1e15 && autoBuyerPrices[2] < 1e18) return +(autoBuyerPrices[2] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[2] >= 1e18 && autoBuyerPrices[2] < 1e21) return +(autoBuyerPrices[2] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[2] >= 1e21 && autoBuyerPrices[2] < 1e24) return +(autoBuyerPrices[2] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[2] >= 1e24 && autoBuyerPrices[2] < 1e27) return +(autoBuyerPrices[2] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[2] >= 1e27 && autoBuyerPrices[2] < 1e30) return +(autoBuyerPrices[2] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[2] >= 1e30 && autoBuyerPrices[2] < 1e33) return +(autoBuyerPrices[2] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[2] >= 1e31) return autoBuyerPrices[2];; 
+}
+var convert27 = autoBuyerPrices => {
+	    if (autoBuyerPrices[3] < 1e3) return autoBuyerPrices[3];
+	    if (autoBuyerPrices[3] >= 1e3 && autoBuyerPrices[3] < 1e6) return +(autoBuyerPrices[3] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[3] >= 1e6 && autoBuyerPrices[3] < 1e9) return +(autoBuyerPrices[3] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[3] >= 1e9 && autoBuyerPrices[3] < 1e12) return +(autoBuyerPrices[3] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[3] >= 1e12 && autoBuyerPrices[3] < 1e15) return +(autoBuyerPrices[3] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[3] >= 1e15 && autoBuyerPrices[3] < 1e18) return +(autoBuyerPrices[3] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[3] >= 1e18 && autoBuyerPrices[3] < 1e21) return +(autoBuyerPrices[3] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[3] >= 1e21 && autoBuyerPrices[3] < 1e24) return +(autoBuyerPrices[3] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[3] >= 1e24 && autoBuyerPrices[3] < 1e27) return +(autoBuyerPrices[3] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[3] >= 1e27 && autoBuyerPrices[3] < 1e30) return +(autoBuyerPrices[3] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[3] >= 1e30 && autoBuyerPrices[3] < 1e33) return +(autoBuyerPrices[3] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[3] >= 1e31) return autoBuyerPrices[3];; 
+}
+var convert28 = autoBuyerPrices => {
+	    if (autoBuyerPrices[4] < 1e3) return autoBuyerPrices[4];
+	    if (autoBuyerPrices[4] >= 1e3 && autoBuyerPrices[4] < 1e6) return +(autoBuyerPrices[4] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[4] >= 1e6 && autoBuyerPrices[4] < 1e9) return +(autoBuyerPrices[4] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[4] >= 1e9 && autoBuyerPrices[4] < 1e12) return +(autoBuyerPrices[4] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[4] >= 1e12 && autoBuyerPrices[4] < 1e15) return +(autoBuyerPrices[4] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[4] >= 1e15 && autoBuyerPrices[4] < 1e18) return +(autoBuyerPrices[4] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[4] >= 1e18 && autoBuyerPrices[4] < 1e21) return +(autoBuyerPrices[4] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[4] >= 1e21 && autoBuyerPrices[4] < 1e24) return +(autoBuyerPrices[4] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[4] >= 1e24 && autoBuyerPrices[4] < 1e27) return +(autoBuyerPrices[4] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[4] >= 1e27 && autoBuyerPrices[4] < 1e30) return +(autoBuyerPrices[4] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[4] >= 1e30 && autoBuyerPrices[4] < 1e33) return +(autoBuyerPrices[4] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[4] >= 1e31) return autoBuyerPrices[4];; 
+}
+var convert29 = autoBuyerPrices => {
+	    if (autoBuyerPrices[5] < 1e3) return autoBuyerPrices[5];
+	    if (autoBuyerPrices[5] >= 1e3 && autoBuyerPrices[5] < 1e6) return +(autoBuyerPrices[5] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[5] >= 1e6 && autoBuyerPrices[5] < 1e9) return +(autoBuyerPrices[5] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[5] >= 1e9 && autoBuyerPrices[5] < 1e12) return +(autoBuyerPrices[5] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[5] >= 1e12 && autoBuyerPrices[5] < 1e15) return +(autoBuyerPrices[5] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[5] >= 1e15 && autoBuyerPrices[5] < 1e18) return +(autoBuyerPrices[5] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[5] >= 1e18 && autoBuyerPrices[5] < 1e21) return +(autoBuyerPrices[5] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[5] >= 1e21 && autoBuyerPrices[5] < 1e24) return +(autoBuyerPrices[5] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[5] >= 1e24 && autoBuyerPrices[5] < 1e27) return +(autoBuyerPrices[5] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[5] >= 1e27 && autoBuyerPrices[5] < 1e30) return +(autoBuyerPrices[5] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[5] >= 1e30 && autoBuyerPrices[5] < 1e33) return +(autoBuyerPrices[5] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[5] >= 1e31) return autoBuyerPrices[5];; 
+}
+var convert30 = autoBuyerPrices => {
+	    if (autoBuyerPrices[6] < 1e3) return autoBuyerPrices[6];
+	    if (autoBuyerPrices[6] >= 1e3 && autoBuyerPrices[6] < 1e6) return +(autoBuyerPrices[6] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[6] >= 1e6 && autoBuyerPrices[6] < 1e9) return +(autoBuyerPrices[6] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[6] >= 1e9 && autoBuyerPrices[6] < 1e12) return +(autoBuyerPrices[6] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[6] >= 1e12 && autoBuyerPrices[6] < 1e15) return +(autoBuyerPrices[6] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[6] >= 1e15 && autoBuyerPrices[6] < 1e18) return +(autoBuyerPrices[6] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[6] >= 1e18 && autoBuyerPrices[6] < 1e21) return +(autoBuyerPrices[6] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[6] >= 1e21 && autoBuyerPrices[6] < 1e24) return +(autoBuyerPrices[6] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[6] >= 1e24 && autoBuyerPrices[6] < 1e27) return +(autoBuyerPrices[6] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[6] >= 1e27 && autoBuyerPrices[6] < 1e30) return +(autoBuyerPrices[6] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[6] >= 1e30 && autoBuyerPrices[6] < 1e33) return +(autoBuyerPrices[6] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[6] >= 1e31) return autoBuyerPrices[6];; 
+}
+var convert31 = autoBuyerPrices => {
+	    if (autoBuyerPrices[7] < 1e3) return autoBuyerPrices[7];
+	    if (autoBuyerPrices[7] >= 1e3 && autoBuyerPrices[7] < 1e6) return +(autoBuyerPrices[7] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[7] >= 1e6 && autoBuyerPrices[7] < 1e9) return +(autoBuyerPrices[7] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[7] >= 1e9 && autoBuyerPrices[7] < 1e12) return +(autoBuyerPrices[7] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[7] >= 1e12 && autoBuyerPrices[7] < 1e15) return +(autoBuyerPrices[7] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[7] >= 1e15 && autoBuyerPrices[7] < 1e18) return +(autoBuyerPrices[7] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[7] >= 1e18 && autoBuyerPrices[7] < 1e21) return +(autoBuyerPrices[7] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[7] >= 1e21 && autoBuyerPrices[7] < 1e24) return +(autoBuyerPrices[7] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[7] >= 1e24 && autoBuyerPrices[7] < 1e27) return +(autoBuyerPrices[7] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[7] >= 1e27 && autoBuyerPrices[7] < 1e30) return +(autoBuyerPrices[7] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[7] >= 1e30 && autoBuyerPrices[7] < 1e33) return +(autoBuyerPrices[7] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[7] >= 1e31) return autoBuyerPrices[7];; 
+}
+var convert32 = autoBuyerPrices => {
+	    if (autoBuyerPrices[8] < 1e3) return autoBuyerPrices[8];
+	    if (autoBuyerPrices[8] >= 1e3 && autoBuyerPrices[8] < 1e6) return +(autoBuyerPrices[8] / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices[8] >= 1e6 && autoBuyerPrices[8] < 1e9) return +(autoBuyerPrices[8] / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices[8] >= 1e9 && autoBuyerPrices[8] < 1e12) return +(autoBuyerPrices[8] / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices[8] >= 1e12 && autoBuyerPrices[8] < 1e15) return +(autoBuyerPrices[8] / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices[8] >= 1e15 && autoBuyerPrices[8] < 1e18) return +(autoBuyerPrices[8] / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices[8] >= 1e18 && autoBuyerPrices[8] < 1e21) return +(autoBuyerPrices[8] / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices[8] >= 1e21 && autoBuyerPrices[8] < 1e24) return +(autoBuyerPrices[8] / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices[8] >= 1e24 && autoBuyerPrices[8] < 1e27) return +(autoBuyerPrices[8] / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices[8] >= 1e27 && autoBuyerPrices[8] < 1e30) return +(autoBuyerPrices[8] / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices[8] >= 1e30 && autoBuyerPrices[8] < 1e33) return +(autoBuyerPrices[8] / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices[8] >= 1e31) return autoBuyerPrices[1];; 
+}
+var convert33 = autoBuyerPrices => {
+	    if (autoBuyerPrices.boost < 1e3) return autoBuyerPrices.boost;
+	    if (autoBuyerPrices.boost >= 1e3 && autoBuyerPrices.boost < 1e6) return +(autoBuyerPrices.boost / 1e3).toFixed(2) + "K";
+            if (autoBuyerPrices.boost >= 1e6 && autoBuyerPrices.boost < 1e9) return +(autoBuyerPrices.boost / 1e6).toFixed(2) + "M";
+	    if (autoBuyerPrices.boost >= 1e9 && autoBuyerPrices.boost < 1e12) return +(autoBuyerPrices.boost / 1e9).toFixed(2) + "B";
+	    if (autoBuyerPrices.boost >= 1e12 && autoBuyerPrices.boost < 1e15) return +(autoBuyerPrices.boost / 1e12).toFixed(2) + "T";
+            if (autoBuyerPrices.boost >= 1e15 && autoBuyerPrices.boost < 1e18) return +(autoBuyerPrices.boost / 1e15).toFixed(2) + "Qa";
+            if (autoBuyerPrices.boost >= 1e18 && autoBuyerPrices.boost < 1e21) return +(autoBuyerPrices.boost / 1e18).toFixed(2) + "Qi";
+            if (autoBuyerPrices.boost >= 1e21 && autoBuyerPrices.boost < 1e24) return +(autoBuyerPrices.boost / 1e21).toFixed(2) + "Sx";
+            if (autoBuyerPrices.boost >= 1e24 && autoBuyerPrices.boost < 1e27) return +(autoBuyerPrices.boost / 1e24).toFixed(2) + "Sp";
+            if (autoBuyerPrices.boost >= 1e27 && autoBuyerPrices.boost < 1e30) return +(autoBuyerPrices.boost / 1e27).toFixed(2) + "Oc";
+            if (autoBuyerPrices.boost >= 1e30 && autoBuyerPrices.boost < 1e33) return +(autoBuyerPrices.boost / 1e30).toFixed(2) + "No";
+            if (autoBuyerPrices.boost >= 1e31) return autoBuyerPrices.boost;; 
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -798,15 +924,15 @@ function gameLoop() {
  }
 updateAchivements();
 displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
- document.getElementById('buyer1Cost').innerHTML = autoBuyerPrices[1]
- document.getElementById('buyer2Cost').innerHTML = autoBuyerPrices[2]
- document.getElementById('buyer3Cost').innerHTML = autoBuyerPrices[3]
- document.getElementById('buyer4Cost').innerHTML = autoBuyerPrices[4]
- document.getElementById('buyer5Cost').innerHTML = autoBuyerPrices[5]
- document.getElementById('buyer6Cost').innerHTML = autoBuyerPrices[6]
- document.getElementById('buyer7Cost').innerHTML = autoBuyerPrices[7]
- document.getElementById('buyer8Cost').innerHTML = autoBuyerPrices[8]
- document.getElementById('buyer9Cost').innerHTML = autoBuyerPrices.boost
+ document.getElementById('buyer1Cost').innerHTML = convert25(autoBuyerPrices)
+ document.getElementById('buyer2Cost').innerHTML = convert26(autoBuyerPrices)
+ document.getElementById('buyer3Cost').innerHTML = convert27(autoBuyerPrices)
+ document.getElementById('buyer4Cost').innerHTML = convert28(autoBuyerPrices)
+ document.getElementById('buyer5Cost').innerHTML = convert29(autoBuyerPrices)
+ document.getElementById('buyer6Cost').innerHTML = convert30(autoBuyerPrices)
+ document.getElementById('buyer7Cost').innerHTML = convert31(autoBuyerPrices)
+ document.getElementById('buyer8Cost').innerHTML = convert32(autoBuyerPrices)
+ document.getElementById('buyer9Cost').innerHTML = convert33(autoBuyerPrices)
  if (autoBuyerInt1 !== undefined) {document.getElementById('buyerInt1').innerHTML = autoBuyerInt1} else {};
  if (autoBuyerInt2 !== undefined) {document.getElementById('buyerInt2').innerHTML = autoBuyerInt2} else {};
  if (autoBuyerInt3 !== undefined) {document.getElementById('buyerInt3').innerHTML = autoBuyerInt3} else {};
