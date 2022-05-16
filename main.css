@@ -35,6 +35,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm2 {
  left: 10%;
@@ -42,6 +43,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm3 {
  left: 10%;
@@ -49,6 +51,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm4 {
  left: 10%;
@@ -56,6 +59,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm5 {
  left: 10%;
@@ -63,6 +67,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm6 {
  left: 10%;
@@ -70,6 +75,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm7 {
  left: 10%;
@@ -77,6 +83,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farm8 {
  left: 10%;
@@ -84,6 +91,7 @@ body {
  width: 100px;
  height: 30px;
  border: 5px;
+ position: relative;
 }
 #farmsMenu {
  height: 30px;
