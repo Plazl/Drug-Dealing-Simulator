@@ -726,6 +726,20 @@ function loadSave() {
  if (typeof game.hiddenDrug !== "undefined") {hiddenDrug = game.hiddenDrug};
  if (typeof game.dollars !== "undefined") {moneu = game.dollars};
  if (typeof game.farmMults !== "undefined") {farmMults = game.farmMults};
+ if (typeof game.autobuyerMults !== "undefined") {autobuyerMults = game.autobuyerMults};
+ if (typeof game.autobuyers !== "undefined") {autobuyers = game.autobuyers};
+ if (typeof game.autoBuyerInt1 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt1};
+ if (typeof game.autoBuyerInt2 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt2};
+ if (typeof game.autoBuyerInt3 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt3};
+ if (typeof game.autoBuyerInt4 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt4};
+ if (typeof game.autoBuyerInt5 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt5};
+ if (typeof game.autoBuyerInt6 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt6};
+ if (typeof game.autoBuyerInt7 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt7};
+ if (typeof game.autoBuyerInt8 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt8};
+ if (typeof game.autoBuyerInt9 !== "undefined") {autoBuyerInt1 = game.autoBuyerInt9};
+ if (typeof game.autoBuyerPrices !== "undefined") {autoBuyerPrices = game.autoBuyerPrices};
+ if (typeof game.buyers !== "undefined") {buyers = game.buyers};
+ if (typeof game.unlockedAchs !== "undefined") {unlockedAchs = game.unlockedAchs};
  };
  loadGame();
 };
@@ -1115,7 +1129,21 @@ function saveGame() {
  'unlockedDrugs':unlockedDrugs,
  'drugsWorth':drugsWorth,
  'hiddenDrug':hiddenDrug,
- 'farmMults':farmMults
+ 'farmMults':farmMults,
+ 'unlockedAchs':unlockedAchs,
+ 'autobuyers':autobuyers,
+ 'autoBuyerPrices':autoBuyerPrices,
+ 'autobuyerMults':autobuyerMults,
+ 'autoBuyerInt1':autoBuyerInt1,
+ 'autoBuyerInt2':autoBuyerInt2,
+ 'autoBuyerInt3':autoBuyerInt3,
+ 'autoBuyerInt4':autoBuyerInt4,
+ 'autoBuyerInt5':autoBuyerInt5,
+ 'autoBuyerInt6':autoBuyerInt6,
+ 'autoBuyerInt7':autoBuyerInt7,
+ 'autoBuyerInt8':autoBuyerInt8,
+ 'autoBuyerInt9':autoBuyerInt9,
+ 'buyers':buyers
  }
    save = JSON.stringify(savedGame);
  localStorage.setItem('gameSave', save)
