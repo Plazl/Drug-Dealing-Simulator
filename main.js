@@ -1424,3 +1424,7 @@ function updateAchivements() {
   unlockedAchs[18] = 1
  }
 }
+window.addEventListener("beforeunload", function( event ) {
+    if(1 == 1)
+        saveGame()
+});
