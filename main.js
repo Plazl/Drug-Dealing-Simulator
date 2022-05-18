@@ -13,6 +13,7 @@ var boostMult = 1;
 var savedGame;
 var save;
 var convertedDrugs;
+var resetting = false;
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -1425,6 +1426,15 @@ function updateAchivements() {
  }
 }
 window.addEventListener("beforeunload", function( event ) {
-    if(1 == 1)
+    if (resetting == false) {
         saveGame()
+    } else if (resetting == true) {
+	savedGame = undefined;
+	game = undefined;
+        this.removeEventListener("beforeunload",arguments.callee,false)
+	location.reload()
+    }
 });
+function resetGame() {
+ resetting = true
+}
