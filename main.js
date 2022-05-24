@@ -33,7 +33,8 @@ var achivements = {
  '16thAch': 'Automation 7, the sad',
  '17thAch': 'Automation 8, the final',
  '18thAch': 'Automation 9, another one?',
- '19thAch': 'INFINITY!'
+ '19thAch': 'INFINITY!',
+ '20thAch': 'No name'
 }
 var unlockedAchs = {
 '1':0,
@@ -53,7 +54,9 @@ var unlockedAchs = {
 '15':0,
 '16':0,
 '17':0,
-'18':0
+'18':0,
+'19':0,
+"20':0
 }
 var displayMoney = moneu.toExponential(2);
 var farmMults = {
@@ -1372,57 +1375,83 @@ function autoBuyer9() {
 function updateAchivements() {
  if (unlockedAchs[1] !== 1 && farms[1] == 1 && moneu == 0) {
   unlockedAchs[1] = 1
+  document.getElementById('achspn1').innerHTML = 'unlocked'
  } 
  else if (unlockedAchs[2] !== 1 && farms[2] == 1) {
   unlockedAchs[2] = 1
+  document.getElementById('achspn2').innerHTML = 'unlocked'
  } 
  else if (unlockedAchs[3] !== 1 && farms[3] == 1) {
   unlockedAchs[3] = 1
+  document.getElementById('achspn3').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[4] !== 1 && farms[4] == 1) {
   unlockedAchs[4] = 1
+  document.getElementById('achspn4').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[5] !== 1 && farms[5] == 1) {
   unlockedAchs[5] = 1
+  document.getElementById('achspn5').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[6] !== 1 && farms[6] == 1) {
   unlockedAchs[6] = 1
+  document.getElementById('achspn6').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[7] !== 1 && farms[7] == 1) {
   unlockedAchs[7] = 1
+  document.getElementById('achspn7').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[8] !== 1 && farms[8] == 1) {
   unlockedAchs[8] = 1
+  document.getElementById('achspn8').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[9] !== 1 && moneu == 100000000000) {
   unlockedAchs[9] = 1
+  document.getElementById('achspn9').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[10] !== 1 && moneu == 1000000000000) {
   unlockedAchs[10] = 1
+  document.getElementById('achspn10').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[11] !== 1) {
   unlockedAchs[11] = 1
+  document.getElementById('achspn11').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[12] !== 1) {
   unlockedAchs[12] = 1
+  document.getElementById('achspn12').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[13] !== 1) {
   unlockedAchs[13] = 1
+  document.getElementById('achspn13').innerHTML = 'unlocked'
  } 
  else if (unlockedAchs[14] !== 1) {
   unlockedAchs[14] = 1
+  document.getElementById('achspn14').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[15] !== 1) {
   unlockedAchs[15] = 1
+  document.getElementById('achspn15').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[16] !== 1) {
   unlockedAchs[16] = 1
+  document.getElementById('achspn16').innerHTML = 'unlocked'
  }
  else if (unlockedAchs[17] !== 1) {
   unlockedAchs[17] = 1
+  document.getElementById('achspn17').innerHTML = 'unlocked'
  } 
  else if (unlockedAchs[18] !== 1) {
   unlockedAchs[18] = 1
+  document.getElementById('achspn18').innerHTML = 'unlocked'
+ }
+ else if (unlockedAchs[19] !== 1) {
+  unlockedAchs[19] = 1
+  document.getElementById('achspn19').innerHTML = 'unlocked'
+ }
+ else if (unlockedAchs[20] !== 1) {
+  unlockedAchs[20] = 1
+  document.getElementById('achspn20').innerHTML = 'unlocked'
  }
 }
 window.addEventListener("beforeunload", function( event ) {
