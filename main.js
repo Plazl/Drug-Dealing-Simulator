@@ -194,7 +194,7 @@ var buyerInt7;
 var buyerInt8;
 var buyerInt9;
 var displayFarms1 = farms[1].toExponential(2);
-var displayFarms2 = farms[2].toExponential(2);
+var displayFarms2 = farm[2].toExponential(2);
 var displayFarms3 = farms[3].toExponential(2);
 var displayFarms4 = farms[4].toExponential(2);
 var displayFarms5 = farms[5].toExponential(2);
@@ -213,7 +213,7 @@ var displayDrugs1 = drugs.aderall.toExponential(2);
 var displayDrugs2 = drugs.marujuana.toExponential(2);
 var displayDrugs3 = drugs.crack.toExponential(2);
 var displayDrugs4 = drugs.meth.toExponential(2);
-var game = JSON.parse(localStorage.getItem('gameSave'));
+var game = JSON.parse(atob(localStorage.gameSave))
 var menu1 = document.getElementById('farms');
 var menu2 = document.getElementById('upgrades');
 var menu3 = document.getElementById('achivements');
@@ -1149,7 +1149,7 @@ function saveGame() {
  'autoBuyerInt9':autoBuyerInt9,
  'buyers':buyers
  }
-   save = JSON.stringify(savedGame);
+   save = btoa(JSON.stringify(savedGame))
  localStorage.setItem('gameSave', save)
 }
 
