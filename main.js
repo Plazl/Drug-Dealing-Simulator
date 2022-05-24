@@ -194,7 +194,7 @@ var buyerInt7;
 var buyerInt8;
 var buyerInt9;
 var displayFarms1 = farms[1].toExponential(2);
-var displayFarms2 = farm[2].toExponential(2);
+var displayFarms2 = farms[2].toExponential(2);
 var displayFarms3 = farms[3].toExponential(2);
 var displayFarms4 = farms[4].toExponential(2);
 var displayFarms5 = farms[5].toExponential(2);
