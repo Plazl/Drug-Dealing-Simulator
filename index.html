@@ -21,6 +21,7 @@
     </table>
 <div id="farms">
   <table>
+   <tbody>
    <tr>
     <tr id="farm1">
      <td class="farmTDs">
@@ -34,6 +35,7 @@
      </td>
      <td>
      <button onclick="buyFarm1()" class="farmBtns">Cost: <span id=farm1price>100</span> dollars</button>
+     </td>
    </tr>
     </tr>
     <tr>
@@ -49,6 +51,7 @@
      </td>
      <td class="farmTDs">
      <button onclick="buyFarm2()" class="farmBtns">Cost: <span id=farm2price>1000</span> dollars</button>
+     </td>
    </tr>
     </tr>
   <tr>
@@ -64,6 +67,7 @@
      </td>
      <td>
      <button onclick="buyFarm3()" class="farmBtns">Cost: <span id=farm3price>10000</span> dollars</button>
+      </td>
    </tr>
     </tr>
     <tr>
@@ -79,6 +83,7 @@
      </td>
      <td>
      <button onclick="buyFarm4()" class="farmBtns">Cost: <span id=farm4price>100000</span> dollars</button>
+      </td>
    </tr>
     </tr>
     <tr>
@@ -94,6 +99,7 @@
      </td>
      <td>
      <button onclick="buyFarm5()" class="farmBtns">Cost: <span id=farm5price>1000000</span> dollars</button>
+      </td>
    </tr>
     </tr>
   <tr>
@@ -109,6 +115,7 @@
      </td>
      <td>
      <button onclick="buyFarm6()" class="farmBtns">Cost: <span id=farm6price>10000000</span> dollars</button>
+      </td>
    </tr>
     </tr>
   <tr>
@@ -124,6 +131,7 @@
      </td>
      <td>
      <button onclick="buyFarm7()" class="farmBtns">Cost: <span id=farm7price>100000000</span> dollars</button>
+      </td>
    </tr>
     </tr>
  <tr>
@@ -139,8 +147,10 @@
      </td>
      <td>
      <button onclick="buyFarm8()" class="farmBtns">Cost: <span id=farm8price>1000000000</span> dollars</button>
+      </td>
    </tr>
     </tr>
+     <tr>
         <button onclick="unlockNewDrug()" id="unlockDrug">Unlock <span id='hiddenDrug'>marujuana</span></button>
         </tr>
             <tr>
@@ -148,6 +158,8 @@
      <button onclick="sellDrugs()" id="sell">Sell your drugs</button>
    </td>
         </tr>
+</tbody>
+</table>
  </div>
     <div id='upgrades'>
         <button id='boostFarms' onclick='boostFarms()'>Boost Farms for <span id='requiredFarms'>20 </span> Eigth Farms</button>
