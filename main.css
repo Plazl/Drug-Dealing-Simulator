@@ -172,6 +172,16 @@ height: 30px;
     border-block-width: 3px;
     position: absolute;
 }
+#priceDiv {
+    height: 30px;
+    top: 210px;
+    left: 50px;
+    color: cornsilk;
+    background-color: #04AA6D;
+    border-color: darkgrey;
+    border-block-width: 3px;
+    position: absolute;
+}
 #topMenu {
  position: relative;
  left: -35%;
