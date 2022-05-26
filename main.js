@@ -2,6 +2,7 @@ var power = 1;
 var powerCost = 100000000000;
 var openTab = 1;
 var moneu = 100;
+var priceDiv = 1;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -711,6 +712,20 @@ var convert33 = autoBuyerPrices => {
             if (autoBuyerPrices.boost >= 1e30 && autoBuyerPrices.boost < 1e33) return +(autoBuyerPrices.boost / 1e30).toFixed(2) + "No";
             if (autoBuyerPrices.boost >= 1e31) return autoBuyerPrices.boost;; 
 }
+var convert34 = powerCost => {
+	    if (powerCost < 1e3) return powerCost;
+	    if (powerCost >= 1e3 && powerCost < 1e6) return +(powerCost / 1e3).toFixed(2) + "K";
+            if (powerCost >= 1e6 && powerCost < 1e9) return +(powerCost / 1e6).toFixed(2) + "M";
+	    if (powerCost >= 1e9 && powerCost < 1e12) return +(powerCost / 1e9).toFixed(2) + "B";
+	    if (powerCost >= 1e12 && powerCost < 1e15) return +(powerCost / 1e12).toFixed(2) + "T";
+            if (powerCost >= 1e15 && powerCost < 1e18) return +(powerCost / 1e15).toFixed(2) + "Qa";
+            if (powerCost >= 1e18 && powerCost < 1e21) return +(powerCost / 1e18).toFixed(2) + "Qi";
+            if (powerCost >= 1e21 && powerCost < 1e24) return +(powerCost / 1e21).toFixed(2) + "Sx";
+            if (powerCost >= 1e24 && powerCost < 1e27) return +(powerCost / 1e24).toFixed(2) + "Sp";
+            if (powerCost >= 1e27 && powerCost < 1e30) return +(powerCost / 1e27).toFixed(2) + "Oc";
+            if (powerCost >= 1e30 && powerCost < 1e33) return +(powerCost / 1e30).toFixed(2) + "No";
+            if (powerCost >= 1e31) return powerCost; 
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -746,6 +761,10 @@ function loadSave() {
  if (typeof game.autoBuyerPrices !== "undefined") {autoBuyerPrices = game.autoBuyerPrices};
  if (typeof game.buyers !== "undefined") {buyers = game.buyers};
  if (typeof game.unlockedAchs !== "undefined") {unlockedAchs = game.unlockedAchs};
+ if (typeof game.power !== "undefined") {power = game.power};
+ if (typeof game.powerCost !== "undefined") {powerCost = game.powerCost};
+ if (typeof game.priceDiv !== "undefined") {priceDiv = game.priceDiv};
+ if (typeof game.priceDivCost !== "undefined") {unlockedAchs = game.priceDivCost};
  };
  loadGame();
 };
@@ -763,9 +782,9 @@ function openAutomationMenu() {
    openTab = 4
 }
 function buyFarm1() {
- if (moneu >= farmsCost[1]) {
+ if (moneu >= farmsCost[1] / priceDiv) {
   farms[1] = farms[1] + 1;
-  moneu = moneu - Math.round(farmsCost[1])
+  moneu = moneu - Math.round(farmsCost[1] / priceDiv)
   farmsCost[1] = farmsCost[1] *1.05
   if (farmsCost[1] < 1000) {
    farmsCost[1] = Math.round(farmsCost[1])
@@ -778,9 +797,9 @@ function buyFarm1() {
  }
 }
 function buyFarm2() {
- if (moneu >= farmsCost[2]) {
+ if (moneu >= farmsCost[2] / priceDiv) {
   farms[2] = farms[2] + 1;
-  moneu = moneu - Math.round(farmsCost[2])
+  moneu = moneu - Math.round(farmsCost[2] / priceDiv)
   farmsCost[2] = farmsCost[2] *1.06
   clearInterval(farm2interval);
   farm2interval = undefined;
@@ -791,9 +810,9 @@ function buyFarm2() {
  }
 }
 function buyFarm3() {
- if (moneu >= farmsCost[3]) {
+ if (moneu >= farmsCost[3] / priceDiv) {
   farms[3] = farms[3] + 1;
-  moneu = moneu - Math.round(farmsCost[3])
+  moneu = moneu - Math.round(farmsCost[3] / priceDiv)
   farmsCost[3] = farmsCost[3] *1.07
   clearInterval(farm3interval);
   farm3interval = undefined;
@@ -804,9 +823,9 @@ function buyFarm3() {
  }
 }
 function buyFarm4() {
- if (moneu >= farmsCost[4]) {
+ if (moneu >= farmsCost[4] / priceDiv) {
   farms[4] = farms[4] + 1;
-  moneu = moneu - Math.round(farmsCost[4])
+  moneu = moneu - Math.round(farmsCost[4] / priceDiv)
   farmsCost[4] = farmsCost[4] *1.08
   clearInterval(farm4interval);
   farm4interval = undefined;
@@ -817,9 +836,9 @@ function buyFarm4() {
  }
 }
 function buyFarm5() {
- if (moneu >= farmsCost[5]) {
+ if (moneu >= farmsCost[5] / priceDiv) {
   farms[5] = farms[5] + 1;
-  moneu = moneu - Math.round(farmsCost[5])
+  moneu = moneu - Math.round(farmsCost[5] / priceDiv)
   farmsCost[5] = farmsCost[5] *1.09
   clearInterval(farm5interval);
   farm5interval = undefined;
@@ -830,9 +849,9 @@ function buyFarm5() {
  }
 }
 function buyFarm6() {
- if (moneu >= farmsCost[6]) {
+ if (moneu >= farmsCost[6] / priceDiv) {
   farms[6] = farms[6] + 1;
-  moneu = moneu - Math.round(farmsCost[6])
+  moneu = moneu - Math.round(farmsCost[6] / priceDiv)
   farmsCost[6] = farmsCost[6] *1.10
   clearInterval(farm6interval);
   farm6interval = undefined;
@@ -843,9 +862,9 @@ function buyFarm6() {
  }
 }
 function buyFarm7() {
- if (moneu >= farmsCost[7]) {
+ if (moneu >= farmsCost[7] / priceDiv) {
   farms[7] = farms[7] + 1;
-  moneu = moneu - Math.round(farmsCost[7])
+  moneu = moneu - Math.round(farmsCost[7] / priceDiv)
   farmsCost[7] = farmsCost[7] *1.11
   clearInterval(farm7interval);
   farm7interval = undefined;
@@ -856,9 +875,9 @@ function buyFarm7() {
  }
 }
 function buyFarm8() {
- if (moneu >= farmsCost[8]) {
+ if (moneu >= farmsCost[8] / priceDiv) {
   farms[8] = farms[8] + 1;
-  moneu = moneu - Math.round(farmsCost[8])
+  moneu = moneu - Math.round(farmsCost[8] / priceDiv)
   farmsCost[8] = farmsCost[8] *1.12
   clearInterval(farm8interval);
   farm8interval = undefined;
@@ -1150,7 +1169,11 @@ function saveGame() {
  'autoBuyerInt7':autoBuyerInt7,
  'autoBuyerInt8':autoBuyerInt8,
  'autoBuyerInt9':autoBuyerInt9,
- 'buyers':buyers
+ 'buyers':buyers,
+ 'power':power,
+ 'powerCost':powerCost,
+ 'priceDiv':priceDIv,
+ 'priceDivCost':priceDivCost
  }
    save = JSON.stringify(savedGame)
  localStorage.setItem('gameSave', save)
@@ -1380,10 +1403,16 @@ function boostTick() {
  power *= 1.5
  power = Math.round(power)
  moneu = moneu - powerCost
- powerCost *= 3.5
- powerCost = Math.round(powerCost)
- document.getElementById('requiredMoney').innerHTML = powerCost
+ powerCost = Math.round(Math.pow(powerCost,1.07))
+ document.getElementById('requiredMoney').innerHTML = convert34(powerCost)
 } else {console.log('no')}
+}
+function buyPriceDivide() {
+ if (moneu >= priceDivCost && priceDiv < 10) {
+  priceDiv += 1;
+  moneu -= priceDivCost;
+  priceDivCost *= 5;
+ }
 }
 function updateAchivements() {
  if (unlockedAchs[1] !== 1 && farms[1] == 1 && moneu == 0) {
