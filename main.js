@@ -1376,7 +1376,7 @@ function autoBuyer9() {
 }
 
 function boostTick() {
-   if (moneu >= powerCost)
+   if (moneu >= powerCost) {
  power *= 1.5
  power = Math.round(power)
  moneu = moneu - powerCost
