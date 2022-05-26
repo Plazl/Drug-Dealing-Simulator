@@ -1,3 +1,4 @@
+var power = 1;
 var openTab = 1;
 var moneu = 100;
 var farm1interval;
@@ -1009,92 +1010,92 @@ displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
  document.getElementById('drugs').innerHTML = convertDrugs(displayDrugs);
 }
 function spawnDrugs() {
-  drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1]
+  drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost * farmMults[1]
+  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost * farmMults[1] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 1 * farms[1] * boost * farmMults[1]
+  drugs.crack = drugs.crack + 1 * farms[1] * boost * farmMults[1] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 1 * farms[1] * boost * farmMults[1]
+  drugs.meth = drugs.meth + 1 * farms[1] * boost * farmMults[1] * power
  }
 }
 
 function farm2int() {
-  drugs.aderall = drugs.aderall + 2 * farms[2] * boost * farmMults[2]
+  drugs.aderall = drugs.aderall + 2 * farms[2] * boost * farmMults[2] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost * farmMults[2]
+  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost * farmMults[2] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 2 * farms[2] * boost * farmMults[2]
+  drugs.crack = drugs.crack + 2 * farms[2] * boost * farmMults[2] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 2 * farms[2] * boost * farmMults[2]
+  drugs.meth = drugs.meth + 2 * farms[2] * boost * farmMults[2] * power
  }
 }
 function farm3int() {
-  drugs.aderall = drugs.aderall + 3 * farms[3] * boost * farmMults[3] 
+  drugs.aderall = drugs.aderall + 3 * farms[3] * boost * farmMults[3] * power 
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost * farmMults[3]
+  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost * farmMults[3] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 3 * farms[3] * boost * farmMults[3]
+  drugs.crack = drugs.crack + 3 * farms[3] * boost * farmMults[3] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 3 * farms[3] * boost * farmMults[3]
+  drugs.meth = drugs.meth + 3 * farms[3] * boost * farmMults[3] * power
  }
 }
 function farm4int() {
-  drugs.aderall = drugs.aderall + 4 * farms[4] * boost * farmMults[4] 
+  drugs.aderall = drugs.aderall + 4 * farms[4] * boost * farmMults[4] * power 
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost * farmMults[4]
+  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost * farmMults[4] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 4 * farms[4] * boost * farmMults[4]
+  drugs.crack = drugs.crack + 4 * farms[4] * boost * farmMults[4] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 4 * farms[4] * boost * farmMults[4]
+  drugs.meth = drugs.meth + 4 * farms[4] * boost * farmMults[4] * power
  }
 }
 function farm5int() {
-  drugs.aderall = drugs.aderall + 5 * farms[5] * boost * farmMults[5]
+  drugs.aderall = drugs.aderall + 5 * farms[5] * boost * farmMults[5] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost * farmMults[5]
+  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost * farmMults[5] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 5 * farms[5] * boost * farmMults[5]
+  drugs.crack = drugs.crack + 5 * farms[5] * boost * farmMults[5] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 5 * farms[5] * boost * farmMults[5]
+  drugs.meth = drugs.meth + 5 * farms[5] * boost * farmMults[5] * power
  }
 }
 function farm6int() {
-  drugs.aderall = drugs.aderall + 6 * farms[6] * boost * farmMults[6]
+  drugs.aderall = drugs.aderall + 6 * farms[6] * boost * farmMults[6] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost * farmMults[6]
+  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost * farmMults[6] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 6 * farms[6] * boost * farmMults[6]
+  drugs.crack = drugs.crack + 6 * farms[6] * boost * farmMults[6] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 6 * farms[6] * boost * farmMults[6]
+  drugs.meth = drugs.meth + 6 * farms[6] * boost * farmMults[6] * power
  }
 }
 function farm7int() {
-  drugs.aderall = drugs.aderall + 7 * farms[7] * boost * farmMults[7]
+  drugs.aderall = drugs.aderall + 7 * farms[7] * boost * farmMults[7] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost * farmMults[7]
+  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost * farmMults[7] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 7 * farms[7] * boost * farmMults[7]
+  drugs.crack = drugs.crack + 7 * farms[7] * boost * farmMults[7] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 7 * farms[7] * boost * farmMults[7]
+  drugs.meth = drugs.meth + 7 * farms[7] * boost * farmMults[7] * power
  }
 }
 function farm8int() {
-  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults[8]
+  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults[8] * power
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8]
+  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8] * power
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 8 * farms[8] * boost * farmMults[8]
+  drugs.crack = drugs.crack + 8 * farms[8] * boost * farmMults[8] * power
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 8 * farms[8] * boost * farmMults[8]
+  drugs.meth = drugs.meth + 8 * farms[8] * boost * farmMults[8] * power
  }
 }
 function boostFarms() {
@@ -1373,6 +1374,10 @@ function autoBuyer9() {
  }
 }
 
+function boostTick() {
+ power *= 1.5
+ power = Math.round(power)
+}
 function updateAchivements() {
  if (unlockedAchs[1] !== 1 && farms[1] == 1 && moneu == 0) {
   unlockedAchs[1] = 1
