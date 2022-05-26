@@ -1,4 +1,5 @@
 var power = 1;
+var powerCost = 100000000000;
 var openTab = 1;
 var moneu = 100;
 var farm1interval;
@@ -1375,8 +1376,14 @@ function autoBuyer9() {
 }
 
 function boostTick() {
+   if (moneu >= powerCost)
  power *= 1.5
  power = Math.round(power)
+ moneu = moneu - powerCost
+ powerCost *= 3.5
+ powerCost = Math.round(powerCost)
+ document.getElementById('requiredMoney').innerHTML = powerCost
+} else {console.log('no')}
 }
 function updateAchivements() {
  if (unlockedAchs[1] !== 1 && farms[1] == 1 && moneu == 0) {
