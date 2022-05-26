@@ -1102,6 +1102,7 @@ function boostFarms() {
   boost += 1;
   farms[8] = farms[8] - boostReq.farmCount;
   boostReq.farmCount = boostReq.farmCount * 2; 
+  document.getElementById('requiredFarms').innerHTML = boostReq.farmCount;
  }
 }
 function updateDrug() {
