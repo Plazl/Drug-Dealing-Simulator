@@ -3,6 +3,7 @@ var powerCost = 100000000000;
 var openTab = 1;
 var moneu = 100;
 var priceDiv = 1;
+var priceDivCost = 100000000000000000;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -726,6 +727,20 @@ var convert34 = powerCost => {
             if (powerCost >= 1e30 && powerCost < 1e33) return +(powerCost / 1e30).toFixed(2) + "No";
             if (powerCost >= 1e31) return powerCost; 
 }
+var convert35 = priceDivCost => {
+	    if (priceDivCost < 1e3) return priceDivCost;
+	    if (priceDivCost >= 1e3 && priceDivCost < 1e6) return +(priceDivCost / 1e3).toFixed(2) + "K";
+            if (priceDivCost >= 1e6 && priceDivCost < 1e9) return +(priceDivCost / 1e6).toFixed(2) + "M";
+	    if (priceDivCost >= 1e9 && priceDivCost < 1e12) return +(priceDivCost / 1e9).toFixed(2) + "B";
+	    if (priceDivCost >= 1e12 && priceDivCost < 1e15) return +(priceDivCost / 1e12).toFixed(2) + "T";
+            if (priceDivCost >= 1e15 && priceDivCost < 1e18) return +(priceDivCost / 1e15).toFixed(2) + "Qa";
+            if (priceDivCost >= 1e18 && priceDivCost < 1e21) return +(priceDivCost / 1e18).toFixed(2) + "Qi";
+            if (priceDivCost >= 1e21 && priceDivCost < 1e24) return +(priceDivCost / 1e21).toFixed(2) + "Sx";
+            if (priceDivCost >= 1e24 && priceDivCost < 1e27) return +(priceDivCost / 1e24).toFixed(2) + "Sp";
+            if (priceDivCost >= 1e27 && priceDivCost < 1e30) return +(priceDivCost / 1e27).toFixed(2) + "Oc";
+            if (priceDivCost >= 1e30 && priceDivCost < 1e33) return +(priceDivCost / 1e30).toFixed(2) + "No";
+            if (priceDivCost >= 1e31) return priceDivCost; 
+}
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -1172,7 +1187,7 @@ function saveGame() {
  'buyers':buyers,
  'power':power,
  'powerCost':powerCost,
- 'priceDiv':priceDIv,
+ 'priceDiv':priceDiv,
  'priceDivCost':priceDivCost
  }
    save = JSON.stringify(savedGame)
@@ -1412,6 +1427,7 @@ function buyPriceDivide() {
   priceDiv += 1;
   moneu -= priceDivCost;
   priceDivCost *= 5;
+  document.getElementById('priceDivCost').innerHTML = convert35(priceDivCost)
  }
 }
 function updateAchivements() {
