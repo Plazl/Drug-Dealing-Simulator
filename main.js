@@ -1148,7 +1148,8 @@ function updateDrug() {
   document.getElementById('hiddenDrug').innerHTML = 'crack for 10M marujuana'
  } else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack == 1) {
   document.getElementById('hiddenDrug').innerHTML = 'meth for 1B crack'
- } 
+ } else if (unlockedDrugs.marujuana == 1 && unlockedDrugs.aderall == 1 && unlockedDrugs.meth == 1 && unlockedDrugs.crack == 1) {
+  document.getElementById('hiddenDrug').style.display = 'none'
 }
 function saveGame() {
    savedGame = {
@@ -1522,6 +1523,10 @@ window.addEventListener("beforeunload", function( event ) {
 	location.reload()
     }
 });
+	var time; var s; setInterval(function e() {var change; change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+};  time = new Date;  s = addZero(time.getSeconds());}, 1000);
 function resetGame() {
  resetting = true
 }
