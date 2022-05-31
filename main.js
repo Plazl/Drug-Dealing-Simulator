@@ -1523,7 +1523,8 @@ window.addEventListener("beforeunload", function( event ) {
 	location.reload()
     }
 });
-var time; 
+var time1;
+var time2;
 var s; 
 var change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
 function addZero(i) {
@@ -1533,4 +1534,5 @@ function addZero(i) {
 setInterval(function e() {change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);  time = new Date;  s = addZero(time.getSeconds());}, 1000);
 function resetGame() {
  resetting = true
+}
 }
