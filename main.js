@@ -781,9 +781,8 @@ function loadSave() {
  if (typeof game.priceDiv !== "undefined") {priceDiv = game.priceDiv};
  if (typeof game.priceDivCost !== "undefined") {unlockedAchs = game.priceDivCost};
  };
- loadGame();
 };
-
+ loadGame();
 function openFarmsMenu() {
    openTab = 1
 }
