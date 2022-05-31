@@ -1523,10 +1523,14 @@ window.addEventListener("beforeunload", function( event ) {
 	location.reload()
     }
 });
-	var time; var s; setInterval(function e() {var change; change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);function addZero(i) {
+var time; 
+var s; 
+var change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
+function addZero(i) {
   if (i < 10) {i = "0" + i}
   return i;
-};  time = new Date;  s = addZero(time.getSeconds());}, 1000);
+};
+setInterval(function e() {change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);  time = new Date;  s = addZero(time.getSeconds());}, 1000);
 function resetGame() {
  resetting = true
 }
