@@ -4,6 +4,9 @@ var openTab = 1;
 var moneu = 100;
 var priceDiv = 1;
 var priceDivCost = 100000000000000000;
+var d = new Date();
+var seconds1 = Math.round(d.getTime() / 1000);
+var seconds2;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -781,8 +784,9 @@ function loadSave() {
  if (typeof game.priceDiv !== "undefined") {priceDiv = game.priceDiv};
  if (typeof game.priceDivCost !== "undefined") {unlockedAchs = game.priceDivCost};
  };
+ drugs.aderall = drugs.aderall + seconds1 - seconds2 * change;
 };
- loadGame();
+ loadSave();
 function openFarmsMenu() {
    openTab = 1
 }
@@ -1188,7 +1192,8 @@ function saveGame() {
  'power':power,
  'powerCost':powerCost,
  'priceDiv':priceDiv,
- 'priceDivCost':priceDivCost
+ 'priceDivCost':priceDivCost,
+ 'seconds':seconds2
  }
    save = JSON.stringify(savedGame)
  localStorage.setItem('gameSave', save)
@@ -1522,15 +1527,9 @@ window.addEventListener("beforeunload", function( event ) {
 	location.reload()
     }
 });
-var time1;
-var time2;
-var s; 
+
 var change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
-function addZero(i) {
-  if (i < 10) {i = "0" + i}
-  return i;
-};
-setInterval(function e() {change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);  time = new Date;  s = addZero(time.getSeconds());}, 1000);
+setInterval(function e() {change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);seconds1 = Math.round(d.getTime() / 1000);}, 1000);
 function resetGame() {
  resetting = true
 }
