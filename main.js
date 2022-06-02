@@ -962,10 +962,10 @@ function gameLoop() {
 	displayFarmsCost8 = farmsCost[8].toExponential(2);
 	 if (moneu >= prCost) {
  document.getElementById('buyPr').style.display = 'block'
-	else {
+	 } else {
   document.getElementById('buyPr').style.display = 'none'
  }
-}
+
   if (openTab !== 1) {
   menu1.style.display = "none"
  } else { 
