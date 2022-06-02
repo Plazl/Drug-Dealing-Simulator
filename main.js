@@ -1529,4 +1529,3 @@ window.addEventListener("beforeunload", function( event ) {
 function resetGame() {
  resetting = true
 }
-}
