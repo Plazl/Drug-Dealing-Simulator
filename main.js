@@ -20,7 +20,8 @@ var convertedDrugs;
 var resetting = false;
 var cps;
 var prCost = 150000000000000000000000;
-var pr = 1;
+var prs = 1;
+var prPwr = 1;
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -959,6 +960,12 @@ function gameLoop() {
 	displayFarmsCost6 = farmsCost[6].toExponential(2);
 	displayFarmsCost7 = farmsCost[7].toExponential(2);
 	displayFarmsCost8 = farmsCost[8].toExponential(2);
+	 if (moneu >= prCost) {
+ document.getElementById('buyPr').style.display = 'block'
+	else {
+  document.getElementById('buyPr').style.display = 'none'
+ }
+}
   if (openTab !== 1) {
   menu1.style.display = "none"
  } else { 
@@ -1048,92 +1055,92 @@ displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
  document.getElementById('drugs').innerHTML = convertDrugs(displayDrugs);
 }
 function spawnDrugs() {
-  drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1] * power
+  drugs.aderall = drugs.aderall + 1 * farms[1] * boost * farmMults[1] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost * farmMults[1] * power
+  drugs.marujuana = drugs.marujuana + 1 * farms[1] * boost * farmMults[1] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 1 * farms[1] * boost * farmMults[1] * power
+  drugs.crack = drugs.crack + 1 * farms[1] * boost * farmMults[1] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 1 * farms[1] * boost * farmMults[1] * power
+  drugs.meth = drugs.meth + 1 * farms[1] * boost * farmMults[1] * power * prPwr
  }
 }
 
 function farm2int() {
-  drugs.aderall = drugs.aderall + 2 * farms[2] * boost * farmMults[2] * power
+  drugs.aderall = drugs.aderall + 2 * farms[2] * boost * farmMults[2] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost * farmMults[2] * power
+  drugs.marujuana = drugs.marujuana + 2 * farms[2] * boost * farmMults[2] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 2 * farms[2] * boost * farmMults[2] * power
+  drugs.crack = drugs.crack + 2 * farms[2] * boost * farmMults[2] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 2 * farms[2] * boost * farmMults[2] * power
+  drugs.meth = drugs.meth + 2 * farms[2] * boost * farmMults[2] * power * prPwr
  }
 }
 function farm3int() {
-  drugs.aderall = drugs.aderall + 3 * farms[3] * boost * farmMults[3] * power 
+  drugs.aderall = drugs.aderall + 3 * farms[3] * boost * farmMults[3] * power  * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost * farmMults[3] * power
+  drugs.marujuana = drugs.marujuana + 3 * farms[3] * boost * farmMults[3] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 3 * farms[3] * boost * farmMults[3] * power
+  drugs.crack = drugs.crack + 3 * farms[3] * boost * farmMults[3] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 3 * farms[3] * boost * farmMults[3] * power
+  drugs.meth = drugs.meth + 3 * farms[3] * boost * farmMults[3] * power * prPwr
  }
 }
 function farm4int() {
-  drugs.aderall = drugs.aderall + 4 * farms[4] * boost * farmMults[4] * power 
+  drugs.aderall = drugs.aderall + 4 * farms[4] * boost * farmMults[4] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost * farmMults[4] * power
+  drugs.marujuana = drugs.marujuana + 4 * farms[4] * boost * farmMults[4] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 4 * farms[4] * boost * farmMults[4] * power
+  drugs.crack = drugs.crack + 4 * farms[4] * boost * farmMults[4] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 4 * farms[4] * boost * farmMults[4] * power
+  drugs.meth = drugs.meth + 4 * farms[4] * boost * farmMults[4] * power * prPwr
  }
 }
 function farm5int() {
-  drugs.aderall = drugs.aderall + 5 * farms[5] * boost * farmMults[5] * power
+  drugs.aderall = drugs.aderall + 5 * farms[5] * boost * farmMults[5] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost * farmMults[5] * power
+  drugs.marujuana = drugs.marujuana + 5 * farms[5] * boost * farmMults[5] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 5 * farms[5] * boost * farmMults[5] * power
+  drugs.crack = drugs.crack + 5 * farms[5] * boost * farmMults[5] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 5 * farms[5] * boost * farmMults[5] * power
+  drugs.meth = drugs.meth + 5 * farms[5] * boost * farmMults[5] * power * prPwr
  }
 }
 function farm6int() {
-  drugs.aderall = drugs.aderall + 6 * farms[6] * boost * farmMults[6] * power
+  drugs.aderall = drugs.aderall + 6 * farms[6] * boost * farmMults[6] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost * farmMults[6] * power
+  drugs.marujuana = drugs.marujuana + 6 * farms[6] * boost * farmMults[6] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 6 * farms[6] * boost * farmMults[6] * power
+  drugs.crack = drugs.crack + 6 * farms[6] * boost * farmMults[6] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 6 * farms[6] * boost * farmMults[6] * power
+  drugs.meth = drugs.meth + 6 * farms[6] * boost * farmMults[6] * power * prPwr
  }
 }
 function farm7int() {
-  drugs.aderall = drugs.aderall + 7 * farms[7] * boost * farmMults[7] * power
+  drugs.aderall = drugs.aderall + 7 * farms[7] * boost * farmMults[7] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost * farmMults[7] * power
+  drugs.marujuana = drugs.marujuana + 7 * farms[7] * boost * farmMults[7] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 7 * farms[7] * boost * farmMults[7] * power
+  drugs.crack = drugs.crack + 7 * farms[7] * boost * farmMults[7] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 7 * farms[7] * boost * farmMults[7] * power
+  drugs.meth = drugs.meth + 7 * farms[7] * boost * farmMults[7] * power * prPwr
  }
 }
 function farm8int() {
-  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults[8] * power
+  drugs.aderall = drugs.aderall + 8 * farms[8] * boost * farmMults[8] * power * prPwr
  if (unlockedDrugs.marujuana == 1) {
-  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8] * power
+  drugs.marujuana = drugs.marujuana + 8 * farms[8] * boost * farmMults[8] * power * prPwr
   
  }; if (unlockedDrugs.crack == 1) {
-  drugs.crack = drugs.crack + 8 * farms[8] * boost * farmMults[8] * power
+  drugs.crack = drugs.crack + 8 * farms[8] * boost * farmMults[8] * power * prPwr
  }; if (unlockedDrugs.meth == 1) {
-  drugs.meth = drugs.meth + 8 * farms[8] * boost * farmMults[8] * power
+  drugs.meth = drugs.meth + 8 * farms[8] * boost * farmMults[8] * power * prPwr
  }
 }
 function boostFarms() {
@@ -1515,18 +1522,37 @@ function updateAchivements() {
   document.getElementById('achspn20').innerHTML = 'unlocked'
  }
 }
-function getCps() {
- cps = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
-}
 function buyPr() {
  if (moneu >= prCost) {
-  moneu = 0;
+  moneu = 100;
   drugs.aderall = 0;
   drugs.marujuana = 0;
-  drugs.crack = 0;
-  drugs.meth = 0;
+  drugs.crack = 0;	
+	 	3drugs.meth = 0;
+  farms[1] = 0;
+  farms[2] = 0;
+  farms[3] = 0;
+  farms[4] = 0;
+  farms[5] = 0;
+  farms[6] = 0;
+  farms[7] = 0;
+  farms[8] = 0;
+  farmsCost[1] = 100;
+  farmsCost[2] = 1000;
+  farmsCost[3] = 10000;
+  farmsCost[4] = 100000;
+  farmsCost[5] = 1000000;
+  farmsCost[6] = 10000000;
+  farmsCost[7] = 100000000;
+  farmsCost[8] = 1000000000;
+  boost = 1;
+  boostReq.farmCount = 20;
+  unlockedDrugs.marujuana = 0;
+  unlockedDrugs.crack = 0;
+  unlockedDrugs.meth = 0;
+  prs += 1;
+  prPwr += 1;
   prCost *= 10;
-  pr += 1;
  }
 }
 window.addEventListener("beforeunload", function( event ) {
