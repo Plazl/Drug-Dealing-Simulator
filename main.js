@@ -744,8 +744,6 @@ var convert35 = priceDivCost => {
             if (priceDivCost >= 1e30 && priceDivCost < 1e33) return +(priceDivCost / 1e30).toFixed(2) + "No";
             if (priceDivCost >= 1e31) return priceDivCost; 
 }
-
-var change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
 function loadSave() {
  if (typeof game !== "undefined") {
  if (typeof game.t1 !== "undefined") {t1 = game.t1};
@@ -786,7 +784,6 @@ function loadSave() {
  if (typeof game.priceDiv !== "undefined") {priceDiv = game.priceDiv};
  if (typeof game.priceDivCost !== "undefined") {unlockedAchs = game.priceDivCost};
  };
- drugs.aderall = drugs.aderall + seconds1 - seconds2 * change;
 };
  loadSave();
 function openFarmsMenu() {
@@ -1529,7 +1526,6 @@ window.addEventListener("beforeunload", function( event ) {
 	location.reload()
     }
 });
-setInterval(function e() {change = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; console.log(change);seconds1 = Math.round(d.getTime() / 1000);}, 1000);
 function resetGame() {
  resetting = true
 }
