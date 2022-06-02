@@ -4,9 +4,6 @@ var openTab = 1;
 var moneu = 100;
 var priceDiv = 1;
 var priceDivCost = 100000000000000000;
-var d = new Date();
-var seconds1 = Math.round(d.getTime() / 1000);
-var seconds2;
 var farm1interval;
 var farm2interval;
 var farm3interval;
@@ -784,8 +781,9 @@ function loadSave() {
  if (typeof game.priceDiv !== "undefined") {priceDiv = game.priceDiv};
  if (typeof game.priceDivCost !== "undefined") {unlockedAchs = game.priceDivCost};
  };
+ loadGame();
 };
- loadSave();
+
 function openFarmsMenu() {
    openTab = 1
 }
@@ -1150,8 +1148,7 @@ function updateDrug() {
   document.getElementById('hiddenDrug').innerHTML = 'crack for 10M marujuana'
  } else if (unlockedDrugs.meth == 0 && unlockedDrugs.crack == 1) {
   document.getElementById('hiddenDrug').innerHTML = 'meth for 1B crack'
- } else if (unlockedDrugs.marujuana == 1 && unlockedDrugs.aderall == 1 && unlockedDrugs.meth == 1 && unlockedDrugs.crack == 1) {
-  document.getElementById('hiddenDrug').style.display = 'none'
+ } 
 }
 function saveGame() {
    savedGame = {
@@ -1191,8 +1188,7 @@ function saveGame() {
  'power':power,
  'powerCost':powerCost,
  'priceDiv':priceDiv,
- 'priceDivCost':priceDivCost,
- 'seconds':seconds2
+ 'priceDivCost':priceDivCost
  }
    save = JSON.stringify(savedGame)
  localStorage.setItem('gameSave', save)
