@@ -19,6 +19,8 @@ var save;
 var convertedDrugs;
 var resetting = false;
 var cps;
+var prCost = 150000000000000000000000;
+var pr = 1;
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -1515,6 +1517,17 @@ function updateAchivements() {
 }
 function getCps() {
  cps = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
+}
+function buyPr() {
+ if (moneu >= prCost) {
+  moneu = 0;
+  drugs.aderall = 0;
+  drugs.marujuana = 0;
+  drugs.crack = 0;
+  drugs.meth = 0;
+  prCost *= 10;
+  pr += 1;
+ }
 }
 window.addEventListener("beforeunload", function( event ) {
     if (resetting == false) {
