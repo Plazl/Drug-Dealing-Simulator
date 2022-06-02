@@ -18,6 +18,7 @@ var savedGame;
 var save;
 var convertedDrugs;
 var resetting = false;
+var cps;
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -1511,6 +1512,9 @@ function updateAchivements() {
   unlockedAchs[20] = 1
   document.getElementById('achspn20').innerHTML = 'unlocked'
  }
+}
+function getCps() {
+ cps = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth; 
 }
 window.addEventListener("beforeunload", function( event ) {
     if (resetting == false) {
