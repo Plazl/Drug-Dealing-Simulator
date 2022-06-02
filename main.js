@@ -1546,6 +1546,22 @@ function buyPr() {
   farmsCost[7] = 100000000;
   farmsCost[8] = 1000000000;
   boost = 1;
+  clearInterval(farm1interval);
+  clearInterval(farm2interval);
+  clearInterval(farm3interval);
+  clearInterval(farm4interval);
+  clearInterval(farm5interval);
+  clearInterval(farm6interval);
+  clearInterval(farm7interval);
+  clearInterval(farm8interval);
+  t1 = 1500;
+  t2 = 1500;
+  t3 = 1500;
+  t4 = 1500;
+  t5 = 1500;
+  t6 = 1500;
+  t7 = 1500;
+  t8 = 1500;
   boostReq.farmCount = 20;
   unlockedDrugs.marujuana = 0;
   unlockedDrugs.crack = 0;
@@ -1553,6 +1569,7 @@ function buyPr() {
   prs += 1;
   prPwr += 1;
   prCost *= 10;
+  
  }
 }
 window.addEventListener("beforeunload", function( event ) {
