@@ -1528,7 +1528,7 @@ function buyPr() {
   drugs.aderall = 0;
   drugs.marujuana = 0;
   drugs.crack = 0;	
-	 	3drugs.meth = 0;
+  drugs.meth = 0;
   farms[1] = 0;
   farms[2] = 0;
   farms[3] = 0;
