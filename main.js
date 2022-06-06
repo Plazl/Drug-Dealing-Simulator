@@ -22,6 +22,7 @@ var cps;
 var prCost = 150000000000000000000000;
 var prs = 1;
 var prPwr = 1;
+var settings = document.getElementById('settingsMenu')
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -800,6 +801,9 @@ function openAchMenu() {
 function openAutomationMenu() {
    openTab = 4
 }
+function openSettingsMenu() {
+   openTab = 5
+}
 function buyFarm1() {
  if (moneu >= farmsCost[1] / priceDiv) {
   farms[1] = farms[1] + 1;
@@ -985,6 +989,11 @@ function gameLoop() {
   menu4.style.display = "none"
  } else { 
   menu4.style.display = "contents"
+ }
+   if (openTab !== 5) {
+  settings.style.display = "none"
+ } else { 
+  settings.style.display = "contents"
  }
 updateAchivements();
 displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
@@ -1579,9 +1588,14 @@ function e() {
  }
 } 
 function resetGame() {
- resetting = true
- savedGame = undefined;
- game = undefined;
- autoSave.removeEventListener('beforeunload', e)
- location.reload()
+if (confirm("Do you want to reset? This cannot be undone.")) {
+  resetting = true
+  savedGame = undefined;
+  game = undefined;
+  autoSave.removeEventListener('beforeunload', e)
+  location.reload()
+ } else {
+   saveGame()	 
+  return; 
+ }
 }
