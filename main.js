@@ -1572,16 +1572,16 @@ function buyPr() {
   
  }
 }
-window.addEventListener("beforeunload", function( event ) {
-    if (resetting == false) {
-        saveGame()
-    } else if (resetting == true) {
-	savedGame = undefined;
-	game = undefined;
-        this.removeEventListener("beforeunload",arguments.callee,false)
-	location.reload()
-    }
-});
+autoSave = window.addEventListener('beforeunload', e)
+function e() {
+ if (resetting == false) {
+  saveGame()
+ }
+} 
 function resetGame() {
  resetting = true
+ savedGame = undefined;
+ game = undefined;
+ autoSave.removeEventListener('beforeunload', e)
+ location.reload()
 }
