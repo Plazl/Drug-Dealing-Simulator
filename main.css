@@ -96,7 +96,7 @@ body {
 #farmsMenu {
  height: 30px;
  width: 100px;
- left: 300px;
+ left: 200px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -106,7 +106,7 @@ body {
 #upgrdsMenu {
  height: 30px;
  width: 100px;
- left: 400px;
+ left: 300px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -116,7 +116,7 @@ body {
 #achMenu {
  height: 30px;
  width: 100px;
- left: 500px;
+ left: 400px;
  color: cornsilk;
  background-color: #04AA6D;
  border-color: darkgrey;
@@ -124,6 +124,16 @@ body {
  position: absolute;
 }
 #autoMenu {
+ height: 30px;
+ width: 100px;
+ left: 500px;
+ color: cornsilk;
+ background-color: #04AA6D;
+ border-color: darkgrey;
+ border-block-width: 3px;
+ position: absolute;
+}
+#settingsMenu {
  height: 30px;
  width: 100px;
  left: 600px;
@@ -184,7 +194,7 @@ height: 30px;
 }
 #topMenu {
  position: relative;
- left: -35%;
+ left: -40%;
 }
 #automation {
     position: relative !important;
