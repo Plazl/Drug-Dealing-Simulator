@@ -1572,7 +1572,7 @@ function buyPr() {
   
  }
 }
-autoSave = window.addEventListener('beforeunload', e)
+var autoSave = window.addEventListener('beforeunload', e)
 function e() {
  if (resetting == false) {
   saveGame()
