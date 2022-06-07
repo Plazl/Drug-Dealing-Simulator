@@ -133,7 +133,7 @@ body {
  border-block-width: 3px;
  position: absolute;
 }
-#settingsMenu {
+#settingsBtn {
  height: 30px;
  width: 100px;
  left: 600px;
