@@ -1590,22 +1590,25 @@ function buyPr() {
   
  }
 }
-const page = document.getElementById("fullPage")
-page.addEventListener('beforeunload', e)
-function resetGame() {
-if (confirm("Do you want to reset? This cannot be undone.")) {
-  resetting = true
-  savedGame = undefined;
-  game = undefined;
-  page.removeEventListener('beforeunload', e)
-  location.reload()
- } else {
-   saveGame()	 
-  return; 
- }
-}
 function e() {
  if (resetting == false) {
   saveGame()
+ } else if (resetting == true) {
+  page.removeEventListener('beforeunload', e)
+  resetting = true
+  savedGame = undefined;
+  game = undefined;
+  location.reload()
  }
 } 
+const page = document.getElementById("fullPage")
+page.addEventListener('beforeunload', e)
+function resetGame() {
+if (confirm("Do you want to reset? This cannot be undone.") == true) {
+  page.removeEventListener('beforeunload', e)
+  resetting = true
+  savedGame = undefined;
+  game = undefined;
+  location.reload()
+ }
+}
