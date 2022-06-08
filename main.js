@@ -1546,6 +1546,14 @@ function buyPr() {
   farms[6] = 0;
   farms[7] = 0;
   farms[8] = 0;
+  farmMults[1] = 1;
+  farmMults[2] = 1;
+  farmMults[3] = 1;
+  farmMults[4] = 1;
+  farmMults[5] = 1;
+  farmMults[6] = 1;
+  farmMults[7] = 1;
+  farmMults[8] = 1;
   farmsCost[1] = 100;
   farmsCost[2] = 1000;
   farmsCost[3] = 10000;
@@ -1555,6 +1563,7 @@ function buyPr() {
   farmsCost[7] = 100000000;
   farmsCost[8] = 1000000000;
   boost = 1;
+  power = 1;
   clearInterval(farm1interval);
   clearInterval(farm2interval);
   clearInterval(farm3interval);
@@ -1583,11 +1592,6 @@ function buyPr() {
 }
 const page = document.getElementById("fullPage")
 page.addEventListener('beforeunload', e)
-function e() {
- if (resetting == false) {
-  saveGame()
- }
-} 
 function resetGame() {
 if (confirm("Do you want to reset? This cannot be undone.")) {
   resetting = true
@@ -1600,3 +1604,8 @@ if (confirm("Do you want to reset? This cannot be undone.")) {
   return; 
  }
 }
+function e() {
+ if (resetting == false) {
+  saveGame()
+ }
+} 
