@@ -1581,7 +1581,8 @@ function buyPr() {
   
  }
 }
-var autoSave = window.addEventListener('beforeunload', e)
+const page = document.getElementById("fullPage")
+page.addEventListener('beforeunload', e)
 function e() {
  if (resetting == false) {
   saveGame()
@@ -1592,7 +1593,7 @@ if (confirm("Do you want to reset? This cannot be undone.")) {
   resetting = true
   savedGame = undefined;
   game = undefined;
-  autoSave.removeEventListener('beforeunload', e)
+  page.removeEventListener('beforeunload', e)
   location.reload()
  } else {
    saveGame()	 
