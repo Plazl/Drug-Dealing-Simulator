@@ -23,6 +23,8 @@ var prCost = 150000000000000000000000;
 var prs = 1;
 var prPwr = 1;
 var settings = document.getElementById('settingsMenu')
+var officeUp =  1;
+var office = 1;
 var achivements = {
  '1stAch': 'You gotta start somewhere',
  '2ndAch': 'Why do you play this?',
@@ -997,6 +999,35 @@ function gameLoop() {
  }
 updateAchivements();
 displayDrugs = drugs.aderall + drugs.marujuana + drugs.crack + drugs.meth
+	if (officeUp == 1) {
+	 document.getElementById("farm3").style.display = "none"
+	 document.getElementById("farm4").style.display = "none"
+         document.getElementById("farm5").style.display = "none"
+	 document.getElementById("farm6").style.display = "none"
+	 document.getElementById("farm7").style.display = "none"
+	 document.getElementById("farm8").style.display = "none"
+	} else if (officeUp == 2) {
+	 document.getElementById("farm3").style.display = "block"
+	 document.getElementById("farm4").style.display = "block"
+         document.getElementById("farm5").style.display = "none"
+	 document.getElementById("farm6").style.display = "none"
+	 document.getElementById("farm7").style.display = "none"
+	 document.getElementById("farm8").style.display = "none"
+	} else if (officeUp == 3) {
+	 document.getElementById("farm3").style.display = "block"
+	 document.getElementById("farm4").style.display = "block"
+         document.getElementById("farm5").style.display = "block"
+	 document.getElementById("farm6").style.display = "block"
+	 document.getElementById("farm7").style.display = "none"
+	 document.getElementById("farm8").style.display = "none"
+	} else if (officeUp == 4) {
+	 document.getElementById("farm3").style.display = "block"
+	 document.getElementById("farm4").style.display = "block"
+         document.getElementById("farm5").style.display = "block"
+	 document.getElementById("farm6").style.display = "block"
+	 document.getElementById("farm7").style.display = "block"
+	 document.getElementById("farm8").style.display = "block"
+	}
  document.getElementById('buyer1Cost').innerHTML = convert25(autoBuyerPrices)
  document.getElementById('buyer2Cost').innerHTML = convert26(autoBuyerPrices)
  document.getElementById('buyer3Cost').innerHTML = convert27(autoBuyerPrices)
@@ -1589,6 +1620,9 @@ function buyPr() {
   prCost *= 10;
   
  }
+}
+function upgradeOffice() {
+ 
 }
 function e() {
  if (resetting == false) {
